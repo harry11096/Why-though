@@ -1,3 +1,5 @@
+//question题目表，定义了题目有哪些field
+
 const mongoose = require('mongoose'); //MongoDB
 
 const questionSchema = new mongoose.Schema({
@@ -10,6 +12,7 @@ const questionSchema = new mongoose.Schema({
     type: String,
     required: true,
     trim: true
+    enum: ['Pun Play', 'Body Facts', 'Daily Life Trivia', 'Animal Facts', 'Brain Teasers']
   },
   options: {
     type: [String],
