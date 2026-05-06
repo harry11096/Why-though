@@ -11,7 +11,7 @@ const questionSchema = new mongoose.Schema({
   category: {
     type: String,
     required: true,
-    trim: true
+    trim: true,
     enum: ['Pun Play', 'Body Facts', 'Daily Life Trivia', 'Animal Facts', 'Brain Teasers']
   },
   options: {
