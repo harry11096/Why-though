@@ -1,16 +1,20 @@
 import { useEffect, useMemo, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
 import {
   bulkImportQuestions,
   createQuestion,
   deleteQuestion,
   fetchCategories,
+  fetchMe,
   fetchQuestions,
   loginAdmin,
   toggleQuestionStatus,
   updateQuestion
 } from '../api/api.js';
 
-const emptyForm = {
+const emptyQuestionForm = {
   text: '',
   category: 'Pun Play',
   options: ['', '', '', ''],
@@ -28,17 +32,69 @@ const sampleImport = `[
   }
 ]`;
 
+const loginSchema = z.object({
+  email: z.email('Enter a valid email address.'),
+  password: z.string().min(1, 'Password is required.')
+});
+
+const questionSchema = z
+  .object({
+    text: z.string().trim().min(1, 'Question text is required.'),
+    category: z.string().min(1, 'Category is required.'),
+    options: z.array(z.string().trim().min(1, 'Option cannot be empty.')).length(4),
+    correctAnswer: z.string().min(1, 'Select the correct answer.'),
+    isActive: z.boolean()
+  })
+  .superRefine((value, context) => {
+    const uniqueOptions = new Set(value.options.map((option) => option.toLowerCase()));
+
+    if (uniqueOptions.size !== value.options.length) {
+      context.addIssue({
+        code: 'custom',
+        message: 'All four options must be unique.',
+        path: ['options', 0]
+      });
+    }
+
+    if (!value.options.includes(value.correctAnswer)) {
+      context.addIssue({
+        code: 'custom',
+        message: 'Correct answer must match one option.',
+        path: ['correctAnswer']
+      });
+    }
+  });
+
+const bulkImportSchema = z.object({
+  bulkJson: z.string().trim().min(1, 'Paste a JSON array first.')
+});
+
 export default function AdminPage() {
   const [theme, setTheme] = useState(() => localStorage.getItem('quiz-admin-theme') || 'light');
   const [token, setToken] = useState(() => localStorage.getItem('quiz-admin-token') || '');
+  const [admin, setAdmin] = useState(null);
   const [categories, setCategories] = useState(['Pun Play']);
   const [questions, setQuestions] = useState([]);
-  const [form, setForm] = useState(emptyForm);
   const [editingId, setEditingId] = useState('');
-  const [bulkJson, setBulkJson] = useState(sampleImport);
-  const [loginForm, setLoginForm] = useState({ email: '', password: '' });
   const [status, setStatus] = useState({ type: 'idle', message: '' });
   const [loading, setLoading] = useState(false);
+
+  const loginForm = useForm({
+    resolver: zodResolver(loginSchema),
+    defaultValues: { email: '', password: '' }
+  });
+
+  const questionForm = useForm({
+    resolver: zodResolver(questionSchema),
+    defaultValues: emptyQuestionForm
+  });
+
+  const bulkForm = useForm({
+    resolver: zodResolver(bulkImportSchema),
+    defaultValues: { bulkJson: sampleImport }
+  });
+
+  const watchedOptions = questionForm.watch('options');
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
@@ -52,16 +108,33 @@ export default function AdminPage() {
 
     const bootstrap = async () => {
       try {
-        const [categoryData, questionData] = await Promise.all([fetchCategories(), fetchQuestions()]);
+        const [me, categoryData, questionData] = await Promise.all([
+          fetchMe(),
+          fetchCategories(),
+          fetchQuestions()
+        ]);
+
+        if (me.role !== 'admin') {
+          throw new Error('This account is not an admin account.');
+        }
+
+        setAdmin(me);
         setCategories(categoryData);
         setQuestions(questionData);
+
+        if (categoryData.length > 0) {
+          questionForm.setValue('category', questionForm.getValues('category') || categoryData[0]);
+        }
       } catch (error) {
+        localStorage.removeItem('quiz-admin-token');
+        setToken('');
+        setAdmin(null);
         setStatus({ type: 'error', message: error.message });
       }
     };
 
     bootstrap();
-  }, [token]);
+  }, [token, questionForm]);
 
   const sortedQuestions = useMemo(
     () =>
@@ -74,53 +147,79 @@ export default function AdminPage() {
     [questions]
   );
 
-  const handleLogin = async (event) => {
-    event.preventDefault();
-    setLoading(true);
-    setStatus({ type: 'idle', message: '' });
-
-    try {
-      const result = await loginAdmin(loginForm);
-      localStorage.setItem('quiz-admin-token', result.token);
-      setToken(result.token);
-      setStatus({ type: 'success', message: `Welcome, ${result.user.username}.` });
-    } catch (error) {
-      setStatus({ type: 'error', message: error.message });
-    } finally {
-      setLoading(false);
-    }
-  };
-
   const refreshQuestions = async () => {
     const questionData = await fetchQuestions();
     setQuestions(questionData);
   };
 
-  const handleSubmitQuestion = async (event) => {
-    event.preventDefault();
+  const handleLogin = loginForm.handleSubmit(async (values) => {
+    setLoading(true);
+    setStatus({ type: 'idle', message: '' });
+
+    try {
+      const result = await loginAdmin(values);
+
+      if (result.user.role !== 'admin') {
+        throw new Error('This account does not have admin access.');
+      }
+
+      localStorage.setItem('quiz-admin-token', result.token);
+      setToken(result.token);
+      setStatus({ type: 'success', message: 'Admin login successful.' });
+    } catch (error) {
+      setStatus({ type: 'error', message: error.message });
+    } finally {
+      setLoading(false);
+    }
+  });
+
+  const handleSubmitQuestion = questionForm.handleSubmit(async (values) => {
     setLoading(true);
     setStatus({ type: 'idle', message: '' });
 
     try {
       if (editingId) {
-        await updateQuestion(editingId, form);
+        await updateQuestion(editingId, values);
         setStatus({ type: 'success', message: 'Question updated.' });
       } else {
-        await createQuestion(form);
+        await createQuestion(values);
         setStatus({ type: 'success', message: 'Question created.' });
       }
 
       await refreshQuestions();
-      setForm({ ...emptyForm, category: categories[0] || emptyForm.category });
+      questionForm.reset({
+        ...emptyQuestionForm,
+        category: categories[0] || emptyQuestionForm.category
+      });
       setEditingId('');
     } catch (error) {
       setStatus({ type: 'error', message: error.message });
     } finally {
       setLoading(false);
     }
-  };
+  });
+
+  const handleBulkImport = bulkForm.handleSubmit(async ({ bulkJson }) => {
+    setLoading(true);
+    setStatus({ type: 'idle', message: '' });
+
+    try {
+      const parsed = JSON.parse(bulkJson);
+      const result = await bulkImportQuestions(parsed);
+      await refreshQuestions();
+      setStatus({ type: 'success', message: `${result.importedCount} questions imported.` });
+    } catch (error) {
+      setStatus({ type: 'error', message: error.message || 'Invalid JSON.' });
+    } finally {
+      setLoading(false);
+    }
+  });
 
   const handleDelete = async (questionId) => {
+    if (!window.confirm('Delete this question?')) {
+      return;
+    }
+
     setLoading(true);
     try {
       await deleteQuestion(questionId);
@@ -146,43 +245,38 @@ export default function AdminPage() {
     }
   };
 
-  const handleBulkImport = async (event) => {
-    event.preventDefault();
-    setLoading(true);
-    setStatus({ type: 'idle', message: '' });
-
-    try {
-      const parsed = JSON.parse(bulkJson);
-      const result = await bulkImportQuestions(parsed);
-      await refreshQuestions();
-      setStatus({ type: 'success', message: `${result.importedCount} questions imported.` });
-    } catch (error) {
-      setStatus({ type: 'error', message: error.message || 'Invalid JSON.' });
-    } finally {
-      setLoading(false);
-    }
-  };
-
   const startEdit = (question) => {
     setEditingId(question._id);
-    setForm({
+    questionForm.reset({
       text: question.text,
       category: question.category,
       options: question.options,
       correctAnswer: question.correctAnswer,
       isActive: question.isActive
     });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const resetQuestionForm = () => {
+    setEditingId('');
+    questionForm.reset({
+      ...emptyQuestionForm,
+      category: categories[0] || emptyQuestionForm.category
+    });
   };
 
   const logout = () => {
     localStorage.removeItem('quiz-admin-token');
     setToken('');
+    setAdmin(null);
     setQuestions([]);
     setEditingId('');
+    loginForm.reset();
+    resetQuestionForm();
     setStatus({ type: 'success', message: 'Logged out.' });
   };
 
-  if (!token) {
+  if (!token || !admin) {
     return (
       <main className="shell">
         <section className="panel login-panel">
@@ -196,27 +290,28 @@ export default function AdminPage() {
             </button>
           </div>
 
-          <p className="muted">Sign in with an admin account to manage quiz questions.</p>
+          <p className="muted">
+            Sign in with an admin account. If you need to create the first admin user, register with
+            `ADMIN_SETUP_KEY` from the backend environment.
+          </p>
 
           <form className="stack" onSubmit={handleLogin}>
             <label>
               Email
-              <input
-                type="email"
-                value={loginForm.email}
-                onChange={(event) => setLoginForm((current) => ({ ...current, email: event.target.value }))}
-                required
-              />
+              <input type="email" {...loginForm.register('email')} required />
             </label>
+            {loginForm.formState.errors.email ? (
+              <p className="field-error">{loginForm.formState.errors.email.message}</p>
+            ) : null}
+
             <label>
               Password
-              <input
-                type="password"
-                value={loginForm.password}
-                onChange={(event) => setLoginForm((current) => ({ ...current, password: event.target.value }))}
-                required
-              />
+              <input type="password" {...loginForm.register('password')} required />
             </label>
+            {loginForm.formState.errors.password ? (
+              <p className="field-error">{loginForm.formState.errors.password.message}</p>
+            ) : null}
+
             <button className="primary-button" type="submit" disabled={loading}>
               {loading ? 'Signing in...' : 'Sign In'}
             </button>
@@ -235,6 +330,7 @@ export default function AdminPage() {
           <div>
             <p className="eyebrow">Admin</p>
             <h1>Question Management</h1>
+            <p className="muted">Logged in as {admin.username}</p>
           </div>
           <div className="actions">
             <button className="ghost-button" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
@@ -254,20 +350,15 @@ export default function AdminPage() {
             <form className="stack" onSubmit={handleSubmitQuestion}>
               <label>
                 Question Text
-                <textarea
-                  value={form.text}
-                  onChange={(event) => setForm((current) => ({ ...current, text: event.target.value }))}
-                  rows="4"
-                  required
-                />
+                <textarea {...questionForm.register('text')} rows="4" required />
               </label>
+              {questionForm.formState.errors.text ? (
+                <p className="field-error">{questionForm.formState.errors.text.message}</p>
+              ) : null}
 
               <label>
                 Category
-                <select
-                  value={form.category}
-                  onChange={(event) => setForm((current) => ({ ...current, category: event.target.value }))}
-                >
+                <select {...questionForm.register('category')}>
                   {categories.map((category) => (
                     <option key={category} value={category}>
                       {category}
@@ -275,34 +366,25 @@ export default function AdminPage() {
                   ))}
                 </select>
               </label>
+              {questionForm.formState.errors.category ? (
+                <p className="field-error">{questionForm.formState.errors.category.message}</p>
+              ) : null}
 
-              {form.options.map((option, index) => (
+              {watchedOptions.map((_, index) => (
                 <label key={index}>
                   Option {index + 1}
-                  <input
-                    value={option}
-                    onChange={(event) =>
-                      setForm((current) => ({
-                        ...current,
-                        options: current.options.map((item, itemIndex) =>
-                          itemIndex === index ? event.target.value : item
-                        )
-                      }))
-                    }
-                    required
-                  />
+                  <input {...questionForm.register(`options.${index}`)} required />
                 </label>
               ))}
+              {questionForm.formState.errors.options?.[0] ? (
+                <p className="field-error">{questionForm.formState.errors.options[0].message}</p>
+              ) : null}
 
               <label>
                 Correct Answer
-                <select
-                  value={form.correctAnswer}
-                  onChange={(event) => setForm((current) => ({ ...current, correctAnswer: event.target.value }))}
-                  required
-                >
+                <select {...questionForm.register('correctAnswer')} required>
                   <option value="">Select the correct option</option>
-                  {form.options
+                  {watchedOptions
                     .filter((option) => option.trim())
                     .map((option) => (
                       <option key={option} value={option}>
@@ -311,13 +393,12 @@ export default function AdminPage() {
                     ))}
                 </select>
               </label>
+              {questionForm.formState.errors.correctAnswer ? (
+                <p className="field-error">{questionForm.formState.errors.correctAnswer.message}</p>
+              ) : null}
 
               <label className="checkbox">
-                <input
-                  type="checkbox"
-                  checked={form.isActive}
-                  onChange={(event) => setForm((current) => ({ ...current, isActive: event.target.checked }))}
-                />
+                <input type="checkbox" {...questionForm.register('isActive')} />
                 Active
               </label>
 
@@ -325,14 +406,7 @@ export default function AdminPage() {
                 <button className="primary-button" type="submit" disabled={loading}>
                   {editingId ? 'Update Question' : 'Create Question'}
                 </button>
-                <button
-                  className="ghost-button"
-                  type="button"
-                  onClick={() => {
-                    setEditingId('');
-                    setForm({ ...emptyForm, category: categories[0] || emptyForm.category });
-                  }}
-                >
+                <button className="ghost-button" type="button" onClick={resetQuestionForm}>
                   Reset
                 </button>
               </div>
@@ -341,8 +415,12 @@ export default function AdminPage() {
 
           <section className="card">
             <h2>Bulk Import</h2>
+            <p className="muted">Paste a JSON array. Every object must include text, category, 4 options and correctAnswer.</p>
             <form className="stack" onSubmit={handleBulkImport}>
-              <textarea value={bulkJson} onChange={(event) => setBulkJson(event.target.value)} rows="14" />
+              <textarea {...bulkForm.register('bulkJson')} rows="14" />
+              {bulkForm.formState.errors.bulkJson ? (
+                <p className="field-error">{bulkForm.formState.errors.bulkJson.message}</p>
+              ) : null}
               <button className="primary-button" type="submit" disabled={loading}>
                 Import JSON
               </button>
@@ -394,6 +472,8 @@ export default function AdminPage() {
               </div>
             </article>
           ))}
+
+          {!sortedQuestions.length ? <p className="muted">No questions yet.</p> : null}
         </div>
       </section>
     </main>
