@@ -1,37 +1,60 @@
-//question题目表，定义了题目有哪些field
+const mongoose = require('mongoose');
 
-const mongoose = require('mongoose'); //MongoDB
+const allowedCategories = [
+  'Pun Play',
+  'Body Facts',
+  'Daily Life Trivia',
+  'Animal Facts',
+  'Brain Teasers'
+];
 
-const questionSchema = new mongoose.Schema({
-  text: {
-    type: String,
-    required: true,
-    trim: true
-  },
-  category: {
-    type: String,
-    required: true,
-    trim: true
-    enum: ['Pun Play', 'Body Facts', 'Daily Life Trivia', 'Animal Facts', 'Brain Teasers']
-  },
-  options: {
-    type: [String],
-    required: true,
-    validate: {
-      validator: function(v) {
-        return v.length === 4;
-      },
-      message: 'A question must have exactly 4 options'
+const questionSchema = new mongoose.Schema(
+  {
+    text: {
+      type: String,
+      required: true,
+      trim: true
+    },
+    category: {
+      type: String,
+      required: true,
+      trim: true,
+      enum: allowedCategories
+    },
+    options: {
+      type: [String],
+      required: true,
+      validate: {
+        validator(value) {
+          return (
+            Array.isArray(value) &&
+            value.length === 4 &&
+            value.every((option) => typeof option === 'string' && option.trim().length > 0)
+          );
+        },
+        message: 'A question must have exactly 4 non-empty options'
+      }
+    },
+    correctAnswer: {
+      type: String,
+      required: true,
+      trim: true,
+      validate: {
+        validator(value) {
+          return Array.isArray(this.options) && this.options.includes(value);
+        },
+        message: 'Correct answer must match one of the provided options'
+      }
+    },
+    isActive: {
+      type: Boolean,
+      default: true
     }
   },
-  correctAnswer: {
-    type: String,
-    required: true
-  },
-  isActive: { //whether the quiz is active or not
-    type: Boolean,
-    default: true
-  }
-}, { timestamps: true });
+  { timestamps: true }
+);
 
-module.exports = mongoose.model('Question', questionSchema);
+module.exports = {
+  Question: mongoose.model('Question', questionSchema),
+  allowedCategories
+};
