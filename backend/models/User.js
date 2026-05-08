@@ -1,3 +1,5 @@
+//user用户表，记录用户信息
+
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
