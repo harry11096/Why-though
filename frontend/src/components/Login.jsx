@@ -59,7 +59,7 @@ export default function Login({ onSubmit, loading, inputStyle }) {
           name="identifier"
           value={form.identifier}
           onChange={handleChange}
-          placeholder="harry123 or harry@email.com"
+          placeholder="alexm or alex@example.com"
           style={inputStyle}
           required
         />

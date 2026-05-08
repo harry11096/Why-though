@@ -73,7 +73,7 @@ export default function Register({ onSubmit, loading, inputStyle }) {
           name="fullName"
           value={form.fullName}
           onChange={handleChange}
-          placeholder="Harry Zhang"
+          placeholder="Alex Morgan"
           style={inputStyle}
         />
       </label>
@@ -85,7 +85,7 @@ export default function Register({ onSubmit, loading, inputStyle }) {
           name="email"
           value={form.email}
           onChange={handleChange}
-          placeholder="harry@email.com"
+          placeholder="alex@example.com"
           style={inputStyle}
           required
         />

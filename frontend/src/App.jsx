@@ -393,7 +393,7 @@ function Dashboard({ user, attempts, onSave, onLogout, loading }) {
               value={profileForm.fullName}
               onChange={handleChange}
               style={inputStyle}
-              placeholder="Harry Zhang"
+              placeholder="Alex Morgan"
             />
           </label>
 
@@ -405,7 +405,7 @@ function Dashboard({ user, attempts, onSave, onLogout, loading }) {
               value={profileForm.email}
               onChange={handleChange}
               style={inputStyle}
-              placeholder="harry@email.com"
+              placeholder="alex@example.com"
               required
             />
           </label>
