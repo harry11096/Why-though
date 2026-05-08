@@ -75,3 +75,19 @@ const submitQuiz = async (req, res) => {
   }
 };
 
+// 排行榜（每个用户最高分）
+const getLeaderboard = async (req, res) => {
+  try {
+    const leaderboard = await Score.aggregate([
+      { $group: { _id: '$userId', highestScore: { $max: '$score' } } },
+      { $sort: { highestScore: -1 } },
+      { $lookup: { from: 'users', localField: '_id', foreignField: '_id', as: 'user' } },
+      { $unwind: '$user' },
+      { $project: { username: '$user.username', highestScore: 1, _id: 0 } }
+    ]);
+    res.json({ success: true, data: leaderboard });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+};
+
