@@ -1,4 +1,5 @@
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+const API_BASE_URL =
+  import.meta.env.VITE_API_URL || import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
 
 async function request(path, options = {}) {
   const response = await fetch(`${API_BASE_URL}${path}`, {
@@ -30,6 +31,19 @@ const unwrapData = (result) => {
     message: result.message || '',
     data: result,
   };
+};
+
+const requestAdmin = async (path, options = {}) => {
+  const token = localStorage.getItem('quiz-admin-token');
+  const result = await request(path, {
+    ...options,
+    headers: {
+      ...(options.headers || {}),
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+  });
+
+  return result.data;
 };
 
 export const authApi = {
@@ -101,3 +115,41 @@ export const authApi = {
     return unwrapData(result);
   },
 };
+
+export const loginAdmin = (credentials) =>
+  requestAdmin('/auth/login', {
+    method: 'POST',
+    body: JSON.stringify(credentials),
+  });
+
+export const fetchMe = () => requestAdmin('/auth/me');
+export const fetchCategories = () => requestAdmin('/admin/categories');
+export const fetchQuestions = () => requestAdmin('/admin/questions?includeInactive=true');
+
+export const createQuestion = (payload) =>
+  requestAdmin('/admin/questions', {
+    method: 'POST',
+    body: JSON.stringify(payload),
+  });
+
+export const updateQuestion = (questionId, payload) =>
+  requestAdmin(`/admin/questions/${questionId}`, {
+    method: 'PUT',
+    body: JSON.stringify(payload),
+  });
+
+export const deleteQuestion = (questionId) =>
+  requestAdmin(`/admin/questions/${questionId}`, {
+    method: 'DELETE',
+  });
+
+export const toggleQuestionStatus = (questionId) =>
+  requestAdmin(`/admin/questions/${questionId}/toggle`, {
+    method: 'PATCH',
+  });
+
+export const bulkImportQuestions = (questions) =>
+  requestAdmin('/admin/questions/bulk', {
+    method: 'POST',
+    body: JSON.stringify({ questions }),
+  });

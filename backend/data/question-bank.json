@@ -1,0 +1,527 @@
+[
+  {
+    "text": "What do you call a bear with no teeth?",
+    "options": ["A gummy bear", "A teddy bear", "A polar bear", "A honey bear"],
+    "correctAnswer": "A gummy bear",
+    "isActive": true,
+    "category": "Pun Play"
+  },
+  {
+    "text": "Why did the math book look sad?",
+    "options": ["It was too heavy", "It had too many problems", "It lost its cover", "It hated numbers"],
+    "correctAnswer": "It had too many problems",
+    "isActive": true,
+    "category": "Pun Play"
+  },
+  {
+    "text": "What do you call fake spaghetti?",
+    "options": ["Spaghett-no", "An impasta", "Fake noodles", "Pasta zero"],
+    "correctAnswer": "An impasta",
+    "isActive": true,
+    "category": "Pun Play"
+  },
+  {
+    "text": "Why did the bicycle fall over?",
+    "options": ["It was tired", "It was two-tired", "It was broken", "It was too fast"],
+    "correctAnswer": "It was two-tired",
+    "isActive": true,
+    "category": "Pun Play"
+  },
+  {
+    "text": "What do you call cheese that is not yours?",
+    "options": ["My cheese", "Old cheese", "Nacho cheese", "Blue cheese"],
+    "correctAnswer": "Nacho cheese",
+    "isActive": true,
+    "category": "Pun Play"
+  },
+  {
+    "text": "Why can't your nose be 12 inches long?",
+    "options": ["Because it would hurt", "Because it would be too big", "Because then it would be a foot", "Because noses are small"],
+    "correctAnswer": "Because then it would be a foot",
+    "isActive": true,
+    "category": "Pun Play"
+  },
+  {
+    "text": "What do you call a sleeping bull?",
+    "options": ["A bulldozer", "A sleepy cow", "A night bull", "A soft bull"],
+    "correctAnswer": "A bulldozer",
+    "isActive": true,
+    "category": "Pun Play"
+  },
+  {
+    "text": "Why did the cookie go to the doctor?",
+    "options": ["It felt crummy", "It was hungry", "It was too sweet", "It broke a plate"],
+    "correctAnswer": "It felt crummy",
+    "isActive": true,
+    "category": "Pun Play"
+  },
+  {
+    "text": "What do you call a fish with no eyes?",
+    "options": ["Blind fish", "Fsh", "Sea fish", "Small fish"],
+    "correctAnswer": "Fsh",
+    "isActive": true,
+    "category": "Pun Play"
+  },
+  {
+    "text": "Why was the computer cold?",
+    "options": ["It forgot its jacket", "It left its Windows open", "It was made of ice", "It had no battery"],
+    "correctAnswer": "It left its Windows open",
+    "isActive": true,
+    "category": "Pun Play"
+  },
+  {
+    "text": "Why did the scarecrow win an award?",
+    "options": ["Because he was outstanding in his field", "Because he scared everyone", "Because he loved farming", "Because he made a good hat"],
+    "correctAnswer": "Because he was outstanding in his field",
+    "isActive": true,
+    "category": "Pun Play"
+  },
+  {
+    "text": "What did the grape do when it got stepped on?",
+    "options": ["It ran away", "It became juice", "It let out a little wine", "It started dancing"],
+    "correctAnswer": "It let out a little wine",
+    "isActive": true,
+    "category": "Pun Play"
+  },
+  {
+    "text": "Why don't eggs tell jokes?",
+    "options": ["They are too quiet", "They might crack up", "They cannot speak", "They are too small"],
+    "correctAnswer": "They might crack up",
+    "isActive": true,
+    "category": "Pun Play"
+  },
+  {
+    "text": "What do you call a belt made of watches?",
+    "options": ["A time belt", "A clock strap", "A watch line", "A waist of time"],
+    "correctAnswer": "A waist of time",
+    "isActive": true,
+    "category": "Pun Play"
+  },
+  {
+    "text": "Why did the music teacher need a ladder?",
+    "options": ["To fix the ceiling", "To climb onto the stage", "To reach the high notes", "To find the piano"],
+    "correctAnswer": "To reach the high notes",
+    "isActive": true,
+    "category": "Pun Play"
+  },
+  {
+    "text": "Which organ pumps blood around the body?",
+    "options": ["Brain", "Heart", "Stomach", "Lung"],
+    "correctAnswer": "Heart",
+    "isActive": true,
+    "category": "Body Facts"
+  },
+  {
+    "text": "What do lungs help us do?",
+    "options": ["Think", "Digest food", "Breathe", "Hear sounds"],
+    "correctAnswer": "Breathe",
+    "isActive": true,
+    "category": "Body Facts"
+  },
+  {
+    "text": "Which body part helps us think and remember?",
+    "options": ["Brain", "Foot", "Nose", "Knee"],
+    "correctAnswer": "Brain",
+    "isActive": true,
+    "category": "Body Facts"
+  },
+  {
+    "text": "What protects the brain?",
+    "options": ["Ribs", "Skull", "Skin only", "Teeth"],
+    "correctAnswer": "Skull",
+    "isActive": true,
+    "category": "Body Facts"
+  },
+  {
+    "text": "What do teeth mainly help us do?",
+    "options": ["Smell food", "Chew food", "Breathe air", "Pump blood"],
+    "correctAnswer": "Chew food",
+    "isActive": true,
+    "category": "Body Facts"
+  },
+  {
+    "text": "Which sense uses the eyes?",
+    "options": ["Taste", "Touch", "Sight", "Hearing"],
+    "correctAnswer": "Sight",
+    "isActive": true,
+    "category": "Body Facts"
+  },
+  {
+    "text": "What is the largest organ of the human body?",
+    "options": ["Skin", "Heart", "Brain", "Liver"],
+    "correctAnswer": "Skin",
+    "isActive": true,
+    "category": "Body Facts"
+  },
+  {
+    "text": "What do muscles help the body do?",
+    "options": ["Move", "See", "Taste", "Grow hair"],
+    "correctAnswer": "Move",
+    "isActive": true,
+    "category": "Body Facts"
+  },
+  {
+    "text": "Which bones protect the heart and lungs?",
+    "options": ["Finger bones", "Ribs", "Toe bones", "Jawbone"],
+    "correctAnswer": "Ribs",
+    "isActive": true,
+    "category": "Body Facts"
+  },
+  {
+    "text": "What does the stomach mainly do?",
+    "options": ["Helps digest food", "Helps us hear", "Pumps blood", "Makes bones move"],
+    "correctAnswer": "Helps digest food",
+    "isActive": true,
+    "category": "Body Facts"
+  },
+  {
+    "text": "Which part of blood helps carry oxygen?",
+    "options": ["Red blood cells", "Hair cells", "Skin cells", "Bone cells"],
+    "correctAnswer": "Red blood cells",
+    "isActive": true,
+    "category": "Body Facts"
+  },
+  {
+    "text": "What does saliva mainly help with?",
+    "options": ["Making bones stronger", "Starting digestion and making food easier to swallow", "Pumping blood", "Helping us hear sounds"],
+    "correctAnswer": "Starting digestion and making food easier to swallow",
+    "isActive": true,
+    "category": "Body Facts"
+  },
+  {
+    "text": "Which organs filter waste from the blood and help make urine?",
+    "options": ["Lungs", "Kidneys", "Eyes", "Muscles"],
+    "correctAnswer": "Kidneys",
+    "isActive": true,
+    "category": "Body Facts"
+  },
+  {
+    "text": "What are the tiny air sacs in the lungs called?",
+    "options": ["Neurons", "Alveoli", "Veins", "Tendons"],
+    "correctAnswer": "Alveoli",
+    "isActive": true,
+    "category": "Body Facts"
+  },
+  {
+    "text": "Which part of the brain helps with balance and coordination?",
+    "options": ["Cerebellum", "Stomach", "Rib cage", "Liver"],
+    "correctAnswer": "Cerebellum",
+    "isActive": true,
+    "category": "Body Facts"
+  },
+  {
+    "text": "What should you use to cut paper safely?",
+    "options": ["Spoon", "Scissors", "Pillow", "Cup"],
+    "correctAnswer": "Scissors",
+    "isActive": true,
+    "category": "Daily Life Trivia"
+  },
+  {
+    "text": "Where do people usually keep food cold?",
+    "options": ["Refrigerator", "Closet", "Bookshelf", "Sofa"],
+    "correctAnswer": "Refrigerator",
+    "isActive": true,
+    "category": "Daily Life Trivia"
+  },
+  {
+    "text": "What do people usually wear on their feet?",
+    "options": ["Gloves", "Hat", "Shoes", "Scarf"],
+    "correctAnswer": "Shoes",
+    "isActive": true,
+    "category": "Daily Life Trivia"
+  },
+  {
+    "text": "Which item is used to brush your teeth?",
+    "options": ["Toothbrush", "Hairbrush", "Fork", "Towel"],
+    "correctAnswer": "Toothbrush",
+    "isActive": true,
+    "category": "Daily Life Trivia"
+  },
+  {
+    "text": "What do you use to unlock a door?",
+    "options": ["Key", "Plate", "Pencil", "Blanket"],
+    "correctAnswer": "Key",
+    "isActive": true,
+    "category": "Daily Life Trivia"
+  },
+  {
+    "text": "What should you do before crossing the road?",
+    "options": ["Close your eyes", "Look both ways", "Run without stopping", "Read a book"],
+    "correctAnswer": "Look both ways",
+    "isActive": true,
+    "category": "Daily Life Trivia"
+  },
+  {
+    "text": "What do people usually use to tell time?",
+    "options": ["Clock", "Chair", "Bowl", "Window"],
+    "correctAnswer": "Clock",
+    "isActive": true,
+    "category": "Daily Life Trivia"
+  },
+  {
+    "text": "Which object helps you stay dry in the rain?",
+    "options": ["Umbrella", "Sunglasses", "Notebook", "Plate"],
+    "correctAnswer": "Umbrella",
+    "isActive": true,
+    "category": "Daily Life Trivia"
+  },
+  {
+    "text": "What do you usually use to write on paper?",
+    "options": ["Pen", "Spoon", "Shoe", "Phone charger"],
+    "correctAnswer": "Pen",
+    "isActive": true,
+    "category": "Daily Life Trivia"
+  },
+  {
+    "text": "What do people usually do before eating to keep clean?",
+    "options": ["Wash their hands", "Turn off the lights", "Wear shoes", "Open the window"],
+    "correctAnswer": "Wash their hands",
+    "isActive": true,
+    "category": "Daily Life Trivia"
+  },
+  {
+    "text": "What does an expiry date on food usually tell you?",
+    "options": ["The food's color", "The food's price", "The date after which the food may not be safe or fresh", "The food's country"],
+    "correctAnswer": "The date after which the food may not be safe or fresh",
+    "isActive": true,
+    "category": "Daily Life Trivia"
+  },
+  {
+    "text": "Why should you not pour cooking oil down the sink?",
+    "options": ["It can make the sink smell like flowers", "It can clog the pipes", "It can clean the drain", "It can make water hotter"],
+    "correctAnswer": "It can clog the pipes",
+    "isActive": true,
+    "category": "Daily Life Trivia"
+  },
+  {
+    "text": "What tool is used to measure body temperature?",
+    "options": ["Thermometer", "Ruler", "Spoon", "Flashlight"],
+    "correctAnswer": "Thermometer",
+    "isActive": true,
+    "category": "Daily Life Trivia"
+  },
+  {
+    "text": "Why should raw meat and vegetables use separate cutting boards?",
+    "options": ["To make the kitchen look cleaner", "To save time", "To prevent cross-contamination", "To make vegetables softer"],
+    "correctAnswer": "To prevent cross-contamination",
+    "isActive": true,
+    "category": "Daily Life Trivia"
+  },
+  {
+    "text": "Which cleaner should you avoid mixing with bleach?",
+    "options": ["Water", "Ammonia-based cleaner", "Dish soap only", "Baking paper"],
+    "correctAnswer": "Ammonia-based cleaner",
+    "isActive": true,
+    "category": "Daily Life Trivia"
+  },
+  {
+    "text": "Which animal is known as \"the king of the jungle\"?",
+    "options": ["Elephant", "Lion", "Rabbit", "Penguin"],
+    "correctAnswer": "Lion",
+    "isActive": true,
+    "category": "Animal Facts"
+  },
+  {
+    "text": "What do bees make?",
+    "options": ["Milk", "Honey", "Bread", "Cheese"],
+    "correctAnswer": "Honey",
+    "isActive": true,
+    "category": "Animal Facts"
+  },
+  {
+    "text": "Which animal can change its color to blend in?",
+    "options": ["Chameleon", "Horse", "Chicken", "Dog"],
+    "correctAnswer": "Chameleon",
+    "isActive": true,
+    "category": "Animal Facts"
+  },
+  {
+    "text": "Which animal is the largest land animal?",
+    "options": ["Giraffe", "Elephant", "Tiger", "Zebra"],
+    "correctAnswer": "Elephant",
+    "isActive": true,
+    "category": "Animal Facts"
+  },
+  {
+    "text": "What do pandas mainly eat?",
+    "options": ["Bamboo", "Fish", "Meat", "Grasshoppers"],
+    "correctAnswer": "Bamboo",
+    "isActive": true,
+    "category": "Animal Facts"
+  },
+  {
+    "text": "Which animal has a very long neck?",
+    "options": ["Kangaroo", "Giraffe", "Bear", "Sheep"],
+    "correctAnswer": "Giraffe",
+    "isActive": true,
+    "category": "Animal Facts"
+  },
+  {
+    "text": "Which animal is known for carrying its baby in a pouch?",
+    "options": ["Kangaroo", "Dolphin", "Frog", "Snake"],
+    "correctAnswer": "Kangaroo",
+    "isActive": true,
+    "category": "Animal Facts"
+  },
+  {
+    "text": "What do fish use to breathe underwater?",
+    "options": ["Wings", "Gills", "Ears", "Fur"],
+    "correctAnswer": "Gills",
+    "isActive": true,
+    "category": "Animal Facts"
+  },
+  {
+    "text": "Which animal is famous for being very slow?",
+    "options": ["Cheetah", "Sloth", "Eagle", "Rabbit"],
+    "correctAnswer": "Sloth",
+    "isActive": true,
+    "category": "Animal Facts"
+  },
+  {
+    "text": "Which bird cannot fly?",
+    "options": ["Eagle", "Penguin", "Parrot", "Sparrow"],
+    "correctAnswer": "Penguin",
+    "isActive": true,
+    "category": "Animal Facts"
+  },
+  {
+    "text": "Which mammal can lay eggs?",
+    "options": ["Cat", "Platypus", "Cow", "Dolphin"],
+    "correctAnswer": "Platypus",
+    "isActive": true,
+    "category": "Animal Facts"
+  },
+  {
+    "text": "Which animal is famous for using echolocation?",
+    "options": ["Bat", "Rabbit", "Turtle", "Horse"],
+    "correctAnswer": "Bat",
+    "isActive": true,
+    "category": "Animal Facts"
+  },
+  {
+    "text": "What type of animal is a dolphin?",
+    "options": ["Fish", "Reptile", "Mammal", "Insect"],
+    "correctAnswer": "Mammal",
+    "isActive": true,
+    "category": "Animal Facts"
+  },
+  {
+    "text": "Why do camels have humps?",
+    "options": ["To store water directly", "To store fat for energy", "To hide food", "To help them swim"],
+    "correctAnswer": "To store fat for energy",
+    "isActive": true,
+    "category": "Animal Facts"
+  },
+  {
+    "text": "Which sea animal has three hearts?",
+    "options": ["Octopus", "Shark", "Jellyfish", "Crab"],
+    "correctAnswer": "Octopus",
+    "isActive": true,
+    "category": "Animal Facts"
+  },
+  {
+    "text": "What has hands but cannot clap?",
+    "options": ["A clock", "A robot", "A monkey", "A teacher"],
+    "correctAnswer": "A clock",
+    "isActive": true,
+    "category": "Brain Teasers"
+  },
+  {
+    "text": "What gets wetter as it dries?",
+    "options": ["A towel", "A cup", "A pencil", "A phone"],
+    "correctAnswer": "A towel",
+    "isActive": true,
+    "category": "Brain Teasers"
+  },
+  {
+    "text": "What has a face and two hands but no arms or legs?",
+    "options": ["A clock", "A doll", "A cat", "A baby"],
+    "correctAnswer": "A clock",
+    "isActive": true,
+    "category": "Brain Teasers"
+  },
+  {
+    "text": "What has many keys but cannot open any doors?",
+    "options": ["A piano", "A car", "A bag", "A wallet"],
+    "correctAnswer": "A piano",
+    "isActive": true,
+    "category": "Brain Teasers"
+  },
+  {
+    "text": "What can you catch but not throw?",
+    "options": ["A cold", "A ball", "A book", "A fish"],
+    "correctAnswer": "A cold",
+    "isActive": true,
+    "category": "Brain Teasers"
+  },
+  {
+    "text": "What has one eye but cannot see?",
+    "options": ["A needle", "A bird", "A camera", "A cat"],
+    "correctAnswer": "A needle",
+    "isActive": true,
+    "category": "Brain Teasers"
+  },
+  {
+    "text": "What goes up but never comes down?",
+    "options": ["Your age", "A balloon", "A bird", "A plane"],
+    "correctAnswer": "Your age",
+    "isActive": true,
+    "category": "Brain Teasers"
+  },
+  {
+    "text": "What has a neck but no head?",
+    "options": ["A bottle", "A dog", "A person", "A horse"],
+    "correctAnswer": "A bottle",
+    "isActive": true,
+    "category": "Brain Teasers"
+  },
+  {
+    "text": "What has words but never speaks?",
+    "options": ["A book", "A singer", "A teacher", "A radio"],
+    "correctAnswer": "A book",
+    "isActive": true,
+    "category": "Brain Teasers"
+  },
+  {
+    "text": "What can fill a room but takes up no space?",
+    "options": ["Light", "A sofa", "Water", "A table"],
+    "correctAnswer": "Light",
+    "isActive": true,
+    "category": "Brain Teasers"
+  },
+  {
+    "text": "What has to be broken before you can use it?",
+    "options": ["An egg", "A chair", "A pencil", "A shoe"],
+    "correctAnswer": "An egg",
+    "isActive": true,
+    "category": "Brain Teasers"
+  },
+  {
+    "text": "What has a thumb and four fingers but is not alive?",
+    "options": ["A glove", "A hand", "A monkey", "A robot"],
+    "correctAnswer": "A glove",
+    "isActive": true,
+    "category": "Brain Teasers"
+  },
+  {
+    "text": "What has a head and a tail but no body?",
+    "options": ["A coin", "A snake", "A fish", "A dog"],
+    "correctAnswer": "A coin",
+    "isActive": true,
+    "category": "Brain Teasers"
+  },
+  {
+    "text": "The more you take, the more you leave behind. What are they?",
+    "options": ["Coins", "Photos", "Footsteps", "Books"],
+    "correctAnswer": "Footsteps",
+    "isActive": true,
+    "category": "Brain Teasers"
+  },
+  {
+    "text": "What comes once in a minute, twice in a moment, but never in a thousand years?",
+    "options": ["The letter M", "The letter T", "The number 1", "The word \"time\""],
+    "correctAnswer": "The letter M",
+    "isActive": true,
+    "category": "Brain Teasers"
+  }
+]

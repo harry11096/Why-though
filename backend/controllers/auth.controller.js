@@ -2,15 +2,18 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const Score = require('../models/Score');
 
-const signToken = (user) =>
-  jwt.sign(
-    {
-      id: user._id,
-      role: user.role,
-    },
-    process.env.JWT_SECRET,
-    { expiresIn: '7d' }
-  );
+const createToken = (user) =>
+  jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET, { expiresIn: '7d' });
+
+const sanitiseUser = (user) =>
+  typeof user.toSafeObject === 'function'
+    ? user.toSafeObject()
+    : {
+        id: user._id,
+        username: user.username,
+        email: user.email,
+        role: user.role,
+      };
 
 const formatAttempt = (attempt) => ({
   id: attempt._id,
@@ -22,12 +25,16 @@ const formatAttempt = (attempt) => ({
   updatedAt: attempt.updatedAt,
 });
 
-exports.register = async (req, res) => {
+const register = async (req, res) => {
   try {
-    const { username, email, password, fullName = '' } = req.body;
+    const { username, email, password, fullName = '', adminSetupKey } = req.body;
 
     if (!username || !email || !password) {
-      return res.status(400).json({ success: false, error: 'Username, email, and password are required.' });
+      return res.status(400).json({ success: false, error: 'Username, email and password are required.' });
+    }
+
+    if (password.length < 6) {
+      return res.status(400).json({ success: false, error: 'Password must be at least 6 characters.' });
     }
 
     const existingUser = await User.findOne({
@@ -35,40 +42,46 @@ exports.register = async (req, res) => {
     });
 
     if (existingUser) {
-      return res.status(409).json({ success: false, error: 'Username or email already exists.' });
+      return res.status(409).json({ success: false, error: 'User already exists.' });
     }
+
+    const role =
+      adminSetupKey && process.env.ADMIN_SETUP_KEY && adminSetupKey === process.env.ADMIN_SETUP_KEY
+        ? 'admin'
+        : 'user';
 
     const user = await User.create({
       username: username.trim(),
       email: email.trim().toLowerCase(),
       password,
       fullName: fullName.trim(),
+      role,
     });
 
     return res.status(201).json({
       success: true,
       message: 'Registration successful.',
       data: {
-        token: signToken(user),
-        user: user.toSafeObject(),
+        token: createToken(user),
+        user: sanitiseUser(user),
       },
     });
   } catch (error) {
-    return res.status(500).json({ success: false, error: error.message });
+    return res.status(500).json({ success: false, error: 'Failed to register user.' });
   }
 };
 
-exports.login = async (req, res) => {
+const login = async (req, res) => {
   try {
     const { identifier, email, username, password } = req.body;
-    const loginIdentifier = identifier || email || username;
+    const loginIdentifier = (identifier || email || username || '').trim();
 
     if (!loginIdentifier || !password) {
       return res.status(400).json({ success: false, error: 'Username/email and password are required.' });
     }
 
     const user = await User.findOne({
-      $or: [{ username: loginIdentifier.trim() }, { email: loginIdentifier.trim().toLowerCase() }],
+      $or: [{ username: loginIdentifier }, { email: loginIdentifier.toLowerCase() }],
     });
 
     if (!user) {
@@ -76,6 +89,7 @@ exports.login = async (req, res) => {
     }
 
     const isMatch = await user.comparePassword(password);
+
     if (!isMatch) {
       return res.status(401).json({ success: false, error: 'Invalid credentials.' });
     }
@@ -84,20 +98,24 @@ exports.login = async (req, res) => {
       success: true,
       message: 'Login successful.',
       data: {
-        token: signToken(user),
-        user: user.toSafeObject(),
+        token: createToken(user),
+        user: sanitiseUser(user),
       },
     });
   } catch (error) {
-    return res.status(500).json({ success: false, error: error.message });
+    return res.status(500).json({ success: false, error: 'Failed to log in.' });
   }
 };
 
-exports.getProfile = async (req, res) => {
-  return res.json({ success: true, data: req.user.toSafeObject() });
+const getMe = async (req, res) => {
+  return res.json({ success: true, data: sanitiseUser(req.user) });
 };
 
-exports.updateProfile = async (req, res) => {
+const getProfile = async (req, res) => {
+  return res.json({ success: true, data: sanitiseUser(req.user) });
+};
+
+const updateProfile = async (req, res) => {
   try {
     const { fullName = '', bio = '', email } = req.body;
     const updates = {
@@ -107,9 +125,11 @@ exports.updateProfile = async (req, res) => {
 
     if (email && email.trim().toLowerCase() !== req.user.email) {
       const existingEmail = await User.findOne({ email: email.trim().toLowerCase() });
+
       if (existingEmail && existingEmail._id.toString() !== req.user._id.toString()) {
         return res.status(409).json({ success: false, error: 'Email is already in use.' });
       }
+
       updates.email = email.trim().toLowerCase();
     }
 
@@ -121,23 +141,23 @@ exports.updateProfile = async (req, res) => {
     return res.json({
       success: true,
       message: 'Profile updated successfully.',
-      data: updatedUser.toSafeObject(),
+      data: sanitiseUser(updatedUser),
     });
   } catch (error) {
-    return res.status(500).json({ success: false, error: error.message });
+    return res.status(500).json({ success: false, error: 'Failed to update profile.' });
   }
 };
 
-exports.getAttempts = async (req, res) => {
+const getAttempts = async (req, res) => {
   try {
     const attempts = await Score.find({ userId: req.user._id }).sort({ completedAt: -1, createdAt: -1 });
     return res.json({ success: true, data: attempts.map(formatAttempt) });
   } catch (error) {
-    return res.status(500).json({ success: false, error: error.message });
+    return res.status(500).json({ success: false, error: 'Failed to load attempts.' });
   }
 };
 
-exports.createAttempt = async (req, res) => {
+const createAttempt = async (req, res) => {
   try {
     const { category, score = 0, answers = [] } = req.body;
 
@@ -158,6 +178,16 @@ exports.createAttempt = async (req, res) => {
       data: formatAttempt(attempt),
     });
   } catch (error) {
-    return res.status(500).json({ success: false, error: error.message });
+    return res.status(500).json({ success: false, error: 'Failed to save attempt.' });
   }
+};
+
+module.exports = {
+  register,
+  login,
+  getMe,
+  getProfile,
+  updateProfile,
+  getAttempts,
+  createAttempt,
 };
