@@ -34,3 +34,44 @@ const getQuestions = async (req, res) => {
   }
 };
 
+// 提交答案，服务端算分
+const submitQuiz = async (req, res) => {
+  try {
+    const { category, answers } = req.body;
+    // answers格式: [{ questionId, selectedAnswer }]
+
+    if (!answers || !Array.isArray(answers) || answers.length === 0) {
+      return res.status(400).json({ success: false, error: 'Answers are required' });
+    }
+
+    // 从数据库取正确答案
+    const questionIds = answers.map(a => a.questionId);
+    const questions = await Question.find({ _id: { $in: questionIds } });
+
+    // 服务端算分
+    let score = 0;
+    const gradedAnswers = answers.map(answer => {
+      const question = questions.find(q => q._id.toString() === answer.questionId);
+      const isCorrect = question && question.correctAnswer === answer.selectedAnswer;
+      if (isCorrect) score++;
+      return {
+        questionId: answer.questionId,
+        selectedAnswer: answer.selectedAnswer,
+        isCorrect: !!isCorrect
+      };
+    });
+
+    // 存到数据库
+    const scoreRecord = await Score.create({
+      userId: req.user._id,
+      category,
+      score,
+      answers: gradedAnswers
+    });
+
+    res.json({ success: true, data: { score, total: answers.length, scoreRecord } });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+};
+
