@@ -258,7 +258,229 @@ function StatCard({ eyebrow, value, note, tint }) {
   );
 }
 
-function Dashboard({ user, attempts, onSave, onLogout, loading }) {
+function QuizWorkspace({
+  token,
+  loading,
+  onBack,
+  onComplete,
+  setGlobalMessage,
+}) {
+  const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState('');
+  const [questions, setQuestions] = useState([]);
+  const [answers, setAnswers] = useState({});
+  const [step, setStep] = useState('categories');
+  const [submitting, setSubmitting] = useState(false);
+  const [result, setResult] = useState(null);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function loadCategories() {
+      try {
+        const response = await authApi.getCategories();
+        if (!cancelled) {
+          setCategories(response.data || []);
+        }
+      } catch (error) {
+        if (!cancelled) {
+          setGlobalMessage(error.message);
+        }
+      }
+    }
+
+    loadCategories();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [setGlobalMessage]);
+
+  const startCategory = async (category) => {
+    try {
+      setGlobalMessage('');
+      setSelectedCategory(category);
+      const response = await authApi.getQuestions(token, category);
+      setQuestions(response.data || []);
+      setAnswers({});
+      setResult(null);
+      setStep('questions');
+    } catch (error) {
+      setGlobalMessage(error.message);
+    }
+  };
+
+  const chooseAnswer = (questionId, option) => {
+    setAnswers((current) => ({ ...current, [questionId]: option }));
+  };
+
+  const handleSubmit = async () => {
+    const payload = {
+      category: selectedCategory,
+      answers: questions.map((question) => ({
+        questionId: question._id,
+        selectedAnswer: answers[question._id],
+      })),
+    };
+
+    if (payload.answers.some((answer) => !answer.selectedAnswer)) {
+      setGlobalMessage('Please answer every question before submitting.');
+      return;
+    }
+
+    try {
+      setSubmitting(true);
+      const response = await authApi.submitQuiz(token, payload);
+      setResult(response.data);
+      setStep('result');
+      setGlobalMessage('Quiz submitted successfully.');
+      onComplete();
+    } catch (error) {
+      setGlobalMessage(error.message);
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  return (
+    <div style={{ display: 'grid', gap: 24 }}>
+      <section
+        style={{
+          ...glassCardStyle,
+          padding: '24px 24px 26px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          gap: 16,
+          alignItems: 'center',
+          flexWrap: 'wrap',
+        }}
+      >
+        <div>
+          <div style={{ color: '#64748b', fontWeight: 600, marginBottom: 8 }}>Quiz Mode</div>
+          <h2 style={{ margin: 0, fontSize: '2rem', letterSpacing: '-0.03em' }}>
+            {step === 'categories' ? 'Pick your chaos.' : selectedCategory || 'Quiz in progress'}
+          </h2>
+        </div>
+        <button onClick={onBack} style={secondaryButtonStyle}>
+          Back to profile
+        </button>
+      </section>
+
+      {step === 'categories' ? (
+        <section
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+            gap: 18,
+          }}
+        >
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => startCategory(category)}
+              disabled={loading}
+              style={{
+                ...glassCardStyle,
+                padding: '24px 20px',
+                border: '1px solid rgba(255,255,255,0.85)',
+                textAlign: 'left',
+                cursor: 'pointer',
+                color: '#0f172a',
+                background: 'rgba(255,255,255,0.72)',
+              }}
+            >
+              <div style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: 10 }}>{category}</div>
+              <div style={{ color: '#64748b', lineHeight: 1.65 }}>
+                Enter this category and see whether your brain should really know any of it.
+              </div>
+            </button>
+          ))}
+        </section>
+      ) : null}
+
+      {step === 'questions' ? (
+        <section style={{ display: 'grid', gap: 18 }}>
+          {questions.map((question, index) => (
+            <div
+              key={question._id}
+              style={{
+                ...glassCardStyle,
+                padding: '24px 24px 26px',
+                display: 'grid',
+                gap: 16,
+              }}
+            >
+              <div style={{ color: '#64748b', fontWeight: 600 }}>Question {index + 1}</div>
+              <div style={{ fontSize: '1.3rem', fontWeight: 700, lineHeight: 1.5 }}>{question.text}</div>
+              <div style={{ display: 'grid', gap: 12 }}>
+                {question.options.map((option) => {
+                  const active = answers[question._id] === option;
+                  return (
+                    <button
+                      key={option}
+                      onClick={() => chooseAnswer(question._id, option)}
+                      style={{
+                        padding: '14px 16px',
+                        borderRadius: 18,
+                        border: active ? '1px solid #3b82f6' : '1px solid rgba(148,163,184,0.22)',
+                        background: active ? 'rgba(219,234,254,0.9)' : 'rgba(255,255,255,0.88)',
+                        color: '#0f172a',
+                        textAlign: 'left',
+                        cursor: 'pointer',
+                        fontSize: '0.98rem',
+                      }}
+                    >
+                      {option}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+
+          <button
+            onClick={handleSubmit}
+            disabled={submitting}
+            style={{ ...primaryButtonStyle, opacity: submitting ? 0.72 : 1, justifySelf: 'start' }}
+          >
+            {submitting ? 'Submitting...' : 'Submit quiz'}
+          </button>
+        </section>
+      ) : null}
+
+      {step === 'result' && result ? (
+        <section
+          style={{
+            ...glassCardStyle,
+            padding: '28px 26px 30px',
+            display: 'grid',
+            gap: 14,
+            maxWidth: 560,
+          }}
+        >
+          <div style={{ color: '#64748b', fontWeight: 600 }}>Result</div>
+          <h3 style={{ margin: 0, fontSize: '2rem', letterSpacing: '-0.04em' }}>
+            Score {result.score} / {result.total}
+          </h3>
+          <p style={{ margin: 0, color: '#475569', lineHeight: 1.75 }}>
+            You finished the category, earned a score, and probably learned something nobody
+            urgently needed.
+          </p>
+          <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap' }}>
+            <button onClick={() => setStep('categories')} style={primaryButtonStyle}>
+              Try another category
+            </button>
+            <button onClick={onBack} style={secondaryButtonStyle}>
+              Back to profile
+            </button>
+          </div>
+        </section>
+      ) : null}
+    </div>
+  );
+}
+
+function Dashboard({ user, attempts, onSave, onLogout, onStartQuiz, loading }) {
   const [profileForm, setProfileForm] = useState({
     fullName: user?.fullName || '',
     email: user?.email || '',
@@ -330,6 +552,29 @@ function Dashboard({ user, attempts, onSave, onLogout, loading }) {
 
         <button onClick={onLogout} style={secondaryButtonStyle}>
           Logout
+        </button>
+      </section>
+
+      <section
+        style={{
+          ...glassCardStyle,
+          padding: '24px 24px 26px',
+          display: 'grid',
+          gap: 12,
+          background:
+            'linear-gradient(135deg, rgba(255,255,255,0.82) 0%, rgba(236,253,245,0.72) 100%)',
+        }}
+      >
+        <div style={{ color: '#64748b', fontWeight: 600 }}>Ready to waste knowledge productively?</div>
+        <div style={{ fontSize: '1.5rem', fontWeight: 700, letterSpacing: '-0.03em' }}>
+          Start a new WhyThough round.
+        </div>
+        <div style={{ color: '#475569', lineHeight: 1.7 }}>
+          Choose a category, answer the strange questions, and collect the score you probably did
+          not need.
+        </div>
+        <button onClick={onStartQuiz} style={{ ...primaryButtonStyle, justifySelf: 'start' }}>
+          Start quiz
         </button>
       </section>
 
@@ -509,6 +754,7 @@ function Dashboard({ user, attempts, onSave, onLogout, loading }) {
 
 export default function App() {
   const [mode, setMode] = useState('login');
+  const [view, setView] = useState('dashboard');
   const [authState, setAuthState] = useState(() => ({
     token: localStorage.getItem('quiz-game-token') || '',
     user: null,
@@ -556,13 +802,14 @@ export default function App() {
 
   const handleAuthSuccess = (result) => {
     localStorage.setItem('quiz-game-token', result.data.token);
-    setAuthState({
-      token: result.data.token,
-      user: result.data.user,
-      attempts: [],
-    });
-    setMessage(result.message || '');
-  };
+      setAuthState({
+        token: result.data.token,
+        user: result.data.user,
+        attempts: [],
+      });
+      setView('dashboard');
+      setMessage(result.message || '');
+    };
 
   const handleLogin = async (payload) => {
     setLoading(true);
@@ -605,7 +852,17 @@ export default function App() {
     localStorage.removeItem('quiz-game-token');
     setAuthState({ token: '', user: null, attempts: [] });
     setMode('login');
+    setView('dashboard');
     setMessage('Logged out successfully.');
+  };
+
+  const refreshAttempts = async () => {
+    try {
+      const attemptsResult = await authApi.getAttempts(authState.token);
+      setAuthState((current) => ({ ...current, attempts: attemptsResult.data }));
+    } catch (error) {
+      setMessage(error.message);
+    }
   };
 
   const isAuthenticated = Boolean(authState.token && authState.user);
@@ -638,13 +895,24 @@ export default function App() {
         </header>
 
         {isAuthenticated ? (
-          <Dashboard
-            user={authState.user}
-            attempts={authState.attempts}
-            onSave={handleProfileSave}
-            onLogout={handleLogout}
-            loading={loading}
-          />
+          view === 'quiz' ? (
+            <QuizWorkspace
+              token={authState.token}
+              loading={loading}
+              onBack={() => setView('dashboard')}
+              onComplete={refreshAttempts}
+              setGlobalMessage={setMessage}
+            />
+          ) : (
+            <Dashboard
+              user={authState.user}
+              attempts={authState.attempts}
+              onSave={handleProfileSave}
+              onLogout={handleLogout}
+              onStartQuiz={() => setView('quiz')}
+              loading={loading}
+            />
+          )
         ) : (
           <AuthPanel
             mode={mode}

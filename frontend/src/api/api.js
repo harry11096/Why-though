@@ -78,4 +78,26 @@ export const authApi = {
 
     return unwrapData(result);
   },
+  async getCategories() {
+    const result = await request('/quiz/categories');
+    return unwrapData(result);
+  },
+  async getQuestions(token, category) {
+    const result = await request(`/quiz/questions?category=${encodeURIComponent(category)}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return unwrapData(result);
+  },
+  async submitQuiz(token, payload) {
+    const result = await request('/quiz/submit', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(payload),
+    });
+    return unwrapData(result);
+  },
 };
