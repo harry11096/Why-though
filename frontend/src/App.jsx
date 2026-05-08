@@ -124,7 +124,7 @@ function AuthPanel({ mode, setMode, onLogin, onRegister, loading, message }) {
               letterSpacing: '0.04em',
             }}
           >
-            USER EXPERIENCE
+            BEAUTIFULLY POINTLESS
           </div>
 
           <h1
@@ -160,8 +160,8 @@ function AuthPanel({ mode, setMode, onLogin, onRegister, loading, message }) {
               margin: '16px 0 0',
             }}
           >
-            You click one strange question, then another, then somehow you already have a score
-            and a growing concern about why you knew any of it.
+            You open one pointless question, then another, then suddenly you have a score, a fake
+            personality type, and a very serious question about why any of this made sense to you.
           </p>
         </div>
       </div>
