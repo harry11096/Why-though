@@ -1,1 +1,106 @@
-module.exports = {};
+const { Question } = require('../models/Question');
+const Score = require('../models/Score');
+
+const getCategories = async (req, res) => {
+  try {
+    const categories = await Question.distinct('category', { isActive: true });
+    res.json({ success: true, data: categories });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+};
+
+const getQuestions = async (req, res) => {
+  try {
+    const { category } = req.query;
+
+    if (!category) {
+      return res.status(400).json({ success: false, error: 'Category is required' });
+    }
+
+    const questions = await Question.find({ category, isActive: true }).select('-correctAnswer');
+
+    if (questions.length < 6) {
+      return res
+        .status(400)
+        .json({ success: false, error: 'Not enough questions in this category' });
+    }
+
+    const shuffled = questions.sort(() => Math.random() - 0.5);
+    const questionCount = Math.min(
+      questions.length,
+      Math.floor(Math.random() * (10 - 6 + 1)) + 6
+    );
+
+    res.json({ success: true, data: shuffled.slice(0, questionCount) });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+};
+
+const submitQuiz = async (req, res) => {
+  try {
+    const { category, answers } = req.body;
+
+    if (!answers || !Array.isArray(answers) || answers.length === 0) {
+      return res.status(400).json({ success: false, error: 'Answers are required' });
+    }
+
+    const questionIds = answers.map((answer) => answer.questionId);
+    const questions = await Question.find({ _id: { $in: questionIds } });
+
+    let score = 0;
+    const gradedAnswers = answers.map((answer) => {
+      const question = questions.find((item) => item._id.toString() === answer.questionId);
+      const isCorrect = question && question.correctAnswer === answer.selectedAnswer;
+
+      if (isCorrect) {
+        score += 1;
+      }
+
+      return {
+        questionId: answer.questionId,
+        selectedAnswer: answer.selectedAnswer,
+        isCorrect: !!isCorrect
+      };
+    });
+
+    const scoreRecord = await Score.create({
+      userId: req.user._id,
+      category,
+      score,
+      answers: gradedAnswers
+    });
+
+    res.json({ success: true, data: { score, total: answers.length, scoreRecord } });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+};
+
+const getLeaderboard = async (req, res) => {
+  try {
+    const leaderboard = await Score.aggregate([
+      { $group: { _id: '$userId', highestScore: { $max: '$score' } } },
+      { $sort: { highestScore: -1 } },
+      { $lookup: { from: 'users', localField: '_id', foreignField: '_id', as: 'user' } },
+      { $unwind: '$user' },
+      { $project: { username: '$user.username', highestScore: 1, _id: 0 } }
+    ]);
+
+    res.json({ success: true, data: leaderboard });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+};
+
+const getMyAttempts = async (req, res) => {
+  try {
+    const attempts = await Score.find({ userId: req.user._id }).sort({ completedAt: -1 });
+    res.json({ success: true, data: attempts });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+};
+
+module.exports = { getCategories, getQuestions, submitQuiz, getLeaderboard, getMyAttempts };
