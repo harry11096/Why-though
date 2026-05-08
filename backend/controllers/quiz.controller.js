@@ -91,3 +91,15 @@ const getLeaderboard = async (req, res) => {
   }
 };
 
+// 当前用户的历史答题记录
+const getMyAttempts = async (req, res) => {
+  try {
+    const attempts = await Score.find({ userId: req.user._id })
+      .sort({ completedAt: -1 });
+    res.json({ success: true, data: attempts });
+  } catch (error) {
+    res.status(500).json({ success: false, error: error.message });
+  }
+};
+
+module.exports = { getCategories, getQuestions, submitQuiz, getLeaderboard, getMyAttempts };
