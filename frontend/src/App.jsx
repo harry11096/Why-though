@@ -104,7 +104,7 @@ function AuthPanel({ mode, setMode, onLogin, onRegister, loading, message }) {
           minHeight: 560,
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'space-between',
+          justifyContent: 'center',
           background:
             'linear-gradient(180deg, rgba(255,255,255,0.78) 0%, rgba(255,255,255,0.56) 100%)',
         }}
@@ -129,61 +129,40 @@ function AuthPanel({ mode, setMode, onLogin, onRegister, loading, message }) {
 
           <h1
             style={{
-              fontSize: 'clamp(2.7rem, 7vw, 5.6rem)',
-              lineHeight: 0.95,
+              fontSize: 'clamp(3.2rem, 8vw, 6.2rem)',
+              lineHeight: 0.9,
               letterSpacing: '-0.05em',
-              margin: '22px 0 18px',
+              margin: '24px 0 16px',
               maxWidth: 620,
             }}
           >
-            Bright,
-            <br />
-            simple login
-            <br />
-            for your quiz world.
+            WhyThough.
           </h1>
 
           <p
             style={{
-              maxWidth: 560,
+              maxWidth: 430,
               color: '#475569',
-              fontSize: '1.05rem',
-              lineHeight: 1.7,
+              fontSize: '1.08rem',
+              lineHeight: 1.75,
               margin: 0,
             }}
           >
-            A cleaner user system for registration, sign in, personal profile management, and
-            quiz attempt history. Minimal like Apple, but still fresh and lively for a student
-            project demo.
+            Answer first. Question your life later.
           </p>
-        </div>
 
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))',
-            gap: 14,
-            marginTop: 28,
-          }}
-        >
-          {[
-            ['Register', 'Create a new account in seconds'],
-            ['Profile', 'Keep personal details tidy and editable'],
-            ['Attempts', 'See your quiz records at a glance'],
-          ].map(([title, body]) => (
-            <div
-              key={title}
-              style={{
-                padding: '18px 18px 20px',
-                borderRadius: 24,
-                background: 'rgba(255,255,255,0.58)',
-                border: '1px solid rgba(255,255,255,0.85)',
-              }}
-            >
-              <div style={{ fontWeight: 700, marginBottom: 8 }}>{title}</div>
-              <div style={{ color: '#64748b', lineHeight: 1.55, fontSize: '0.93rem' }}>{body}</div>
-            </div>
-          ))}
+          <p
+            style={{
+              maxWidth: 470,
+              color: '#64748b',
+              fontSize: '0.98rem',
+              lineHeight: 1.75,
+              margin: '16px 0 0',
+            }}
+          >
+            You click one strange question, then another, then somehow you already have a score
+            and a growing concern about why you knew any of it.
+          </p>
         </div>
       </div>
 
@@ -227,12 +206,12 @@ function AuthPanel({ mode, setMode, onLogin, onRegister, loading, message }) {
                 letterSpacing: '-0.03em',
               }}
             >
-              {mode === 'login' ? 'Welcome back.' : 'Join the quiz game.'}
+              {mode === 'login' ? 'Welcome back.' : 'Join WhyThough.'}
             </h2>
             <p style={{ margin: 0, color: '#64748b', lineHeight: 1.65 }}>
               {mode === 'login'
                 ? 'Sign in to open your profile and track your recent progress.'
-                : 'Create a new account and start building your own record.'}
+                : 'Create a new account and start building your beautifully useless record.'}
             </p>
           </div>
 
@@ -364,7 +343,7 @@ function Dashboard({ user, attempts, onSave, onLogout, loading }) {
         <StatCard
           eyebrow="Quiz Attempts"
           value={attemptSummary.total}
-          note="Your complete record of submitted quiz sessions."
+          note="Your complete record of submitted absurd quiz sessions."
           tint="linear-gradient(180deg, rgba(255,255,255,0.84) 0%, rgba(239,246,255,0.85) 100%)"
         />
         <StatCard
@@ -476,7 +455,7 @@ function Dashboard({ user, attempts, onSave, onLogout, loading }) {
                 lineHeight: 1.7,
               }}
             >
-              No attempts yet. Once the quiz submission flow is connected, your records will appear
+              No attempts yet. Once the WhyThough quiz flow is connected, your records will appear
               here automatically.
             </div>
           ) : (
@@ -555,8 +534,8 @@ export default function App() {
         if (!cancelled) {
           setAuthState((current) => ({
             ...current,
-            user: profileResult.user,
-            attempts: attemptsResult.attempts,
+            user: profileResult.data,
+            attempts: attemptsResult.data,
           }));
         }
       } catch (error) {
@@ -576,13 +555,13 @@ export default function App() {
   }, [authState.token]);
 
   const handleAuthSuccess = (result) => {
-    localStorage.setItem('quiz-game-token', result.token);
+    localStorage.setItem('quiz-game-token', result.data.token);
     setAuthState({
-      token: result.token,
-      user: result.user,
+      token: result.data.token,
+      user: result.data.user,
       attempts: [],
     });
-    setMessage(result.message);
+    setMessage(result.message || '');
   };
 
   const handleLogin = async (payload) => {
@@ -613,8 +592,8 @@ export default function App() {
     setLoading(true);
     try {
       const result = await authApi.updateProfile(authState.token, payload);
-      setAuthState((current) => ({ ...current, user: result.user }));
-      setMessage(result.message);
+      setAuthState((current) => ({ ...current, user: result.data }));
+      setMessage(result.message || '');
     } catch (error) {
       setMessage(error.message);
     } finally {
@@ -654,7 +633,7 @@ export default function App() {
             }}
           >
             <span style={{ width: 10, height: 10, borderRadius: 999, background: '#34c759' }} />
-            COMP5347 User System
+            WhyThough
           </div>
         </header>
 

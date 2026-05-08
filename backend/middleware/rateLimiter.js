@@ -5,7 +5,7 @@ const loginLimiter = rateLimit({
   max: 5,
   message: { success: false, error: 'Too many login attempts, please try again after 15 minutes' },
   standardHeaders: true,
-  legacyHeaders: false
+  legacyHeaders: false,
 });
 
 const quizSubmitLimiter = rateLimit({
@@ -13,7 +13,7 @@ const quizSubmitLimiter = rateLimit({
   max: 10,
   message: { success: false, error: 'Too many submissions, please slow down' },
   standardHeaders: true,
-  legacyHeaders: false
+  legacyHeaders: false,
 });
 
 module.exports = { loginLimiter, quizSubmitLimiter };

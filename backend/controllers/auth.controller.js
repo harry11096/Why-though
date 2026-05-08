@@ -27,7 +27,7 @@ exports.register = async (req, res) => {
     const { username, email, password, fullName = '' } = req.body;
 
     if (!username || !email || !password) {
-      return res.status(400).json({ message: 'Username, email, and password are required.' });
+      return res.status(400).json({ success: false, error: 'Username, email, and password are required.' });
     }
 
     const existingUser = await User.findOne({
@@ -35,7 +35,7 @@ exports.register = async (req, res) => {
     });
 
     if (existingUser) {
-      return res.status(409).json({ message: 'Username or email already exists.' });
+      return res.status(409).json({ success: false, error: 'Username or email already exists.' });
     }
 
     const user = await User.create({
@@ -46,48 +46,55 @@ exports.register = async (req, res) => {
     });
 
     return res.status(201).json({
+      success: true,
       message: 'Registration successful.',
-      token: signToken(user),
-      user: user.toSafeObject(),
+      data: {
+        token: signToken(user),
+        user: user.toSafeObject(),
+      },
     });
   } catch (error) {
-    return res.status(500).json({ message: 'Failed to register user.', error: error.message });
+    return res.status(500).json({ success: false, error: error.message });
   }
 };
 
 exports.login = async (req, res) => {
   try {
-    const { identifier, password } = req.body;
+    const { identifier, email, username, password } = req.body;
+    const loginIdentifier = identifier || email || username;
 
-    if (!identifier || !password) {
-      return res.status(400).json({ message: 'Username/email and password are required.' });
+    if (!loginIdentifier || !password) {
+      return res.status(400).json({ success: false, error: 'Username/email and password are required.' });
     }
 
     const user = await User.findOne({
-      $or: [{ username: identifier.trim() }, { email: identifier.trim().toLowerCase() }],
+      $or: [{ username: loginIdentifier.trim() }, { email: loginIdentifier.trim().toLowerCase() }],
     });
 
     if (!user) {
-      return res.status(401).json({ message: 'Invalid credentials.' });
+      return res.status(401).json({ success: false, error: 'Invalid credentials.' });
     }
 
     const isMatch = await user.comparePassword(password);
     if (!isMatch) {
-      return res.status(401).json({ message: 'Invalid credentials.' });
+      return res.status(401).json({ success: false, error: 'Invalid credentials.' });
     }
 
     return res.json({
+      success: true,
       message: 'Login successful.',
-      token: signToken(user),
-      user: user.toSafeObject(),
+      data: {
+        token: signToken(user),
+        user: user.toSafeObject(),
+      },
     });
   } catch (error) {
-    return res.status(500).json({ message: 'Failed to log in.', error: error.message });
+    return res.status(500).json({ success: false, error: error.message });
   }
 };
 
 exports.getProfile = async (req, res) => {
-  return res.json({ user: req.user.toSafeObject() });
+  return res.json({ success: true, data: req.user.toSafeObject() });
 };
 
 exports.updateProfile = async (req, res) => {
@@ -101,7 +108,7 @@ exports.updateProfile = async (req, res) => {
     if (email && email.trim().toLowerCase() !== req.user.email) {
       const existingEmail = await User.findOne({ email: email.trim().toLowerCase() });
       if (existingEmail && existingEmail._id.toString() !== req.user._id.toString()) {
-        return res.status(409).json({ message: 'Email is already in use.' });
+        return res.status(409).json({ success: false, error: 'Email is already in use.' });
       }
       updates.email = email.trim().toLowerCase();
     }
@@ -112,20 +119,21 @@ exports.updateProfile = async (req, res) => {
     });
 
     return res.json({
+      success: true,
       message: 'Profile updated successfully.',
-      user: updatedUser.toSafeObject(),
+      data: updatedUser.toSafeObject(),
     });
   } catch (error) {
-    return res.status(500).json({ message: 'Failed to update profile.', error: error.message });
+    return res.status(500).json({ success: false, error: error.message });
   }
 };
 
 exports.getAttempts = async (req, res) => {
   try {
     const attempts = await Score.find({ userId: req.user._id }).sort({ completedAt: -1, createdAt: -1 });
-    return res.json({ attempts: attempts.map(formatAttempt) });
+    return res.json({ success: true, data: attempts.map(formatAttempt) });
   } catch (error) {
-    return res.status(500).json({ message: 'Failed to load attempts.', error: error.message });
+    return res.status(500).json({ success: false, error: error.message });
   }
 };
 
@@ -134,7 +142,7 @@ exports.createAttempt = async (req, res) => {
     const { category, score = 0, answers = [] } = req.body;
 
     if (!category) {
-      return res.status(400).json({ message: 'Category is required.' });
+      return res.status(400).json({ success: false, error: 'Category is required.' });
     }
 
     const attempt = await Score.create({
@@ -145,10 +153,11 @@ exports.createAttempt = async (req, res) => {
     });
 
     return res.status(201).json({
+      success: true,
       message: 'Attempt saved successfully.',
-      attempt: formatAttempt(attempt),
+      data: formatAttempt(attempt),
     });
   } catch (error) {
-    return res.status(500).json({ message: 'Failed to save attempt.', error: error.message });
+    return res.status(500).json({ success: false, error: error.message });
   }
 };

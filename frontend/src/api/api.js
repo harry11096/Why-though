@@ -12,46 +12,70 @@ async function request(path, options = {}) {
   const data = await response.json().catch(() => ({}));
 
   if (!response.ok) {
-    throw new Error(data.message || 'Request failed.');
+    throw new Error(data.error || data.message || 'Request failed.');
   }
 
   return data;
 }
 
+const unwrapData = (result) => {
+  if (typeof result.success === 'boolean') {
+    return {
+      message: result.message || '',
+      data: result.data,
+    };
+  }
+
+  return {
+    message: result.message || '',
+    data: result,
+  };
+};
+
 export const authApi = {
-  register(payload) {
-    return request('/auth/register', {
+  async register(payload) {
+    const result = await request('/auth/register', {
       method: 'POST',
       body: JSON.stringify(payload),
     });
+
+    return unwrapData(result);
   },
-  login(payload) {
-    return request('/auth/login', {
+  async login(payload) {
+    const result = await request('/auth/login', {
       method: 'POST',
       body: JSON.stringify(payload),
     });
+
+    return unwrapData(result);
   },
-  getProfile(token) {
-    return request('/auth/profile', {
+  async getProfile(token) {
+    const result = await request('/auth/profile', {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     });
+
+    return unwrapData(result);
   },
-  updateProfile(token, payload) {
-    return request('/auth/profile', {
+  async updateProfile(token, payload) {
+    const result = await request('/auth/profile', {
       method: 'PUT',
       headers: {
         Authorization: `Bearer ${token}`,
       },
       body: JSON.stringify(payload),
     });
+
+    return unwrapData(result);
   },
-  getAttempts(token) {
-    return request('/auth/attempts', {
+  async getAttempts(token) {
+    const result = await request('/quiz/attempts', {
       headers: {
         Authorization: `Bearer ${token}`,
       },
     });
+
+    return unwrapData(result);
   },
 };
