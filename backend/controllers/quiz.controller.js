@@ -1,4 +1,4 @@
-const Question = require('../models/Question');
+const { Question } = require('../models/Question');
 const Score = require('../models/Score');
 
 const getCategories = async (req, res) => {

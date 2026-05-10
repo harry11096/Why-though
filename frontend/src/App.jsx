@@ -264,6 +264,7 @@ function QuizWorkspace({
   onBack,
   onComplete,
   setGlobalMessage,
+  globalMessage,
 }) {
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -365,6 +366,22 @@ function QuizWorkspace({
           Back to profile
         </button>
       </section>
+
+      {globalMessage ? (
+        <div
+          style={{
+            ...glassCardStyle,
+            padding: '14px 18px',
+            color: globalMessage.toLowerCase().includes('successfully') ? '#1d4ed8' : '#b45309',
+            fontWeight: 600,
+            background: globalMessage.toLowerCase().includes('successfully')
+              ? 'linear-gradient(135deg, rgba(219,234,254,0.9), rgba(236,253,245,0.92))'
+              : 'linear-gradient(135deg, rgba(255,247,237,0.94), rgba(254,249,195,0.92))',
+          }}
+        >
+          {globalMessage}
+        </div>
+      ) : null}
 
       {step === 'categories' ? (
         <section
@@ -902,6 +919,7 @@ export default function App() {
               onBack={() => setView('dashboard')}
               onComplete={refreshAttempts}
               setGlobalMessage={setMessage}
+              globalMessage={message}
             />
           ) : (
             <Dashboard
