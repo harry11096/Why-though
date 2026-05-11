@@ -6,7 +6,7 @@ const getCategories = async (req, res) => {
     const categories = await Question.distinct('category', { isActive: true });
     res.json({ success: true, data: categories });
   } catch (error) {
-    res.status(500).json({ success: false, error: error.message });
+    res.status(500).json({ success: false, error: 'Failed to load categories.' });
   }
 };
 
@@ -27,7 +27,7 @@ const getQuestions = async (req, res) => {
     const shuffled = questions.sort(() => Math.random() - 0.5).slice(0, 10);
     res.json({ success: true, data: shuffled });
   } catch (error) {
-    res.status(500).json({ success: false, error: error.message });
+    res.status(500).json({ success: false, error: 'Failed to load questions.' });
   }
 };
 
@@ -67,7 +67,7 @@ const submitQuiz = async (req, res) => {
 
     res.json({ success: true, data: { score, total: answers.length, scoreRecord } });
   } catch (error) {
-    res.status(500).json({ success: false, error: error.message });
+    res.status(500).json({ success: false, error: 'Failed to submit quiz.' });
   }
 };
 
@@ -83,7 +83,7 @@ const getLeaderboard = async (req, res) => {
 
     res.json({ success: true, data: leaderboard });
   } catch (error) {
-    res.status(500).json({ success: false, error: error.message });
+    res.status(500).json({ success: false, error: 'Failed to load leaderboard.' });
   }
 };
 
@@ -92,7 +92,7 @@ const getMyAttempts = async (req, res) => {
     const attempts = await Score.find({ userId: req.user._id }).sort({ completedAt: -1 });
     res.json({ success: true, data: attempts });
   } catch (error) {
-    res.status(500).json({ success: false, error: error.message });
+    res.status(500).json({ success: false, error: 'Failed to load attempts.' });
   }
 };
 

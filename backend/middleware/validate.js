@@ -14,7 +14,8 @@ const validateRegister = [
   body('username')
     .trim()
     .isLength({ min: 3 })
-    .withMessage('Username must be at least 3 characters'),
+    .withMessage('Username must be at least 3 characters')
+    .escape(),
   body('email')
     .trim()
     .isEmail()
@@ -27,6 +28,10 @@ const validateRegister = [
 ];
 
 const validateLogin = [
+  body('identifier')
+    .trim()
+    .notEmpty()
+    .withMessage('Username or email is required'),
   body('password').notEmpty().withMessage('Password is required'),
   handleValidationErrors,
 ];

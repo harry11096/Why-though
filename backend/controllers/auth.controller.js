@@ -1,9 +1,17 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
-const Score = require('../models/Score');
 
 const createToken = (user) =>
   jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET, { expiresIn: '7d' });
+
+const escapeHtml = (value = '') =>
+  String(value)
+    .trim()
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
 
 const sanitiseUser = (user) =>
   typeof user.toSafeObject === 'function'
@@ -14,16 +22,6 @@ const sanitiseUser = (user) =>
         email: user.email,
         role: user.role,
       };
-
-const formatAttempt = (attempt) => ({
-  id: attempt._id,
-  category: attempt.category,
-  score: attempt.score,
-  answers: attempt.answers,
-  completedAt: attempt.completedAt,
-  createdAt: attempt.createdAt,
-  updatedAt: attempt.updatedAt,
-});
 
 const register = async (req, res) => {
   try {
@@ -54,7 +52,7 @@ const register = async (req, res) => {
       username: username.trim(),
       email: email.trim().toLowerCase(),
       password,
-      fullName: fullName.trim(),
+      fullName: escapeHtml(fullName),
       role,
     });
 
@@ -107,20 +105,18 @@ const login = async (req, res) => {
   }
 };
 
-const getMe = async (req, res) => {
-  return res.json({ success: true, data: sanitiseUser(req.user) });
-};
-
 const getProfile = async (req, res) => {
   return res.json({ success: true, data: sanitiseUser(req.user) });
 };
+
+const getMe = getProfile;
 
 const updateProfile = async (req, res) => {
   try {
     const { fullName = '', bio = '', email } = req.body;
     const updates = {
-      fullName: fullName.trim(),
-      bio: bio.trim(),
+      fullName: escapeHtml(fullName),
+      bio: escapeHtml(bio),
     };
 
     if (email && email.trim().toLowerCase() !== req.user.email) {
@@ -148,46 +144,10 @@ const updateProfile = async (req, res) => {
   }
 };
 
-const getAttempts = async (req, res) => {
-  try {
-    const attempts = await Score.find({ userId: req.user._id }).sort({ completedAt: -1, createdAt: -1 });
-    return res.json({ success: true, data: attempts.map(formatAttempt) });
-  } catch (error) {
-    return res.status(500).json({ success: false, error: 'Failed to load attempts.' });
-  }
-};
-
-const createAttempt = async (req, res) => {
-  try {
-    const { category, score = 0, answers = [] } = req.body;
-
-    if (!category) {
-      return res.status(400).json({ success: false, error: 'Category is required.' });
-    }
-
-    const attempt = await Score.create({
-      userId: req.user._id,
-      category: category.trim(),
-      score,
-      answers,
-    });
-
-    return res.status(201).json({
-      success: true,
-      message: 'Attempt saved successfully.',
-      data: formatAttempt(attempt),
-    });
-  } catch (error) {
-    return res.status(500).json({ success: false, error: 'Failed to save attempt.' });
-  }
-};
-
 module.exports = {
   register,
   login,
   getMe,
   getProfile,
   updateProfile,
-  getAttempts,
-  createAttempt,
 };
