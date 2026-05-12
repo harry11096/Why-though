@@ -6,10 +6,18 @@ const normaliseQuestionInput = (rawQuestion) => {
   }
 
   const text = typeof rawQuestion.text === 'string' ? rawQuestion.text.trim() : '';
+  const textEn = typeof rawQuestion.textEn === 'string' ? rawQuestion.textEn.trim() : '';
+  const textZh = typeof rawQuestion.textZh === 'string' ? rawQuestion.textZh.trim() : '';
   const category = typeof rawQuestion.category === 'string' ? rawQuestion.category.trim() : '';
   const options = Array.isArray(rawQuestion.options)
     ? rawQuestion.options.map((option) => (typeof option === 'string' ? option.trim() : ''))
     : [];
+  const optionsEn = Array.isArray(rawQuestion.optionsEn)
+    ? rawQuestion.optionsEn.map((option) => (typeof option === 'string' ? option.trim() : ''))
+    : undefined;
+  const optionsZh = Array.isArray(rawQuestion.optionsZh)
+    ? rawQuestion.optionsZh.map((option) => (typeof option === 'string' ? option.trim() : ''))
+    : undefined;
   const correctAnswer =
     typeof rawQuestion.correctAnswer === 'string' ? rawQuestion.correctAnswer.trim() : '';
   const isActive = typeof rawQuestion.isActive === 'boolean' ? rawQuestion.isActive : true;
@@ -26,6 +34,14 @@ const normaliseQuestionInput = (rawQuestion) => {
     return { error: 'Each question must have exactly 4 non-empty options.' };
   }
 
+  if (optionsEn && (optionsEn.length !== 4 || optionsEn.some((option) => !option))) {
+    return { error: 'English options must have exactly 4 non-empty values.' };
+  }
+
+  if (optionsZh && (optionsZh.length !== 4 || optionsZh.some((option) => !option))) {
+    return { error: 'Chinese options must have exactly 4 non-empty values.' };
+  }
+
   const uniqueOptions = new Set(options.map((option) => option.toLowerCase()));
   if (uniqueOptions.size !== 4) {
     return { error: 'Question options must be unique.' };
@@ -38,8 +54,12 @@ const normaliseQuestionInput = (rawQuestion) => {
   return {
     value: {
       text,
+      textEn,
+      textZh,
       category,
       options,
+      optionsEn,
+      optionsZh,
       correctAnswer,
       isActive
     }

@@ -35,7 +35,7 @@ const buttonStyle = {
   marginTop: 4,
 };
 
-export default function Login({ onSubmit, loading, inputStyle }) {
+export default function Login({ onSubmit, loading, inputStyle, copy }) {
   const [form, setForm] = useState({
     identifier: '',
     password: '',
@@ -54,34 +54,34 @@ export default function Login({ onSubmit, loading, inputStyle }) {
   return (
     <form onSubmit={handleSubmit} style={formStyle}>
       <label style={labelStyle}>
-        <span style={labelTextStyle}>Username or Email</span>
+        <span style={labelTextStyle}>{copy.identifierLabel}</span>
         <input
           name="identifier"
           value={form.identifier}
           onChange={handleChange}
-          placeholder="alexm or alex@example.com"
+          placeholder={copy.identifierPlaceholder}
           style={inputStyle}
           required
         />
       </label>
 
       <label style={labelStyle}>
-        <span style={labelTextStyle}>Password</span>
+        <span style={labelTextStyle}>{copy.passwordLabel}</span>
         <input
           type="password"
           name="password"
           value={form.password}
           onChange={handleChange}
-          placeholder="Enter your password"
+          placeholder={copy.passwordPlaceholder}
           style={inputStyle}
           required
         />
       </label>
 
-      <div style={helperStyle}>Use the username or email you registered with to access your profile.</div>
+      <div style={helperStyle}>{copy.helper}</div>
 
       <button type="submit" disabled={loading} style={{ ...buttonStyle, opacity: loading ? 0.7 : 1 }}>
-        {loading ? 'Logging in...' : 'Login'}
+        {loading ? copy.loading : copy.submit}
       </button>
     </form>
   );

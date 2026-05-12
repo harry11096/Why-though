@@ -20,11 +20,12 @@ const getQuestions = async (req, res) => {
 
     const questions = await Question.find({ category, isActive: true }).select('-correctAnswer');
 
-    if (questions.length < 6) {
+    if (questions.length < 10) {
       return res.status(400).json({ success: false, error: 'Not enough questions in this category' });
     }
 
-    const shuffled = questions.sort(() => Math.random() - 0.5).slice(0, 10);
+    const questionCount = questions.length >= 15 && Math.random() >= 0.5 ? 15 : 10;
+    const shuffled = questions.sort(() => Math.random() - 0.5).slice(0, questionCount);
     res.json({ success: true, data: shuffled });
   } catch (error) {
     res.status(500).json({ success: false, error: 'Failed to load questions.' });

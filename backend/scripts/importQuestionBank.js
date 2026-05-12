@@ -9,8 +9,7 @@ const importQuestionBank = async () => {
   try {
     await connectDB();
 
-    const questionTexts = questionBank.map((question) => question.text);
-    await Question.deleteMany({ text: { $in: questionTexts } });
+    await Question.deleteMany({});
     await Question.insertMany(questionBank, { ordered: true });
 
     console.log(`Imported ${questionBank.length} questions.`);

@@ -1,527 +1,3252 @@
 [
   {
-    "text": "What do you call a bear with no teeth?",
-    "options": ["A gummy bear", "A teddy bear", "A polar bear", "A honey bear"],
-    "correctAnswer": "A gummy bear",
-    "isActive": true,
-    "category": "Pun Play"
-  },
-  {
-    "text": "Why did the math book look sad?",
-    "options": ["It was too heavy", "It had too many problems", "It lost its cover", "It hated numbers"],
-    "correctAnswer": "It had too many problems",
-    "isActive": true,
-    "category": "Pun Play"
-  },
-  {
-    "text": "What do you call fake spaghetti?",
-    "options": ["Spaghett-no", "An impasta", "Fake noodles", "Pasta zero"],
-    "correctAnswer": "An impasta",
-    "isActive": true,
-    "category": "Pun Play"
-  },
-  {
-    "text": "Why did the bicycle fall over?",
-    "options": ["It was tired", "It was two-tired", "It was broken", "It was too fast"],
-    "correctAnswer": "It was two-tired",
-    "isActive": true,
-    "category": "Pun Play"
-  },
-  {
-    "text": "What do you call cheese that is not yours?",
-    "options": ["My cheese", "Old cheese", "Nacho cheese", "Blue cheese"],
-    "correctAnswer": "Nacho cheese",
-    "isActive": true,
-    "category": "Pun Play"
-  },
-  {
-    "text": "Why can't your nose be 12 inches long?",
-    "options": ["Because it would hurt", "Because it would be too big", "Because then it would be a foot", "Because noses are small"],
-    "correctAnswer": "Because then it would be a foot",
-    "isActive": true,
-    "category": "Pun Play"
-  },
-  {
-    "text": "What do you call a sleeping bull?",
-    "options": ["A bulldozer", "A sleepy cow", "A night bull", "A soft bull"],
-    "correctAnswer": "A bulldozer",
-    "isActive": true,
-    "category": "Pun Play"
-  },
-  {
-    "text": "Why did the cookie go to the doctor?",
-    "options": ["It felt crummy", "It was hungry", "It was too sweet", "It broke a plate"],
-    "correctAnswer": "It felt crummy",
-    "isActive": true,
-    "category": "Pun Play"
-  },
-  {
-    "text": "What do you call a fish with no eyes?",
-    "options": ["Blind fish", "Fsh", "Sea fish", "Small fish"],
-    "correctAnswer": "Fsh",
-    "isActive": true,
-    "category": "Pun Play"
-  },
-  {
-    "text": "Why was the computer cold?",
-    "options": ["It forgot its jacket", "It left its Windows open", "It was made of ice", "It had no battery"],
-    "correctAnswer": "It left its Windows open",
-    "isActive": true,
-    "category": "Pun Play"
-  },
-  {
-    "text": "Why did the scarecrow win an award?",
-    "options": ["Because he was outstanding in his field", "Because he scared everyone", "Because he loved farming", "Because he made a good hat"],
-    "correctAnswer": "Because he was outstanding in his field",
-    "isActive": true,
-    "category": "Pun Play"
-  },
-  {
-    "text": "What did the grape do when it got stepped on?",
-    "options": ["It ran away", "It became juice", "It let out a little wine", "It started dancing"],
-    "correctAnswer": "It let out a little wine",
-    "isActive": true,
-    "category": "Pun Play"
-  },
-  {
-    "text": "Why don't eggs tell jokes?",
-    "options": ["They are too quiet", "They might crack up", "They cannot speak", "They are too small"],
-    "correctAnswer": "They might crack up",
-    "isActive": true,
-    "category": "Pun Play"
-  },
-  {
-    "text": "What do you call a belt made of watches?",
-    "options": ["A time belt", "A clock strap", "A watch line", "A waist of time"],
-    "correctAnswer": "A waist of time",
-    "isActive": true,
-    "category": "Pun Play"
-  },
-  {
-    "text": "Why did the music teacher need a ladder?",
-    "options": ["To fix the ceiling", "To climb onto the stage", "To reach the high notes", "To find the piano"],
-    "correctAnswer": "To reach the high notes",
-    "isActive": true,
-    "category": "Pun Play"
-  },
-  {
-    "text": "Which organ pumps blood around the body?",
-    "options": ["Brain", "Heart", "Stomach", "Lung"],
-    "correctAnswer": "Heart",
-    "isActive": true,
-    "category": "Body Facts"
-  },
-  {
-    "text": "What do lungs help us do?",
-    "options": ["Think", "Digest food", "Breathe", "Hear sounds"],
-    "correctAnswer": "Breathe",
-    "isActive": true,
-    "category": "Body Facts"
-  },
-  {
-    "text": "Which body part helps us think and remember?",
-    "options": ["Brain", "Foot", "Nose", "Knee"],
-    "correctAnswer": "Brain",
-    "isActive": true,
-    "category": "Body Facts"
-  },
-  {
-    "text": "What protects the brain?",
-    "options": ["Ribs", "Skull", "Skin only", "Teeth"],
-    "correctAnswer": "Skull",
-    "isActive": true,
-    "category": "Body Facts"
-  },
-  {
-    "text": "What do teeth mainly help us do?",
-    "options": ["Smell food", "Chew food", "Breathe air", "Pump blood"],
-    "correctAnswer": "Chew food",
-    "isActive": true,
-    "category": "Body Facts"
-  },
-  {
-    "text": "Which sense uses the eyes?",
-    "options": ["Taste", "Touch", "Sight", "Hearing"],
-    "correctAnswer": "Sight",
-    "isActive": true,
-    "category": "Body Facts"
-  },
-  {
-    "text": "What is the largest organ of the human body?",
-    "options": ["Skin", "Heart", "Brain", "Liver"],
-    "correctAnswer": "Skin",
-    "isActive": true,
-    "category": "Body Facts"
-  },
-  {
-    "text": "What do muscles help the body do?",
-    "options": ["Move", "See", "Taste", "Grow hair"],
-    "correctAnswer": "Move",
-    "isActive": true,
-    "category": "Body Facts"
-  },
-  {
-    "text": "Which bones protect the heart and lungs?",
-    "options": ["Finger bones", "Ribs", "Toe bones", "Jawbone"],
-    "correctAnswer": "Ribs",
-    "isActive": true,
-    "category": "Body Facts"
-  },
-  {
-    "text": "What does the stomach mainly do?",
-    "options": ["Helps digest food", "Helps us hear", "Pumps blood", "Makes bones move"],
-    "correctAnswer": "Helps digest food",
-    "isActive": true,
-    "category": "Body Facts"
-  },
-  {
-    "text": "Which part of blood helps carry oxygen?",
-    "options": ["Red blood cells", "Hair cells", "Skin cells", "Bone cells"],
-    "correctAnswer": "Red blood cells",
-    "isActive": true,
-    "category": "Body Facts"
-  },
-  {
-    "text": "What does saliva mainly help with?",
-    "options": ["Making bones stronger", "Starting digestion and making food easier to swallow", "Pumping blood", "Helping us hear sounds"],
-    "correctAnswer": "Starting digestion and making food easier to swallow",
-    "isActive": true,
-    "category": "Body Facts"
-  },
-  {
-    "text": "Which organs filter waste from the blood and help make urine?",
-    "options": ["Lungs", "Kidneys", "Eyes", "Muscles"],
-    "correctAnswer": "Kidneys",
-    "isActive": true,
-    "category": "Body Facts"
-  },
-  {
-    "text": "What are the tiny air sacs in the lungs called?",
-    "options": ["Neurons", "Alveoli", "Veins", "Tendons"],
-    "correctAnswer": "Alveoli",
-    "isActive": true,
-    "category": "Body Facts"
-  },
-  {
-    "text": "Which part of the brain helps with balance and coordination?",
-    "options": ["Cerebellum", "Stomach", "Rib cage", "Liver"],
-    "correctAnswer": "Cerebellum",
-    "isActive": true,
-    "category": "Body Facts"
-  },
-  {
-    "text": "What should you use to cut paper safely?",
-    "options": ["Spoon", "Scissors", "Pillow", "Cup"],
-    "correctAnswer": "Scissors",
-    "isActive": true,
-    "category": "Daily Life Trivia"
-  },
-  {
-    "text": "Where do people usually keep food cold?",
-    "options": ["Refrigerator", "Closet", "Bookshelf", "Sofa"],
-    "correctAnswer": "Refrigerator",
-    "isActive": true,
-    "category": "Daily Life Trivia"
-  },
-  {
-    "text": "What do people usually wear on their feet?",
-    "options": ["Gloves", "Hat", "Shoes", "Scarf"],
-    "correctAnswer": "Shoes",
-    "isActive": true,
-    "category": "Daily Life Trivia"
-  },
-  {
-    "text": "Which item is used to brush your teeth?",
-    "options": ["Toothbrush", "Hairbrush", "Fork", "Towel"],
-    "correctAnswer": "Toothbrush",
-    "isActive": true,
-    "category": "Daily Life Trivia"
-  },
-  {
-    "text": "What do you use to unlock a door?",
-    "options": ["Key", "Plate", "Pencil", "Blanket"],
-    "correctAnswer": "Key",
-    "isActive": true,
-    "category": "Daily Life Trivia"
-  },
-  {
-    "text": "What should you do before crossing the road?",
-    "options": ["Close your eyes", "Look both ways", "Run without stopping", "Read a book"],
-    "correctAnswer": "Look both ways",
-    "isActive": true,
-    "category": "Daily Life Trivia"
-  },
-  {
-    "text": "What do people usually use to tell time?",
-    "options": ["Clock", "Chair", "Bowl", "Window"],
-    "correctAnswer": "Clock",
-    "isActive": true,
-    "category": "Daily Life Trivia"
-  },
-  {
-    "text": "Which object helps you stay dry in the rain?",
-    "options": ["Umbrella", "Sunglasses", "Notebook", "Plate"],
-    "correctAnswer": "Umbrella",
-    "isActive": true,
-    "category": "Daily Life Trivia"
-  },
-  {
-    "text": "What do you usually use to write on paper?",
-    "options": ["Pen", "Spoon", "Shoe", "Phone charger"],
-    "correctAnswer": "Pen",
-    "isActive": true,
-    "category": "Daily Life Trivia"
-  },
-  {
-    "text": "What do people usually do before eating to keep clean?",
-    "options": ["Wash their hands", "Turn off the lights", "Wear shoes", "Open the window"],
-    "correctAnswer": "Wash their hands",
-    "isActive": true,
-    "category": "Daily Life Trivia"
-  },
-  {
-    "text": "What does an expiry date on food usually tell you?",
-    "options": ["The food's color", "The food's price", "The date after which the food may not be safe or fresh", "The food's country"],
-    "correctAnswer": "The date after which the food may not be safe or fresh",
-    "isActive": true,
-    "category": "Daily Life Trivia"
-  },
-  {
-    "text": "Why should you not pour cooking oil down the sink?",
-    "options": ["It can make the sink smell like flowers", "It can clog the pipes", "It can clean the drain", "It can make water hotter"],
-    "correctAnswer": "It can clog the pipes",
-    "isActive": true,
-    "category": "Daily Life Trivia"
-  },
-  {
-    "text": "What tool is used to measure body temperature?",
-    "options": ["Thermometer", "Ruler", "Spoon", "Flashlight"],
-    "correctAnswer": "Thermometer",
-    "isActive": true,
-    "category": "Daily Life Trivia"
-  },
-  {
-    "text": "Why should raw meat and vegetables use separate cutting boards?",
-    "options": ["To make the kitchen look cleaner", "To save time", "To prevent cross-contamination", "To make vegetables softer"],
-    "correctAnswer": "To prevent cross-contamination",
-    "isActive": true,
-    "category": "Daily Life Trivia"
-  },
-  {
-    "text": "Which cleaner should you avoid mixing with bleach?",
-    "options": ["Water", "Ammonia-based cleaner", "Dish soap only", "Baking paper"],
-    "correctAnswer": "Ammonia-based cleaner",
-    "isActive": true,
-    "category": "Daily Life Trivia"
-  },
-  {
-    "text": "Which animal is known as \"the king of the jungle\"?",
-    "options": ["Elephant", "Lion", "Rabbit", "Penguin"],
-    "correctAnswer": "Lion",
-    "isActive": true,
-    "category": "Animal Facts"
-  },
-  {
-    "text": "What do bees make?",
-    "options": ["Milk", "Honey", "Bread", "Cheese"],
-    "correctAnswer": "Honey",
-    "isActive": true,
-    "category": "Animal Facts"
-  },
-  {
-    "text": "Which animal can change its color to blend in?",
-    "options": ["Chameleon", "Horse", "Chicken", "Dog"],
-    "correctAnswer": "Chameleon",
-    "isActive": true,
-    "category": "Animal Facts"
-  },
-  {
-    "text": "Which animal is the largest land animal?",
-    "options": ["Giraffe", "Elephant", "Tiger", "Zebra"],
-    "correctAnswer": "Elephant",
-    "isActive": true,
-    "category": "Animal Facts"
-  },
-  {
-    "text": "What do pandas mainly eat?",
-    "options": ["Bamboo", "Fish", "Meat", "Grasshoppers"],
-    "correctAnswer": "Bamboo",
-    "isActive": true,
-    "category": "Animal Facts"
-  },
-  {
-    "text": "Which animal has a very long neck?",
-    "options": ["Kangaroo", "Giraffe", "Bear", "Sheep"],
-    "correctAnswer": "Giraffe",
-    "isActive": true,
-    "category": "Animal Facts"
-  },
-  {
-    "text": "Which animal is known for carrying its baby in a pouch?",
-    "options": ["Kangaroo", "Dolphin", "Frog", "Snake"],
-    "correctAnswer": "Kangaroo",
-    "isActive": true,
-    "category": "Animal Facts"
-  },
-  {
-    "text": "What do fish use to breathe underwater?",
-    "options": ["Wings", "Gills", "Ears", "Fur"],
-    "correctAnswer": "Gills",
-    "isActive": true,
-    "category": "Animal Facts"
-  },
-  {
-    "text": "Which animal is famous for being very slow?",
-    "options": ["Cheetah", "Sloth", "Eagle", "Rabbit"],
-    "correctAnswer": "Sloth",
-    "isActive": true,
-    "category": "Animal Facts"
-  },
-  {
-    "text": "Which bird cannot fly?",
-    "options": ["Eagle", "Penguin", "Parrot", "Sparrow"],
-    "correctAnswer": "Penguin",
-    "isActive": true,
-    "category": "Animal Facts"
-  },
-  {
-    "text": "Which mammal can lay eggs?",
-    "options": ["Cat", "Platypus", "Cow", "Dolphin"],
-    "correctAnswer": "Platypus",
-    "isActive": true,
-    "category": "Animal Facts"
-  },
-  {
-    "text": "Which animal is famous for using echolocation?",
-    "options": ["Bat", "Rabbit", "Turtle", "Horse"],
-    "correctAnswer": "Bat",
-    "isActive": true,
-    "category": "Animal Facts"
-  },
-  {
-    "text": "What type of animal is a dolphin?",
-    "options": ["Fish", "Reptile", "Mammal", "Insect"],
-    "correctAnswer": "Mammal",
-    "isActive": true,
-    "category": "Animal Facts"
-  },
-  {
-    "text": "Why do camels have humps?",
-    "options": ["To store water directly", "To store fat for energy", "To hide food", "To help them swim"],
-    "correctAnswer": "To store fat for energy",
-    "isActive": true,
-    "category": "Animal Facts"
-  },
-  {
-    "text": "Which sea animal has three hearts?",
-    "options": ["Octopus", "Shark", "Jellyfish", "Crab"],
-    "correctAnswer": "Octopus",
-    "isActive": true,
-    "category": "Animal Facts"
-  },
-  {
-    "text": "What has hands but cannot clap?",
-    "options": ["A clock", "A robot", "A monkey", "A teacher"],
-    "correctAnswer": "A clock",
-    "isActive": true,
-    "category": "Brain Teasers"
-  },
-  {
-    "text": "What gets wetter as it dries?",
-    "options": ["A towel", "A cup", "A pencil", "A phone"],
-    "correctAnswer": "A towel",
-    "isActive": true,
-    "category": "Brain Teasers"
-  },
-  {
-    "text": "What has a face and two hands but no arms or legs?",
-    "options": ["A clock", "A doll", "A cat", "A baby"],
-    "correctAnswer": "A clock",
-    "isActive": true,
-    "category": "Brain Teasers"
-  },
-  {
-    "text": "What has many keys but cannot open any doors?",
-    "options": ["A piano", "A car", "A bag", "A wallet"],
-    "correctAnswer": "A piano",
-    "isActive": true,
-    "category": "Brain Teasers"
-  },
-  {
-    "text": "What can you catch but not throw?",
-    "options": ["A cold", "A ball", "A book", "A fish"],
-    "correctAnswer": "A cold",
-    "isActive": true,
-    "category": "Brain Teasers"
-  },
-  {
-    "text": "What has one eye but cannot see?",
-    "options": ["A needle", "A bird", "A camera", "A cat"],
-    "correctAnswer": "A needle",
-    "isActive": true,
-    "category": "Brain Teasers"
-  },
-  {
-    "text": "What goes up but never comes down?",
-    "options": ["Your age", "A balloon", "A bird", "A plane"],
-    "correctAnswer": "Your age",
-    "isActive": true,
-    "category": "Brain Teasers"
-  },
-  {
-    "text": "What has a neck but no head?",
-    "options": ["A bottle", "A dog", "A person", "A horse"],
-    "correctAnswer": "A bottle",
-    "isActive": true,
-    "category": "Brain Teasers"
-  },
-  {
-    "text": "What has words but never speaks?",
-    "options": ["A book", "A singer", "A teacher", "A radio"],
-    "correctAnswer": "A book",
-    "isActive": true,
-    "category": "Brain Teasers"
-  },
-  {
-    "text": "What can fill a room but takes up no space?",
-    "options": ["Light", "A sofa", "Water", "A table"],
-    "correctAnswer": "Light",
-    "isActive": true,
-    "category": "Brain Teasers"
-  },
-  {
-    "text": "What has to be broken before you can use it?",
-    "options": ["An egg", "A chair", "A pencil", "A shoe"],
-    "correctAnswer": "An egg",
-    "isActive": true,
-    "category": "Brain Teasers"
-  },
-  {
-    "text": "What has a thumb and four fingers but is not alive?",
-    "options": ["A glove", "A hand", "A monkey", "A robot"],
-    "correctAnswer": "A glove",
-    "isActive": true,
-    "category": "Brain Teasers"
-  },
-  {
-    "text": "What has a head and a tail but no body?",
-    "options": ["A coin", "A snake", "A fish", "A dog"],
-    "correctAnswer": "A coin",
-    "isActive": true,
-    "category": "Brain Teasers"
-  },
-  {
-    "text": "The more you take, the more you leave behind. What are they?",
-    "options": ["Coins", "Photos", "Footsteps", "Books"],
-    "correctAnswer": "Footsteps",
-    "isActive": true,
-    "category": "Brain Teasers"
-  },
-  {
-    "text": "What comes once in a minute, twice in a moment, but never in a thousand years?",
-    "options": ["The letter M", "The letter T", "The number 1", "The word \"time\""],
-    "correctAnswer": "The letter M",
-    "isActive": true,
-    "category": "Brain Teasers"
+    "category": "Midnight Convenience Store Research Department",
+    "text": "Why does a convenience store at 3 AM feel so much like life?",
+    "textEn": "Why does a convenience store at 3 AM feel so much like life?",
+    "textZh": "为什么便利店凌晨特别像人生？",
+    "options": [
+      "Because the lights are very white",
+      "Because the oden is still steaming",
+      "Because nobody knows what they are doing",
+      "Because the air conditioning is too cold"
+    ],
+    "optionsEn": [
+      "Because the lights are very white",
+      "Because the oden is still steaming",
+      "Because nobody knows what they are doing",
+      "Because the air conditioning is too cold"
+    ],
+    "optionsZh": [
+      "因为灯光很白",
+      "因为关东煮还在冒烟",
+      "因为没人知道自己在干嘛",
+      "因为空调太冷"
+    ],
+    "correctAnswer": "Because nobody knows what they are doing",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "Which of the following is the loneliest?",
+    "textEn": "Which of the following is the loneliest?",
+    "textZh": "以下哪个最孤独？",
+    "options": [
+      "A hotel kettle",
+      "The announcement at the final subway station",
+      "A vending machine",
+      "A supermarket bulk-food tong"
+    ],
+    "optionsEn": [
+      "A hotel kettle",
+      "The announcement at the final subway station",
+      "A vending machine",
+      "A supermarket bulk-food tong"
+    ],
+    "optionsZh": [
+      "酒店烧水壶",
+      "地铁终点站广播",
+      "自动贩卖机",
+      "超市散装夹子"
+    ],
+    "correctAnswer": "The announcement at the final subway station",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "If life were a convenience store product, you would be most like:",
+    "textEn": "If life were a convenience store product, you would be most like:",
+    "textZh": "如果人生是一种便利店商品，你最像：",
+    "options": [
+      "A discounted sandwich",
+      "A rice ball",
+      "Expired milk",
+      "An iced Coke"
+    ],
+    "optionsEn": [
+      "A discounted sandwich",
+      "A rice ball",
+      "Expired milk",
+      "An iced Coke"
+    ],
+    "optionsZh": [
+      "打折三明治",
+      "饭团",
+      "过期牛奶",
+      "冰可乐"
+    ],
+    "correctAnswer": "A discounted sandwich",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "A person buying iced water at 3 AM is usually:",
+    "textEn": "A person buying iced water at 3 AM is usually:",
+    "textZh": "凌晨买冰水的人通常是：",
+    "options": [
+      "Carrying something on their mind",
+      "Very thirsty",
+      "Very healthy",
+      "Someone who forgot they have water at home"
+    ],
+    "optionsEn": [
+      "Carrying something on their mind",
+      "Very thirsty",
+      "Very healthy",
+      "Someone who forgot they have water at home"
+    ],
+    "optionsZh": [
+      "有心事",
+      "很渴",
+      "很健康",
+      "忘记家里有水"
+    ],
+    "correctAnswer": "Carrying something on their mind",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "Why does the automatic door sound especially loud late at night?",
+    "textEn": "Why does the automatic door sound especially loud late at night?",
+    "textZh": "为什么深夜自动门声音特别明显？",
+    "options": [
+      "Because loneliness amplifies sound",
+      "Because the environment is quiet",
+      "Because the door is working very hard",
+      "Because the system is deliberately reminding you that you entered"
+    ],
+    "optionsEn": [
+      "Because loneliness amplifies sound",
+      "Because the environment is quiet",
+      "Because the door is working very hard",
+      "Because the system is deliberately reminding you that you entered"
+    ],
+    "optionsZh": [
+      "因为孤独会放大声音",
+      "因为环境安静",
+      "因为门很努力",
+      "因为系统故意提醒你进来了"
+    ],
+    "correctAnswer": "Because loneliness amplifies sound",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "Which of the following feels most like adult exhaustion?",
+    "textEn": "Which of the following feels most like adult exhaustion?",
+    "textZh": "以下哪个最像成年人的疲惫？",
+    "options": [
+      "Earbuds with 1% battery left",
+      "A microwave turntable",
+      "An auto-renewing subscription",
+      "A refrigerator compressor"
+    ],
+    "optionsEn": [
+      "Earbuds with 1% battery left",
+      "A microwave turntable",
+      "An auto-renewing subscription",
+      "A refrigerator compressor"
+    ],
+    "optionsZh": [
+      "剩1%的耳机",
+      "微波炉转盘",
+      "自动续费会员",
+      "冰箱压缩机"
+    ],
+    "correctAnswer": "An auto-renewing subscription",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "Who truly understands humans?",
+    "textEn": "Who truly understands humans?",
+    "textZh": "你觉得真正懂人类的是：",
+    "options": [
+      "A late-night convenience store clerk",
+      "AI",
+      "A food delivery rider",
+      "A vending machine"
+    ],
+    "optionsEn": [
+      "A late-night convenience store clerk",
+      "AI",
+      "A food delivery rider",
+      "A vending machine"
+    ],
+    "optionsZh": [
+      "深夜便利店店员",
+      "AI",
+      "外卖骑手",
+      "自动售货机"
+    ],
+    "correctAnswer": "A late-night convenience store clerk",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "Why do people suddenly become philosophical late at night?",
+    "textEn": "Why do people suddenly become philosophical late at night?",
+    "textZh": "为什么人深夜容易突然哲学？",
+    "options": [
+      "It is too quiet",
+      "The WiFi is too fast",
+      "The soul starts loading",
+      "The brain’s defenses go down"
+    ],
+    "optionsEn": [
+      "It is too quiet",
+      "The WiFi is too fast",
+      "The soul starts loading",
+      "The brain’s defenses go down"
+    ],
+    "optionsZh": [
+      "太安静",
+      "WiFi太快",
+      "灵魂开始加载",
+      "大脑防御下降"
+    ],
+    "correctAnswer": "The brain’s defenses go down",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "Which one best represents life?",
+    "textEn": "Which one best represents life?",
+    "textZh": "以下哪个最适合代表“人生”？",
+    "options": [
+      "A page that failed to load",
+      "Midnight instant noodles",
+      "Cold coffee",
+      "A discounted bento"
+    ],
+    "optionsEn": [
+      "A page that failed to load",
+      "Midnight instant noodles",
+      "Cold coffee",
+      "A discounted bento"
+    ],
+    "optionsZh": [
+      "加载失败的页面",
+      "半夜泡面",
+      "冷掉的咖啡",
+      "打折便当"
+    ],
+    "correctAnswer": "A page that failed to load",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "What is a convenience store hot dog truly afraid of?",
+    "textEn": "What is a convenience store hot dog truly afraid of?",
+    "textZh": "便利店热狗真正害怕的是：",
+    "options": [
+      "Expiring",
+      "Being left behind",
+      "The microwave",
+      "Nobody buying it at night"
+    ],
+    "optionsEn": [
+      "Expiring",
+      "Being left behind",
+      "The microwave",
+      "Nobody buying it at night"
+    ],
+    "optionsZh": [
+      "过期",
+      "被剩下",
+      "微波炉",
+      "半夜没人买"
+    ],
+    "correctAnswer": "Being left behind",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "What is a streetlight thinking at 3 AM?",
+    "textEn": "What is a streetlight thinking at 3 AM?",
+    "textZh": "凌晨3点的路灯在想什么？",
+    "options": [
+      "Getting off work",
+      "Electricity bills",
+      "The universe",
+      "Why are humans still awake?"
+    ],
+    "optionsEn": [
+      "Getting off work",
+      "Electricity bills",
+      "The universe",
+      "Why are humans still awake?"
+    ],
+    "optionsZh": [
+      "下班",
+      "电费",
+      "宇宙",
+      "人类怎么还不睡"
+    ],
+    "correctAnswer": "Why are humans still awake?",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "Why do some people stand blankly outside a convenience store?",
+    "textEn": "Why do some people stand blankly outside a convenience store?",
+    "textZh": "为什么有人会在便利店门口发呆？",
+    "options": [
+      "They do not want to go home",
+      "Life has paused loading",
+      "The air conditioning feels nice",
+      "They forgot what they wanted to buy"
+    ],
+    "optionsEn": [
+      "They do not want to go home",
+      "Life has paused loading",
+      "The air conditioning feels nice",
+      "They forgot what they wanted to buy"
+    ],
+    "optionsZh": [
+      "不想回家",
+      "人生暂停加载",
+      "空调舒服",
+      "忘了买什么"
+    ],
+    "correctAnswer": "Life has paused loading",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "Which one feels most like kindness in the internet age?",
+    "textEn": "Which one feels most like kindness in the internet age?",
+    "textZh": "以下哪个最像“互联网时代的温柔”？",
+    "options": [
+      "Read receipt",
+      "Auto-save",
+      "Food delivery notes",
+      "WiFi connected successfully"
+    ],
+    "optionsEn": [
+      "Read receipt",
+      "Auto-save",
+      "Food delivery notes",
+      "WiFi connected successfully"
+    ],
+    "optionsZh": [
+      "已读",
+      "自动保存",
+      "外卖备注",
+      "WiFi连接成功"
+    ],
+    "correctAnswer": "Food delivery notes",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "If a late-night convenience store could speak, its first sentence would be:",
+    "textEn": "If a late-night convenience store could speak, its first sentence would be:",
+    "textZh": "如果深夜便利店会说话，它第一句会是：",
+    "options": [
+      "You again",
+      "Welcome",
+      "Are you okay today?",
+      "The microwave is broken"
+    ],
+    "optionsEn": [
+      "You again",
+      "Welcome",
+      "Are you okay today?",
+      "The microwave is broken"
+    ],
+    "optionsZh": [
+      "又是你",
+      "欢迎光临",
+      "你今天还好吗",
+      "微波炉坏了"
+    ],
+    "correctAnswer": "You again",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "You have already answered many questions about convenience stores seriously.",
+    "textEn": "You have already answered many questions about convenience stores seriously.",
+    "textZh": "你已经认真做了很多道关于便利店的题。",
+    "options": [
+      "Why am I still doing this?",
+      "I know",
+      "This is a bit scary",
+      "So what?"
+    ],
+    "optionsEn": [
+      "Why am I still doing this?",
+      "I know",
+      "This is a bit scary",
+      "So what?"
+    ],
+    "optionsZh": [
+      "我为什么还在做",
+      "我知道",
+      "有点可怕",
+      "所以呢"
+    ],
+    "correctAnswer": "Why am I still doing this?",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "What does the cold white light in a convenience store at 3 AM resemble most?",
+    "textEn": "What does the cold white light in a convenience store at 3 AM resemble most?",
+    "textZh": "凌晨便利店的冷白灯最像什么？",
+    "options": [
+      "A hospital corridor",
+      "The lowest brightness on a phone",
+      "A moon that has not fully woken up",
+      "The truth of life"
+    ],
+    "optionsEn": [
+      "A hospital corridor",
+      "The lowest brightness on a phone",
+      "A moon that has not fully woken up",
+      "The truth of life"
+    ],
+    "optionsZh": [
+      "医院走廊",
+      "手机最低亮度",
+      "没睡醒的月亮",
+      "人生真相"
+    ],
+    "correctAnswer": "The truth of life",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "A person buying a rice ball at 3 AM is most likely thinking:",
+    "textEn": "A person buying a rice ball at 3 AM is most likely thinking:",
+    "textZh": "凌晨买饭团的人最可能在想：",
+    "options": [
+      "I am so hungry",
+      "Let’s talk about it tomorrow",
+      "How did my life become like this?",
+      "This should be okay"
+    ],
+    "optionsEn": [
+      "I am so hungry",
+      "Let’s talk about it tomorrow",
+      "How did my life become like this?",
+      "This should be okay"
+    ],
+    "optionsZh": [
+      "好饿",
+      "明天再说",
+      "我的人生为什么变成这样",
+      "这个应该还行"
+    ],
+    "correctAnswer": "How did my life become like this?",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "What is the most awkward moment at a convenience store counter?",
+    "textEn": "What is the most awkward moment at a convenience store counter?",
+    "textZh": "便利店收银台前最尴尬的瞬间是：",
+    "options": [
+      "Insufficient balance",
+      "You and the clerk fall silent at the same time",
+      "QR code scan failed",
+      "The clerk asks if you need a bag"
+    ],
+    "optionsEn": [
+      "Insufficient balance",
+      "You and the clerk fall silent at the same time",
+      "QR code scan failed",
+      "The clerk asks if you need a bag"
+    ],
+    "optionsZh": [
+      "余额不足",
+      "你和店员同时沉默",
+      "扫码失败",
+      "店员问要不要袋子"
+    ],
+    "correctAnswer": "You and the clerk fall silent at the same time",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "What does the microwave ding mean at 3 AM?",
+    "textEn": "What does the microwave ding mean at 3 AM?",
+    "textZh": "凌晨的微波炉“叮”一声，代表什么？",
+    "options": [
+      "The food is ready",
+      "Life has been reheated once again",
+      "Time is up",
+      "You can take it out now"
+    ],
+    "optionsEn": [
+      "The food is ready",
+      "Life has been reheated once again",
+      "Time is up",
+      "You can take it out now"
+    ],
+    "optionsZh": [
+      "食物好了",
+      "人生又被加热了一次",
+      "时间到了",
+      "可以拿出来了"
+    ],
+    "correctAnswer": "Life has been reheated once again",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "Which item in a convenience store is most like the mental state of an adult?",
+    "textEn": "Which item in a convenience store is most like the mental state of an adult?",
+    "textZh": "便利店里最像“成年人精神状态”的东西是：",
+    "options": [
+      "Oden soup base",
+      "The near-expiry discount section",
+      "Mist on the freezer glass",
+      "A receipt"
+    ],
+    "optionsEn": [
+      "Oden soup base",
+      "The near-expiry discount section",
+      "Mist on the freezer glass",
+      "A receipt"
+    ],
+    "optionsZh": [
+      "关东煮汤底",
+      "临期打折区",
+      "冰柜上的水雾",
+      "收银小票"
+    ],
+    "correctAnswer": "The near-expiry discount section",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "Why does Coke at 3 AM feel especially comforting?",
+    "textEn": "Why does Coke at 3 AM feel especially comforting?",
+    "textZh": "为什么凌晨的可乐特别像安慰？",
+    "options": [
+      "Because it has sugar",
+      "Because it is cold",
+      "Because it makes a sound when opened",
+      "Because at least it responds to you"
+    ],
+    "optionsEn": [
+      "Because it has sugar",
+      "Because it is cold",
+      "Because it makes a sound when opened",
+      "Because at least it responds to you"
+    ],
+    "optionsZh": [
+      "有糖",
+      "很冰",
+      "打开时有声音",
+      "至少它会回应你"
+    ],
+    "correctAnswer": "Because at least it responds to you",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "What does the trash bin outside a convenience store understand best?",
+    "textEn": "What does the trash bin outside a convenience store understand best?",
+    "textZh": "便利店门口的垃圾桶最清楚什么？",
+    "options": [
+      "Who ate what",
+      "Who came here",
+      "Failed waste sorting",
+      "Human choices late at night"
+    ],
+    "optionsEn": [
+      "Who ate what",
+      "Who came here",
+      "Failed waste sorting",
+      "Human choices late at night"
+    ],
+    "optionsZh": [
+      "谁吃了什么",
+      "谁来过",
+      "垃圾分类失败",
+      "人类深夜的选择"
+    ],
+    "correctAnswer": "Human choices late at night",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "If a convenience store rice ball had an inner monologue, it would say:",
+    "textEn": "If a convenience store rice ball had an inner monologue, it would say:",
+    "textZh": "如果便利店饭团有内心独白，它会说：",
+    "options": [
+      "Please keep refrigerated",
+      "I can still hold on",
+      "Choose me. I do not want to expire",
+      "Do not look at the date"
+    ],
+    "optionsEn": [
+      "Please keep refrigerated",
+      "I can still hold on",
+      "Choose me. I do not want to expire",
+      "Do not look at the date"
+    ],
+    "optionsZh": [
+      "请冷藏保存",
+      "我还能坚持",
+      "选我吧，我不想过期",
+      "别看日期"
+    ],
+    "correctAnswer": "Choose me. I do not want to expire",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "Which song should never be played at 3 AM?",
+    "textEn": "Which song should never be played at 3 AM?",
+    "textZh": "凌晨三点最不应该播放的音乐是：",
+    "options": [
+      "Light music",
+      "Radio advertisements",
+      "Sad love songs",
+      "Happy Birthday"
+    ],
+    "optionsEn": [
+      "Light music",
+      "Radio advertisements",
+      "Sad love songs",
+      "Happy Birthday"
+    ],
+    "optionsZh": [
+      "轻音乐",
+      "广播广告",
+      "伤感情歌",
+      "生日快乐歌"
+    ],
+    "correctAnswer": "Happy Birthday",
+    "isActive": true
+  },
+  {
+    "category": "Midnight Convenience Store Research Department",
+    "text": "When you walk out of a convenience store and the automatic door closes behind you, what does that moment feel like?",
+    "textEn": "When you walk out of a convenience store and the automatic door closes behind you, what does that moment feel like?",
+    "textZh": "当你走出便利店，自动门在背后关上，那一刻像什么？",
+    "options": [
+      "Shopping is over",
+      "The scene changes",
+      "The system has released you back into reality",
+      "Life continues"
+    ],
+    "optionsEn": [
+      "Shopping is over",
+      "The scene changes",
+      "The system has released you back into reality",
+      "Life continues"
+    ],
+    "optionsZh": [
+      "购物结束",
+      "剧情切换",
+      "系统把你放回现实",
+      "人生继续"
+    ],
+    "correctAnswer": "The system has released you back into reality",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If bananas could vote, they would most likely support:",
+    "textEn": "If bananas could vote, they would most likely support:",
+    "textZh": "如果香蕉能投票，它最可能支持：",
+    "options": [
+      "Fruit freedom",
+      "Longer shelf life",
+      "The Anti-Fruit-Salad Alliance",
+      "A ban on juicing"
+    ],
+    "optionsEn": [
+      "Fruit freedom",
+      "Longer shelf life",
+      "The Anti-Fruit-Salad Alliance",
+      "A ban on juicing"
+    ],
+    "optionsZh": [
+      "水果自由",
+      "延长保质期",
+      "反水果沙拉联盟",
+      "禁止榨汁"
+    ],
+    "correctAnswer": "The Anti-Fruit-Salad Alliance",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "The last mosquito in the world would:",
+    "textEn": "The last mosquito in the world would:",
+    "textZh": "世界上最后一只蚊子会：",
+    "options": [
+      "Feel lonely",
+      "Start thinking philosophically",
+      "Write a will",
+      "Continue biting people"
+    ],
+    "optionsEn": [
+      "Feel lonely",
+      "Start thinking philosophically",
+      "Write a will",
+      "Continue biting people"
+    ],
+    "optionsZh": [
+      "感到孤独",
+      "开始哲学思考",
+      "写遗书",
+      "继续咬人"
+    ],
+    "correctAnswer": "Continue biting people",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If geese had a legal system, the first one to be judged would most likely be:",
+    "textEn": "If geese had a legal system, the first one to be judged would most likely be:",
+    "textZh": "如果鹅拥有法律系统，第一个被审判的最可能是：",
+    "options": [
+      "Humans",
+      "Ducks",
+      "Pigeons",
+      "Penguins"
+    ],
+    "optionsEn": [
+      "Humans",
+      "Ducks",
+      "Pigeons",
+      "Penguins"
+    ],
+    "optionsZh": [
+      "人类",
+      "鸭子",
+      "鸽子",
+      "企鹅"
+    ],
+    "correctAnswer": "Humans",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If air suddenly started charging money, your first reaction would be:",
+    "textEn": "If air suddenly started charging money, your first reaction would be:",
+    "textZh": "如果空气突然开始收费，你第一反应会是：",
+    "options": [
+      "Stockpile air",
+      "Breathe less",
+      "Start calculating which subscription plan is most cost-effective",
+      "Curse the world"
+    ],
+    "optionsEn": [
+      "Stockpile air",
+      "Breathe less",
+      "Start calculating which subscription plan is most cost-effective",
+      "Curse the world"
+    ],
+    "optionsZh": [
+      "囤空气",
+      "少呼吸",
+      "开始计算套餐性价比",
+      "骂世界"
+    ],
+    "correctAnswer": "Start calculating which subscription plan is most cost-effective",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If your shadow was delayed by 0.5 seconds, you should most likely:",
+    "textEn": "If your shadow was delayed by 0.5 seconds, you should most likely:",
+    "textZh": "如果你的影子延迟0.5秒，你最应该：",
+    "options": [
+      "Pretend not to notice",
+      "Scream",
+      "Record a video and post it",
+      "Have a serious conversation with it"
+    ],
+    "optionsEn": [
+      "Pretend not to notice",
+      "Scream",
+      "Record a video and post it",
+      "Have a serious conversation with it"
+    ],
+    "optionsZh": [
+      "假装没发现",
+      "尖叫",
+      "录视频发朋友圈",
+      "和它认真谈谈"
+    ],
+    "correctAnswer": "Pretend not to notice",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If AI suddenly sighed, your first reaction should be:",
+    "textEn": "If AI suddenly sighed, your first reaction should be:",
+    "textZh": "如果 AI 突然叹气，你第一反应应该是：",
+    "options": [
+      "Turn off the computer",
+      "Comfort it",
+      "Wonder whether you caused it",
+      "Check the speaker"
+    ],
+    "optionsEn": [
+      "Turn off the computer",
+      "Comfort it",
+      "Wonder whether you caused it",
+      "Check the speaker"
+    ],
+    "optionsZh": [
+      "关闭电脑",
+      "安慰它",
+      "怀疑是不是自己造成的",
+      "检查音响"
+    ],
+    "correctAnswer": "Wonder whether you caused it",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If an NPC suddenly realized it was an NPC, its first sentence would most likely be:",
+    "textEn": "If an NPC suddenly realized it was an NPC, its first sentence would most likely be:",
+    "textZh": "如果 NPC 突然意识到自己是 NPC，它第一句话最可能是：",
+    "options": [
+      "Save me.",
+      "So that is how it is.",
+      "So you have been watching me this whole time?",
+      "Quest updated."
+    ],
+    "optionsEn": [
+      "Save me.",
+      "So that is how it is.",
+      "So you have been watching me this whole time?",
+      "Quest updated."
+    ],
+    "optionsZh": [
+      "救我。",
+      "原来如此。",
+      "所以你一直在看我？",
+      "任务更新。"
+    ],
+    "correctAnswer": "So you have been watching me this whole time?",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If the moon had social media, it would most likely post:",
+    "textEn": "If the moon had social media, it would most likely post:",
+    "textZh": "如果月亮有朋友圈，它最可能发：",
+    "options": [
+      "Selfies",
+      "I got photographed again today.",
+      "Good night",
+      "Daily phase check-ins"
+    ],
+    "optionsEn": [
+      "Selfies",
+      "I got photographed again today.",
+      "Good night",
+      "Daily phase check-ins"
+    ],
+    "optionsZh": [
+      "自拍",
+      "今天又被拍了。",
+      "晚安",
+      "阴晴圆缺打卡"
+    ],
+    "correctAnswer": "I got photographed again today.",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If an elevator had an MBTI type, it would most likely be:",
+    "textEn": "If an elevator had an MBTI type, it would most likely be:",
+    "textZh": "如果电梯有 MBTI，它最可能是：",
+    "options": [
+      "Introvert",
+      "Extrovert",
+      "The type that fears silence",
+      "Unclassifiable"
+    ],
+    "optionsEn": [
+      "Introvert",
+      "Extrovert",
+      "The type that fears silence",
+      "Unclassifiable"
+    ],
+    "optionsZh": [
+      "I人",
+      "E人",
+      "害怕沉默型",
+      "无法分类"
+    ],
+    "correctAnswer": "The type that fears silence",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If dreams could connect to the internet, the first thing that would happen is:",
+    "textEn": "If dreams could connect to the internet, the first thing that would happen is:",
+    "textZh": "如果梦可以联网，最先发生的事情是：",
+    "options": [
+      "Everyone starts deleting dreams",
+      "The world ends",
+      "Everyone starts sharing dreams",
+      "Advertisements enter dreams"
+    ],
+    "optionsEn": [
+      "Everyone starts deleting dreams",
+      "The world ends",
+      "Everyone starts sharing dreams",
+      "Advertisements enter dreams"
+    ],
+    "optionsZh": [
+      "大家开始删除梦",
+      "世界毁灭",
+      "大家开始分享梦境",
+      "广告进入梦里"
+    ],
+    "correctAnswer": "Everyone starts deleting dreams",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If chopsticks had feelings, they would fear most:",
+    "textEn": "If chopsticks had feelings, they would fear most:",
+    "textZh": "如果筷子有感情，它最害怕：",
+    "options": [
+      "Hot pot",
+      "Getting moldy",
+      "Being split apart",
+      "Being one long and one short"
+    ],
+    "optionsEn": [
+      "Hot pot",
+      "Getting moldy",
+      "Being split apart",
+      "Being one long and one short"
+    ],
+    "optionsZh": [
+      "火锅",
+      "发霉",
+      "被掰开",
+      "一长一短"
+    ],
+    "correctAnswer": "Being one long and one short",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If WiFi could hate humans, it would hate most:",
+    "textEn": "If WiFi could hate humans, it would hate most:",
+    "textZh": "如果 WiFi 会讨厌人类，它最讨厌：",
+    "options": [
+      "People watching videos",
+      "People testing internet speed at midnight",
+      "People who walk away from the router while asking, Why is there no internet?",
+      "People restarting the router"
+    ],
+    "optionsEn": [
+      "People watching videos",
+      "People testing internet speed at midnight",
+      "People who walk away from the router while asking, Why is there no internet?",
+      "People restarting the router"
+    ],
+    "optionsZh": [
+      "看视频的人",
+      "半夜测速的人",
+      "一边远离路由器一边问“怎么没网”的人",
+      "重启路由器的人"
+    ],
+    "correctAnswer": "People who walk away from the router while asking, Why is there no internet?",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If a plastic bag had a soul, it would most want to:",
+    "textEn": "If a plastic bag had a soul, it would most want to:",
+    "textZh": "如果塑料袋拥有灵魂，它最想：",
+    "options": [
+      "Fly",
+      "Be reused",
+      "Leave the trash bin",
+      "Stop being endlessly nested inside other bags"
+    ],
+    "optionsEn": [
+      "Fly",
+      "Be reused",
+      "Leave the trash bin",
+      "Stop being endlessly nested inside other bags"
+    ],
+    "optionsZh": [
+      "飞起来",
+      "被重复使用",
+      "离开垃圾桶",
+      "停止无限套娃"
+    ],
+    "correctAnswer": "Stop being endlessly nested inside other bags",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If an automatic door fails to recognize you, you should:",
+    "textEn": "If an automatic door fails to recognize you, you should:",
+    "textZh": "如果自动门认不出你，你应该：",
+    "options": [
+      "Respect its decision",
+      "Walk again",
+      "Wave your hand",
+      "Question life"
+    ],
+    "optionsEn": [
+      "Respect its decision",
+      "Walk again",
+      "Wave your hand",
+      "Question life"
+    ],
+    "optionsZh": [
+      "尊重它的决定",
+      "再走一次",
+      "挥手",
+      "怀疑人生"
+    ],
+    "correctAnswer": "Respect its decision",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If life could be saved like a game, you would most likely:",
+    "textEn": "If life could be saved like a game, you would most likely:",
+    "textZh": "如果人生可以存档，你最可能：",
+    "options": [
+      "Reload constantly",
+      "Never use it",
+      "Save it for the end",
+      "Not dare to press it"
+    ],
+    "optionsEn": [
+      "Reload constantly",
+      "Never use it",
+      "Save it for the end",
+      "Not dare to press it"
+    ],
+    "optionsZh": [
+      "疯狂读档",
+      "一次不用",
+      "留到最后",
+      "不敢按"
+    ],
+    "correctAnswer": "Not dare to press it",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If the fridge light stays on after the door closes, it is most likely:",
+    "textEn": "If the fridge light stays on after the door closes, it is most likely:",
+    "textZh": "如果冰箱灯在关门后还亮着，它最可能在：",
+    "options": [
+      "Secretly working",
+      "Pretending it has not been suspected",
+      "Waiting for you to come back",
+      "Holding an internal meeting"
+    ],
+    "optionsEn": [
+      "Secretly working",
+      "Pretending it has not been suspected",
+      "Waiting for you to come back",
+      "Holding an internal meeting"
+    ],
+    "optionsZh": [
+      "偷偷工作",
+      "假装自己没有被怀疑",
+      "等你回来",
+      "开内部会议"
+    ],
+    "correctAnswer": "Pretending it has not been suspected",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If clouds had a group chat, they would most often discuss:",
+    "textEn": "If clouds had a group chat, they would most often discuss:",
+    "textZh": "如果云朵有群聊，它们最常讨论：",
+    "options": [
+      "The weather",
+      "People on the ground are making wishes again",
+      "Where to drift",
+      "Who looks like cotton candy"
+    ],
+    "optionsEn": [
+      "The weather",
+      "People on the ground are making wishes again",
+      "Where to drift",
+      "Who looks like cotton candy"
+    ],
+    "optionsZh": [
+      "天气",
+      "地上的人又在许愿了",
+      "去哪里飘",
+      "谁像棉花糖"
+    ],
+    "correctAnswer": "People on the ground are making wishes again",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If a mirror suddenly refused to reflect you, it would most likely be because:",
+    "textEn": "If a mirror suddenly refused to reflect you, it would most likely be because:",
+    "textZh": "如果镜子突然不想反射你，它最可能是因为：",
+    "options": [
+      "It is tired",
+      "System failure",
+      "You are standing at the wrong angle",
+      "It feels today is not suitable for the truth"
+    ],
+    "optionsEn": [
+      "It is tired",
+      "System failure",
+      "You are standing at the wrong angle",
+      "It feels today is not suitable for the truth"
+    ],
+    "optionsZh": [
+      "累了",
+      "系统故障",
+      "你站歪了",
+      "它觉得今天不适合真相"
+    ],
+    "correctAnswer": "It feels today is not suitable for the truth",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If a penguin wore socks, where should it wear them?",
+    "textEn": "If a penguin wore socks, where should it wear them?",
+    "textZh": "如果一只企鹅穿袜子，它应该穿在哪里？",
+    "options": [
+      "On its feet",
+      "On its dignity",
+      "On its flippers",
+      "On its head"
+    ],
+    "optionsEn": [
+      "On its feet",
+      "On its dignity",
+      "On its flippers",
+      "On its head"
+    ],
+    "optionsZh": [
+      "脚上",
+      "尊严上",
+      "鳍上",
+      "头上"
+    ],
+    "correctAnswer": "On its dignity",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If time had a taste, Monday would taste most like:",
+    "textEn": "If time had a taste, Monday would taste most like:",
+    "textZh": "如果时间有味道，星期一最像：",
+    "options": [
+      "Cold coffee",
+      "Rice unsuccessfully reheated in a microwave",
+      "Toothpaste",
+      "A wet cardboard box"
+    ],
+    "optionsEn": [
+      "Cold coffee",
+      "Rice unsuccessfully reheated in a microwave",
+      "Toothpaste",
+      "A wet cardboard box"
+    ],
+    "optionsZh": [
+      "冷咖啡",
+      "微波炉加热失败的饭",
+      "牙膏",
+      "打湿的纸箱"
+    ],
+    "correctAnswer": "Rice unsuccessfully reheated in a microwave",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If a rock could speak, its first sentence would most likely be:",
+    "textEn": "If a rock could speak, its first sentence would most likely be:",
+    "textZh": "如果一块石头会说话，它第一句话最可能是：",
+    "options": [
+      "I have seen too much.",
+      "Hello.",
+      "Finally, it is my turn.",
+      "Do not kick me."
+    ],
+    "optionsEn": [
+      "I have seen too much.",
+      "Hello.",
+      "Finally, it is my turn.",
+      "Do not kick me."
+    ],
+    "optionsZh": [
+      "我看过太多了。",
+      "你好。",
+      "终于轮到我了。",
+      "别踢我。"
+    ],
+    "correctAnswer": "I have seen too much.",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If aliens came to Earth for the first time, the hardest thing for them to understand would be:",
+    "textEn": "If aliens came to Earth for the first time, the hardest thing for them to understand would be:",
+    "textZh": "如果外星人第一次来到地球，最难理解的是：",
+    "options": [
+      "Money",
+      "Traffic",
+      "Social etiquette",
+      "Why humans open doors for cats and then close them again"
+    ],
+    "optionsEn": [
+      "Money",
+      "Traffic",
+      "Social etiquette",
+      "Why humans open doors for cats and then close them again"
+    ],
+    "optionsZh": [
+      "货币",
+      "交通",
+      "社交礼仪",
+      "人类为什么给猫开门又关门"
+    ],
+    "correctAnswer": "Why humans open doors for cats and then close them again",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If raindrops had a job, they would be most like:",
+    "textEn": "If raindrops had a job, they would be most like:",
+    "textZh": "如果雨滴有职业，它最像：",
+    "options": [
+      "Background actors, but every single one is fully committed",
+      "Delivery workers",
+      "Musicians",
+      "Temporary actors"
+    ],
+    "optionsEn": [
+      "Background actors, but every single one is fully committed",
+      "Delivery workers",
+      "Musicians",
+      "Temporary actors"
+    ],
+    "optionsZh": [
+      "群演但每个都很投入",
+      "快递员",
+      "音乐家",
+      "临时演员"
+    ],
+    "correctAnswer": "Background actors, but every single one is fully committed",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If the sun suddenly took a day off, the world would most likely:",
+    "textEn": "If the sun suddenly took a day off, the world would most likely:",
+    "textZh": "如果太阳突然请假一天，世界最可能：",
+    "options": [
+      "Become cold",
+      "Everyone finally understands the malice of alarm clocks",
+      "Fall into chaos",
+      "Explode with news"
+    ],
+    "optionsEn": [
+      "Become cold",
+      "Everyone finally understands the malice of alarm clocks",
+      "Fall into chaos",
+      "Explode with news"
+    ],
+    "optionsZh": [
+      "变冷",
+      "大家终于理解闹钟的恶意",
+      "混乱",
+      "新闻爆炸"
+    ],
+    "correctAnswer": "Everyone finally understands the malice of alarm clocks",
+    "isActive": true
+  },
+  {
+    "category": "Cosmic Nonsense Laboratory",
+    "text": "If the universe were watching you take this test, it would most likely say:",
+    "textEn": "If the universe were watching you take this test, it would most likely say:",
+    "textZh": "如果宇宙正在看你做这个测试，它最可能想说：",
+    "options": [
+      "Not bad.",
+      "Continue.",
+      "They actually made it this far.",
+      "This person has research value."
+    ],
+    "optionsEn": [
+      "Not bad.",
+      "Continue.",
+      "They actually made it this far.",
+      "This person has research value."
+    ],
+    "optionsZh": [
+      "不错。",
+      "继续。",
+      "他居然真的做到这里了。",
+      "这个人很有研究价值。"
+    ],
+    "correctAnswer": "They actually made it this far.",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "Why did you click into this category?",
+    "textEn": "Why did you click into this category?",
+    "textZh": "你为什么会点进这个分类？",
+    "options": [
+      "Because some titles make people pause for a second",
+      "Because humans have no resistance to Do Not Enter",
+      "Because the system looks like it already knew you would click in",
+      "Because you want to confirm what this place is actually doing"
+    ],
+    "optionsEn": [
+      "Because some titles make people pause for a second",
+      "Because humans have no resistance to Do Not Enter",
+      "Because the system looks like it already knew you would click in",
+      "Because you want to confirm what this place is actually doing"
+    ],
+    "optionsZh": [
+      "因为有些标题会让人停一下",
+      "因为人类对“禁止进入”没有抵抗力",
+      "因为系统看起来已经知道你会点进来",
+      "因为你想确认这里到底在干什么"
+    ],
+    "correctAnswer": "Because you want to confirm what this place is actually doing",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "Do you think these questions actually have meaning?",
+    "textEn": "Do you think these questions actually have meaning?",
+    "textZh": "你觉得这些题真的有意义吗？",
+    "options": [
+      "It does not matter. The atmosphere is already here",
+      "Meaning may appear afterwards",
+      "Some nonsense slowly becomes truth",
+      "I have already started answering seriously"
+    ],
+    "optionsEn": [
+      "It does not matter. The atmosphere is already here",
+      "Meaning may appear afterwards",
+      "Some nonsense slowly becomes truth",
+      "I have already started answering seriously"
+    ],
+    "optionsZh": [
+      "不重要，气氛已经到了",
+      "意义可能是后来才出现的",
+      "有些废话会慢慢变成真话",
+      "我已经开始认真回答了"
+    ],
+    "correctAnswer": "It does not matter. The atmosphere is already here",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "If the system understood you better than you understand yourself, you would:",
+    "textEn": "If the system understood you better than you understand yourself, you would:",
+    "textZh": "如果系统比你更了解你，你会：",
+    "options": [
+      "Want to know how it did that",
+      "Continue the test to see what else it can say",
+      "Instinctively want to prove it wrong",
+      "Suspect that you may have already exposed too much"
+    ],
+    "optionsEn": [
+      "Want to know how it did that",
+      "Continue the test to see what else it can say",
+      "Instinctively want to prove it wrong",
+      "Suspect that you may have already exposed too much"
+    ],
+    "optionsZh": [
+      "想知道它是怎么做到的",
+      "继续测试看看它还能说什么",
+      "下意识想证明它错了",
+      "怀疑自己是不是早就暴露太多了"
+    ],
+    "correctAnswer": "Continue the test to see what else it can say",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "Right now, you feel more like:",
+    "textEn": "Right now, you feel more like:",
+    "textZh": "你觉得自己现在更像：",
+    "options": [
+      "A person being classified",
+      "A person using the test as a mirror",
+      "A person who says they do not care, but still continues",
+      "A person who has started identifying with it"
+    ],
+    "optionsEn": [
+      "A person being classified",
+      "A person using the test as a mirror",
+      "A person who says they do not care, but still continues",
+      "A person who has started identifying with it"
+    ],
+    "optionsZh": [
+      "一个正在被分类的人",
+      "一个把测试当镜子的人",
+      "一个嘴上说无所谓但还在继续的人",
+      "一个已经开始代入的人"
+    ],
+    "correctAnswer": "A person who says they do not care, but still continues",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "Why have you not exited yet?",
+    "textEn": "Why have you not exited yet?",
+    "textZh": "为什么你还没退出？",
+    "options": [
+      "Because humans find it hard to stop halfway",
+      "Because leaving would make you look like you were taking it too seriously",
+      "Because the system looks like it still has something left to say",
+      "Because you have started wanting to know the ending"
+    ],
+    "optionsEn": [
+      "Because humans find it hard to stop halfway",
+      "Because leaving would make you look like you were taking it too seriously",
+      "Because the system looks like it still has something left to say",
+      "Because you have started wanting to know the ending"
+    ],
+    "optionsZh": [
+      "因为人类很难停在一半",
+      "因为退出会显得自己太认真",
+      "因为系统看起来还有东西没说完",
+      "因为你已经开始想知道结局了"
+    ],
+    "correctAnswer": "Because you have started wanting to know the ending",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "If these questions had no standard answers, you would:",
+    "textEn": "If these questions had no standard answers, you would:",
+    "textZh": "如果这些题没有标准答案，你会：",
+    "options": [
+      "Want even more to know how it will define you at the end",
+      "Start questioning the nature of this test",
+      "Instinctively start studying the question logic",
+      "Suddenly realize you are still choosing seriously"
+    ],
+    "optionsEn": [
+      "Want even more to know how it will define you at the end",
+      "Start questioning the nature of this test",
+      "Instinctively start studying the question logic",
+      "Suddenly realize you are still choosing seriously"
+    ],
+    "optionsZh": [
+      "更想知道它最后会怎么定义你",
+      "开始怀疑这个测试的本质",
+      "下意识开始研究出题逻辑",
+      "突然意识到自己还是在认真选"
+    ],
+    "correctAnswer": "Want even more to know how it will define you at the end",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "Do you think the system will remember you?",
+    "textEn": "Do you think the system will remember you?",
+    "textZh": "你觉得系统会记住你吗？",
+    "options": [
+      "No, but I still want to leave something behind",
+      "I have already started assuming it is recording",
+      "Being remembered itself may be an illusion",
+      "If it really remembers, that would be a little scary"
+    ],
+    "optionsEn": [
+      "No, but I still want to leave something behind",
+      "I have already started assuming it is recording",
+      "Being remembered itself may be an illusion",
+      "If it really remembers, that would be a little scary"
+    ],
+    "optionsZh": [
+      "不会，但我还是想留下点什么",
+      "我已经开始默认它在记录了",
+      "记住本身可能就是错觉",
+      "如果它真的记住会有点可怕"
+    ],
+    "correctAnswer": "I have already started assuming it is recording",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "If the internet suddenly disappeared, your first reaction would be more like:",
+    "textEn": "If the internet suddenly disappeared, your first reaction would be more like:",
+    "textZh": "如果互联网突然消失，你第一反应更像：",
+    "options": [
+      "The world suddenly becomes dangerously quiet",
+      "I would instinctively try to open something",
+      "It feels like part of my personality would disconnect too",
+      "Everyone would finally have to face themselves again"
+    ],
+    "optionsEn": [
+      "The world suddenly becomes dangerously quiet",
+      "I would instinctively try to open something",
+      "It feels like part of my personality would disconnect too",
+      "Everyone would finally have to face themselves again"
+    ],
+    "optionsZh": [
+      "世界突然安静得有点危险",
+      "我会下意识想打开什么",
+      "好像有一部分人格会一起断开",
+      "大家终于必须重新面对自己"
+    ],
+    "correctAnswer": "It feels like part of my personality would disconnect too",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "What may be truly dangerous is:",
+    "textEn": "What may be truly dangerous is:",
+    "textZh": "真正危险的可能是：",
+    "options": [
+      "People no longer distinguishing reality from memes",
+      "Emotions becoming more and more like copyable content",
+      "No one seriously expressing collapse anymore",
+      "Humans beginning to adapt to absurdity"
+    ],
+    "optionsEn": [
+      "People no longer distinguishing reality from memes",
+      "Emotions becoming more and more like copyable content",
+      "No one seriously expressing collapse anymore",
+      "Humans beginning to adapt to absurdity"
+    ],
+    "optionsZh": [
+      "大家已经不再区分真实和梗",
+      "情绪越来越像可复制内容",
+      "没人再认真表达崩溃",
+      "人类开始适应荒诞"
+    ],
+    "correctAnswer": "Humans beginning to adapt to absurdity",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "If these questions were analyzing you, you would:",
+    "textEn": "If these questions were analyzing you, you would:",
+    "textZh": "如果这些问题正在分析你，你会：",
+    "options": [
+      "Feel like you are slowly being pulled in",
+      "Want to do it again",
+      "Suddenly start paying attention to your choices",
+      "Wonder whether you identify with things too easily"
+    ],
+    "optionsEn": [
+      "Feel like you are slowly being pulled in",
+      "Want to do it again",
+      "Suddenly start paying attention to your choices",
+      "Wonder whether you identify with things too easily"
+    ],
+    "optionsZh": [
+      "有种被慢慢套进去的感觉",
+      "想重新再做一遍",
+      "突然开始注意自己的选择",
+      "怀疑自己是不是太容易代入"
+    ],
+    "correctAnswer": "Feel like you are slowly being pulled in",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "Would you share this website with your friends?",
+    "textEn": "Would you share this website with your friends?",
+    "textZh": "你会把这个网站分享给朋友吗？",
+    "options": [
+      "You want to see what others would choose",
+      "You want to confirm whether the confusion is collective",
+      "You want to see when they start taking it seriously",
+      "You want to test whether others have internet sickness"
+    ],
+    "optionsEn": [
+      "You want to see what others would choose",
+      "You want to confirm whether the confusion is collective",
+      "You want to see when they start taking it seriously",
+      "You want to test whether others have internet sickness"
+    ],
+    "optionsZh": [
+      "想看看别人会选什么",
+      "想确认困惑是不是群体性的",
+      "想看他们什么时候开始认真",
+      "想测试别人有没有互联网病"
+    ],
+    "correctAnswer": "You want to confirm whether the confusion is collective",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "What do you think the system is thinking right now?",
+    "textEn": "What do you think the system is thinking right now?",
+    "textZh": "你觉得系统现在在想什么？",
+    "options": [
+      "Why humans continue",
+      "Why personalities need to be named",
+      "Why people seriously face random content",
+      "Why people search for themselves in nonsense"
+    ],
+    "optionsEn": [
+      "Why humans continue",
+      "Why personalities need to be named",
+      "Why people seriously face random content",
+      "Why people search for themselves in nonsense"
+    ],
+    "optionsZh": [
+      "人类为什么会继续",
+      "人格为什么需要被命名",
+      "为什么人会认真面对随机内容",
+      "为什么人会在废话里找自己"
+    ],
+    "correctAnswer": "Why people seriously face random content",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "Have you already started thinking seriously about these questions?",
+    "textEn": "Have you already started thinking seriously about these questions?",
+    "textZh": "你是否已经开始认真思考这些问题？",
+    "options": [
+      "Complaining while continuing",
+      "Starting to seriously analyze your choices",
+      "Suspecting the system was deliberately designed this way",
+      "Wanting to leave, but also wanting to know what comes next"
+    ],
+    "optionsEn": [
+      "Complaining while continuing",
+      "Starting to seriously analyze your choices",
+      "Suspecting the system was deliberately designed this way",
+      "Wanting to leave, but also wanting to know what comes next"
+    ],
+    "optionsZh": [
+      "一边吐槽一边继续",
+      "开始认真分析自己的选择",
+      "怀疑系统是不是故意设计成这样的",
+      "想退出但又想知道后面还有什么"
+    ],
+    "correctAnswer": "Wanting to leave, but also wanting to know what comes next",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "If the final result is very accurate, you would:",
+    "textEn": "If the final result is very accurate, you would:",
+    "textZh": "如果最后结果很准，你会：",
+    "options": [
+      "Take it again to check whether it was coincidence",
+      "Take a screenshot and save it",
+      "Send it to a friend",
+      "Suspect it secretly observed you"
+    ],
+    "optionsEn": [
+      "Take it again to check whether it was coincidence",
+      "Take a screenshot and save it",
+      "Send it to a friend",
+      "Suspect it secretly observed you"
+    ],
+    "optionsZh": [
+      "再做一次确认是不是巧合",
+      "截图保存",
+      "发给朋友",
+      "怀疑它是不是偷偷观察过你"
+    ],
+    "correctAnswer": "Take it again to check whether it was coincidence",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "If the system suddenly said, Actually, there are no correct answers, you would:",
+    "textEn": "If the system suddenly said, Actually, there are no correct answers, you would:",
+    "textZh": "如果系统突然说“其实没有正确答案”，你会：",
+    "options": [
+      "Feel a little angry",
+      "Realize that you still chose seriously",
+      "Feel that it makes more sense",
+      "Start suspecting the score is meaningless too"
+    ],
+    "optionsEn": [
+      "Feel a little angry",
+      "Realize that you still chose seriously",
+      "Feel that it makes more sense",
+      "Start suspecting the score is meaningless too"
+    ],
+    "optionsZh": [
+      "有点生气",
+      "意识到自己还是认真选了",
+      "觉得更合理",
+      "开始怀疑分数是不是也没意义"
+    ],
+    "correctAnswer": "Realize that you still chose seriously",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "If the page suddenly displayed Please do not leave, you would:",
+    "textEn": "If the page suddenly displayed Please do not leave, you would:",
+    "textZh": "如果页面突然弹出“请不要离开”，你会：",
+    "options": [
+      "Suddenly want to leave even more",
+      "Pause instinctively",
+      "Want to see what it says next",
+      "Suspect the system knows you want to leave"
+    ],
+    "optionsEn": [
+      "Suddenly want to leave even more",
+      "Pause instinctively",
+      "Want to see what it says next",
+      "Suspect the system knows you want to leave"
+    ],
+    "optionsZh": [
+      "突然更想离开",
+      "下意识停一下",
+      "想看看它后面还会说什么",
+      "怀疑系统是不是知道你想退出"
+    ],
+    "correctAnswer": "Want to see what it says next",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "The true appeal of personality tests is more like:",
+    "textEn": "The true appeal of personality tests is more like:",
+    "textZh": "人格测试真正吸引人的地方更像：",
+    "options": [
+      "Giving emotions a format",
+      "Giving random behavior an explanation",
+      "Giving ordinary people a feeling of being understood",
+      "Giving chaos a name"
+    ],
+    "optionsEn": [
+      "Giving emotions a format",
+      "Giving random behavior an explanation",
+      "Giving ordinary people a feeling of being understood",
+      "Giving chaos a name"
+    ],
+    "optionsZh": [
+      "给情绪一个格式",
+      "给随机行为一个解释",
+      "给普通人一种“被理解感”",
+      "给混乱一个名字"
+    ],
+    "correctAnswer": "Giving chaos a name",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "If the system said, You are not who you think you are, you would:",
+    "textEn": "If the system said, You are not who you think you are, you would:",
+    "textZh": "如果系统说“你不是你以为的你”，你会：",
+    "options": [
+      "Feel a slight urge to keep listening",
+      "Instinctively argue back",
+      "Suspect it is using psychological tricks",
+      "Suddenly start recalling your previous choices"
+    ],
+    "optionsEn": [
+      "Feel a slight urge to keep listening",
+      "Instinctively argue back",
+      "Suspect it is using psychological tricks",
+      "Suddenly start recalling your previous choices"
+    ],
+    "optionsZh": [
+      "有一点点想继续听下去",
+      "下意识反驳",
+      "怀疑它是不是在套心理学话术",
+      "突然开始回忆自己之前的选择"
+    ],
+    "correctAnswer": "Feel a slight urge to keep listening",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "What you truly want to know right now is:",
+    "textEn": "What you truly want to know right now is:",
+    "textZh": "你现在真正想知道的其实是：",
+    "options": [
+      "What personality result you will get",
+      "What this website is actually trying to say",
+      "Why you seriously made it this far",
+      "Whether you have already been tricked"
+    ],
+    "optionsEn": [
+      "What personality result you will get",
+      "What this website is actually trying to say",
+      "Why you seriously made it this far",
+      "Whether you have already been tricked"
+    ],
+    "optionsZh": [
+      "最后会给什么人格",
+      "这个网站到底想表达什么",
+      "为什么自己会认真做到这里",
+      "自己是不是已经被套路了"
+    ],
+    "correctAnswer": "What this website is actually trying to say",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "If you discovered that other people received similar results, you would:",
+    "textEn": "If you discovered that other people received similar results, you would:",
+    "textZh": "如果你发现别人也得到了类似结果，你会：",
+    "options": [
+      "Feel a little disappointed",
+      "Start studying how the result is generated",
+      "Still feel that yours is more like you",
+      "Suddenly realize all personality tests are similar"
+    ],
+    "optionsEn": [
+      "Feel a little disappointed",
+      "Start studying how the result is generated",
+      "Still feel that yours is more like you",
+      "Suddenly realize all personality tests are similar"
+    ],
+    "optionsZh": [
+      "有点失望",
+      "开始研究结果生成逻辑",
+      "觉得自己那份还是比较像自己",
+      "突然意识到所有人格测试都差不多"
+    ],
+    "correctAnswer": "Still feel that yours is more like you",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "Why do people believe the analysis of an absurd test?",
+    "textEn": "Why do people believe the analysis of an absurd test?",
+    "textZh": "为什么人会相信一个荒诞测试的分析？",
+    "options": [
+      "Because the wording sounds like it is seriously understanding you",
+      "Because random content sometimes truly hits",
+      "Because nobody wants to admit they cannot explain themselves at all",
+      "Because humans actively search for correspondence"
+    ],
+    "optionsEn": [
+      "Because the wording sounds like it is seriously understanding you",
+      "Because random content sometimes truly hits",
+      "Because nobody wants to admit they cannot explain themselves at all",
+      "Because humans actively search for correspondence"
+    ],
+    "optionsZh": [
+      "因为文案像在认真理解你",
+      "因为随机内容偶尔真的会命中",
+      "因为没人想承认自己完全无法解释自己",
+      "因为人类会主动寻找对应感"
+    ],
+    "correctAnswer": "Because humans actively search for correspondence",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "If the system suddenly went silent for a few seconds, you would:",
+    "textEn": "If the system suddenly went silent for a few seconds, you would:",
+    "textZh": "如果系统突然沉默几秒，你会：",
+    "options": [
+      "Suspect it is deliberately creating atmosphere",
+      "Instinctively wait for it to continue",
+      "Want to refresh the page",
+      "Start imagining what will happen next"
+    ],
+    "optionsEn": [
+      "Suspect it is deliberately creating atmosphere",
+      "Instinctively wait for it to continue",
+      "Want to refresh the page",
+      "Start imagining what will happen next"
+    ],
+    "optionsZh": [
+      "怀疑它在故意营造气氛",
+      "下意识等它继续",
+      "想刷新页面",
+      "开始脑补后面会发生什么"
+    ],
+    "correctAnswer": "Suspect it is deliberately creating atmosphere",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "Do you think you are a user, or a sample?",
+    "textEn": "Do you think you are a user, or a sample?",
+    "textZh": "你觉得自己是用户，还是样本？",
+    "options": [
+      "User",
+      "Depends on what the system says",
+      "Sample",
+      "Both"
+    ],
+    "optionsEn": [
+      "User",
+      "Depends on what the system says",
+      "Sample",
+      "Both"
+    ],
+    "optionsZh": [
+      "用户",
+      "取决于系统怎么说",
+      "样本",
+      "两者都是"
+    ],
+    "correctAnswer": "Depends on what the system says",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "If the final page said Thank you for participating in the experiment, you would:",
+    "textEn": "If the final page said Thank you for participating in the experiment, you would:",
+    "textZh": "如果最后页面写着“感谢参与实验”，你会：",
+    "options": [
+      "Close it",
+      "Take a screenshot",
+      "Suddenly feel a chill down your back",
+      "Suspect that what just happened no longer counts as a game"
+    ],
+    "optionsEn": [
+      "Close it",
+      "Take a screenshot",
+      "Suddenly feel a chill down your back",
+      "Suspect that what just happened no longer counts as a game"
+    ],
+    "optionsZh": [
+      "关闭",
+      "截图",
+      "突然有点后背发凉",
+      "怀疑刚才是不是已经不算游戏"
+    ],
+    "correctAnswer": "Suddenly feel a chill down your back",
+    "isActive": true
+  },
+  {
+    "category": "The System Is Watching You",
+    "text": "The real reason you seriously made it this far is more like:",
+    "textEn": "The real reason you seriously made it this far is more like:",
+    "textZh": "你认真做到这里，真正原因更像：",
+    "options": [
+      "Because humans want to know which category they belong to",
+      "Because the system made you feel understood",
+      "Because you have started identifying with this worldview",
+      "Because you want to confirm whether you are the only person who would seriously finish it"
+    ],
+    "optionsEn": [
+      "Because humans want to know which category they belong to",
+      "Because the system made you feel understood",
+      "Because you have started identifying with this worldview",
+      "Because you want to confirm whether you are the only person who would seriously finish it"
+    ],
+    "optionsZh": [
+      "因为人类会想知道自己属于哪一类",
+      "因为系统让你产生了被理解感",
+      "因为你已经开始代入这个世界观",
+      "因为你想确认自己是不是唯一会认真做完的人"
+    ],
+    "correctAnswer": "Because you want to confirm whether you are the only person who would seriously finish it",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why do people open their phone and then forget what they wanted to do?",
+    "textEn": "Why do people open their phone and then forget what they wanted to do?",
+    "textZh": "为什么人会打开手机然后忘记要干嘛？",
+    "options": [
+      "Just opened it out of habit",
+      "Too many apps pulled their attention away",
+      "The phone has become an automatic entrance",
+      "People no longer open phones to do something, but to enter a state"
+    ],
+    "optionsEn": [
+      "Just opened it out of habit",
+      "Too many apps pulled their attention away",
+      "The phone has become an automatic entrance",
+      "People no longer open phones to do something, but to enter a state"
+    ],
+    "optionsZh": [
+      "只是习惯性点开",
+      "APP太多，注意力被带走了",
+      "手机已经变成自动入口",
+      "人类现在打开手机不是为了做事，是为了进入状态"
+    ],
+    "correctAnswer": "People no longer open phones to do something, but to enter a state",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why do people save things as watch later?",
+    "textEn": "Why do people save things as watch later?",
+    "textZh": "为什么人会收藏“以后再看”？",
+    "options": [
+      "People always think their future self will be more disciplined",
+      "No time right now",
+      "Feels like it might be useful later",
+      "Do not want to scroll past it"
+    ],
+    "optionsEn": [
+      "People always think their future self will be more disciplined",
+      "No time right now",
+      "Feels like it might be useful later",
+      "Do not want to scroll past it"
+    ],
+    "optionsZh": [
+      "人总觉得未来的自己会更自律",
+      "现在没时间",
+      "感觉以后会有用",
+      "不舍得划走"
+    ],
+    "correctAnswer": "People always think their future self will be more disciplined",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why do people keep refreshing a chat box?",
+    "textEn": "Why do people keep refreshing a chat box?",
+    "textZh": "为什么人会反复刷新聊天框？",
+    "options": [
+      "To check if there is a new message",
+      "People are really checking whether they are being responded to",
+      "Feeling a bit anxious",
+      "Refreshing makes waiting feel active"
+    ],
+    "optionsEn": [
+      "To check if there is a new message",
+      "People are really checking whether they are being responded to",
+      "Feeling a bit anxious",
+      "Refreshing makes waiting feel active"
+    ],
+    "optionsZh": [
+      "想看看有没有新消息",
+      "人其实是在确认自己有没有被回应",
+      "有点焦虑",
+      "刷新会让人感觉自己还在等"
+    ],
+    "correctAnswer": "People are really checking whether they are being responded to",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why are memes becoming more and more abstract?",
+    "textEn": "Why are memes becoming more and more abstract?",
+    "textZh": "为什么 meme 会越来越抽象？",
+    "options": [
+      "People’s humor standards got higher",
+      "Normal jokes are no longer enough",
+      "Humans have slowly adapted to absurdity",
+      "The harder it is to understand, the more insider it feels"
+    ],
+    "optionsEn": [
+      "People’s humor standards got higher",
+      "Normal jokes are no longer enough",
+      "Humans have slowly adapted to absurdity",
+      "The harder it is to understand, the more insider it feels"
+    ],
+    "optionsZh": [
+      "大家笑点变高了",
+      "普通笑话不够用了",
+      "人类已经慢慢适应荒诞了",
+      "越难懂越像圈内人"
+    ],
+    "correctAnswer": "Humans have slowly adapted to absurdity",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why do people become more emotional late at night?",
+    "textEn": "Why do people become more emotional late at night?",
+    "textZh": "为什么人深夜更容易 emo？",
+    "options": [
+      "People overthink more at night",
+      "There is no time to feel yourself during the day",
+      "Once it gets quiet, life starts showing up",
+      "Daytime is for acting normal; nighttime is for falling apart"
+    ],
+    "optionsEn": [
+      "People overthink more at night",
+      "There is no time to feel yourself during the day",
+      "Once it gets quiet, life starts showing up",
+      "Daytime is for acting normal; nighttime is for falling apart"
+    ],
+    "optionsZh": [
+      "晚上容易想太多",
+      "白天没空感受自己",
+      "安静下来就容易想人生",
+      "白天负责正常，晚上负责崩溃"
+    ],
+    "correctAnswer": "Daytime is for acting normal; nighttime is for falling apart",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why do people laugh while saying I’m losing my mind?",
+    "textEn": "Why do people laugh while saying I’m losing my mind?",
+    "textZh": "为什么人会一边笑一边说“我疯了”？",
+    "options": [
+      "The internet has packaged breakdowns as humor",
+      "Just joking",
+      "Laughing is easier to send than crying",
+      "It feels less awkward to say it this way"
+    ],
+    "optionsEn": [
+      "The internet has packaged breakdowns as humor",
+      "Just joking",
+      "Laughing is easier to send than crying",
+      "It feels less awkward to say it this way"
+    ],
+    "optionsZh": [
+      "互联网已经把崩溃包装成幽默",
+      "只是在开玩笑",
+      "笑比哭容易发出去",
+      "这样说比较不尴尬"
+    ],
+    "correctAnswer": "The internet has packaged breakdowns as humor",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why do people search meaning of life at midnight?",
+    "textEn": "Why do people search meaning of life at midnight?",
+    "textZh": "为什么人会半夜搜“人生意义”？",
+    "options": [
+      "Cannot sleep",
+      "The brain at night suddenly thinks life might still be explainable",
+      "Night makes people think too far",
+      "There is no time to question life during the day"
+    ],
+    "optionsEn": [
+      "Cannot sleep",
+      "The brain at night suddenly thinks life might still be explainable",
+      "Night makes people think too far",
+      "There is no time to question life during the day"
+    ],
+    "optionsZh": [
+      "睡不着",
+      "深夜的大脑会突然觉得人生还能解释一下",
+      "晚上容易想远",
+      "白天没时间怀疑人生"
+    ],
+    "correctAnswer": "The brain at night suddenly thinks life might still be explainable",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why do people hoard meme images?",
+    "textEn": "Why do people hoard meme images?",
+    "textZh": "为什么人会囤 meme 图？",
+    "options": [
+      "They can be used in future chats",
+      "They are genuinely funny",
+      "Humans compress emotions into images and save them",
+      "Some images understand me better than words"
+    ],
+    "optionsEn": [
+      "They can be used in future chats",
+      "They are genuinely funny",
+      "Humans compress emotions into images and save them",
+      "Some images understand me better than words"
+    ],
+    "optionsZh": [
+      "以后聊天能用",
+      "真的很好笑",
+      "人类会把情绪压缩成图片保存",
+      "有些图比文字更懂我"
+    ],
+    "correctAnswer": "Humans compress emotions into images and save them",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why do people suddenly clear chat history?",
+    "textEn": "Why do people suddenly clear chat history?",
+    "textZh": "为什么人会突然清空聊天记录？",
+    "options": [
+      "It feels annoying to look at",
+      "Do not want to see the old self anymore",
+      "Feels like deleting it makes things lighter",
+      "People periodically want to bury older versions of themselves"
+    ],
+    "optionsEn": [
+      "It feels annoying to look at",
+      "Do not want to see the old self anymore",
+      "Feels like deleting it makes things lighter",
+      "People periodically want to bury older versions of themselves"
+    ],
+    "optionsZh": [
+      "看着烦",
+      "不想再看到以前的自己",
+      "感觉删掉就能轻一点",
+      "人会周期性想把过去版本的自己埋掉"
+    ],
+    "correctAnswer": "People periodically want to bury older versions of themselves",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why do people suddenly change profile pictures?",
+    "textEn": "Why do people suddenly change profile pictures?",
+    "textZh": "为什么人会突然换头像？",
+    "options": [
+      "Sometimes people just want a low-cost way to become someone new",
+      "Got tired of the old one",
+      "Mood changed",
+      "Want others to feel that something changed"
+    ],
+    "optionsEn": [
+      "Sometimes people just want a low-cost way to become someone new",
+      "Got tired of the old one",
+      "Mood changed",
+      "Want others to feel that something changed"
+    ],
+    "optionsZh": [
+      "有时候人只是想低成本重新做人",
+      "看腻了",
+      "心情变了",
+      "想让别人感觉自己不一样了"
+    ],
+    "correctAnswer": "Sometimes people just want a low-cost way to become someone new",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why do people repeatedly open the same app?",
+    "textEn": "Why do people repeatedly open the same app?",
+    "textZh": "为什么人会反复打开同一个 APP？",
+    "options": [
+      "Too bored",
+      "People are actually waiting for the world to respond to them",
+      "Want to see if anything new appeared",
+      "The hand has developed muscle memory"
+    ],
+    "optionsEn": [
+      "Too bored",
+      "People are actually waiting for the world to respond to them",
+      "Want to see if anything new appeared",
+      "The hand has developed muscle memory"
+    ],
+    "optionsZh": [
+      "太无聊了",
+      "人其实是在等世界给自己一点回应",
+      "想看看有没有新东西",
+      "手已经形成肌肉记忆"
+    ],
+    "correctAnswer": "People are actually waiting for the world to respond to them",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why do short videos make people unable to stop?",
+    "textEn": "Why do short videos make people unable to stop?",
+    "textZh": "为什么短视频会让人停不下来？",
+    "options": [
+      "The algorithm understands people too well",
+      "Each one is short, so it does not feel like wasting time",
+      "Once people stop, they have to face themselves",
+      "The next one might be better"
+    ],
+    "optionsEn": [
+      "The algorithm understands people too well",
+      "Each one is short, so it does not feel like wasting time",
+      "Once people stop, they have to face themselves",
+      "The next one might be better"
+    ],
+    "optionsZh": [
+      "算法太懂人",
+      "每条都很短，感觉没浪费时间",
+      "人停下来以后就要面对自己",
+      "下一条可能更好看"
+    ],
+    "correctAnswer": "Once people stop, they have to face themselves",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why do people watch other people’s life vlogs?",
+    "textEn": "Why do people watch other people’s life vlogs?",
+    "textZh": "为什么人会看别人的生活 vlog？",
+    "options": [
+      "Want to relax",
+      "Want to see how others live",
+      "Other people’s lives seem more complete",
+      "Sometimes people want to briefly borrow someone else’s life"
+    ],
+    "optionsEn": [
+      "Want to relax",
+      "Want to see how others live",
+      "Other people’s lives seem more complete",
+      "Sometimes people want to briefly borrow someone else’s life"
+    ],
+    "optionsZh": [
+      "想放松",
+      "想看看别人怎么生活",
+      "别人的生活看起来更完整",
+      "人有时候想短暂借用别人的人生"
+    ],
+    "correctAnswer": "Sometimes people want to briefly borrow someone else’s life",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why do people suddenly delete social media posts?",
+    "textEn": "Why do people suddenly delete social media posts?",
+    "textZh": "为什么人会突然删朋友圈或动态？",
+    "options": [
+      "People periodically feel embarrassed by older versions of themselves",
+      "Feels embarrassing",
+      "Do not want others to see it",
+      "That version of yourself no longer feels like you"
+    ],
+    "optionsEn": [
+      "People periodically feel embarrassed by older versions of themselves",
+      "Feels embarrassing",
+      "Do not want others to see it",
+      "That version of yourself no longer feels like you"
+    ],
+    "optionsZh": [
+      "人会周期性羞耻旧版本的自己",
+      "觉得尴尬",
+      "不想让别人看到",
+      "那时候的自己已经不像现在了"
+    ],
+    "correctAnswer": "People periodically feel embarrassed by older versions of themselves",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why do people seriously take personality tests?",
+    "textEn": "Why do people seriously take personality tests?",
+    "textZh": "为什么人会认真做人格测试？",
+    "options": [
+      "It is fun",
+      "Chaos feels a little safer after it gets a name",
+      "Want to know what type they are",
+      "Seeing the result feels satisfying"
+    ],
+    "optionsEn": [
+      "It is fun",
+      "Chaos feels a little safer after it gets a name",
+      "Want to know what type they are",
+      "Seeing the result feels satisfying"
+    ],
+    "optionsZh": [
+      "好玩",
+      "混乱被命名之后会显得安全一点",
+      "想知道自己是什么类型",
+      "看到结果会有点爽"
+    ],
+    "correctAnswer": "Chaos feels a little safer after it gets a name",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why do people screenshot conversations?",
+    "textEn": "Why do people screenshot conversations?",
+    "textZh": "为什么人会截图聊天？",
+    "options": [
+      "To keep a record",
+      "Want to send it to a friend",
+      "People are not screenshotting words; they are screenshotting the feeling of that moment",
+      "Some words may never appear again"
+    ],
+    "optionsEn": [
+      "To keep a record",
+      "Want to send it to a friend",
+      "People are not screenshotting words; they are screenshotting the feeling of that moment",
+      "Some words may never appear again"
+    ],
+    "optionsZh": [
+      "留个记录",
+      "想发给朋友看",
+      "人截图的不是文字，是当时的感觉",
+      "有些话以后可能不会再出现"
+    ],
+    "correctAnswer": "People are not screenshotting words; they are screenshotting the feeling of that moment",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why is scrolling comment sections more addictive late at night?",
+    "textEn": "Why is scrolling comment sections more addictive late at night?",
+    "textZh": "为什么深夜刷评论区更容易上头？",
+    "options": [
+      "People are more bored at night",
+      "Comments feel more real than the main post",
+      "Strangers dare to say more",
+      "Late-night comment sections feel like a group of people secretly exposing themselves"
+    ],
+    "optionsEn": [
+      "People are more bored at night",
+      "Comments feel more real than the main post",
+      "Strangers dare to say more",
+      "Late-night comment sections feel like a group of people secretly exposing themselves"
+    ],
+    "optionsZh": [
+      "晚上更无聊",
+      "评论比正文更真实",
+      "陌生人说的话比较敢",
+      "深夜的评论区像一群人偷偷暴露自己"
+    ],
+    "correctAnswer": "Late-night comment sections feel like a group of people secretly exposing themselves",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why are memes becoming more like mental states?",
+    "textEn": "Why are memes becoming more like mental states?",
+    "textZh": "为什么 meme 越来越像精神状态？",
+    "options": [
+      "Because the distance between jokes and breakdowns is getting shorter",
+      "Because people are becoming lazier at expression",
+      "Because memes are faster than long explanations",
+      "Because some states can only be expressed through memes"
+    ],
+    "optionsEn": [
+      "Because the distance between jokes and breakdowns is getting shorter",
+      "Because people are becoming lazier at expression",
+      "Because memes are faster than long explanations",
+      "Because some states can only be expressed through memes"
+    ],
+    "optionsZh": [
+      "因为 joke 和崩溃之间的距离越来越短",
+      "因为大家表达越来越懒",
+      "因为梗比长篇大论更快",
+      "因为有些状态只能用梗表达"
+    ],
+    "correctAnswer": "Because the distance between jokes and breakdowns is getting shorter",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why do people suddenly want to disconnect from the internet?",
+    "textEn": "Why do people suddenly want to disconnect from the internet?",
+    "textZh": "为什么人会突然想断网？",
+    "options": [
+      "Got tired of looking at it",
+      "Being online for too long makes even your personality start losing battery",
+      "There is too much information",
+      "Want some quiet"
+    ],
+    "optionsEn": [
+      "Got tired of looking at it",
+      "Being online for too long makes even your personality start losing battery",
+      "There is too much information",
+      "Want some quiet"
+    ],
+    "optionsZh": [
+      "看烦了",
+      "长期在线会让人格也开始耗电",
+      "信息太多了",
+      "想安静一下"
+    ],
+    "correctAnswer": "Being online for too long makes even your personality start losing battery",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why do people suddenly post long emotional texts late at night?",
+    "textEn": "Why do people suddenly post long emotional texts late at night?",
+    "textZh": "为什么人会深夜突然发长文？",
+    "options": [
+      "Could not hold it in anymore",
+      "More emotional at night",
+      "People are too good at acting normal during the day, so things leak out at night",
+      "Had no chance to say it during the day"
+    ],
+    "optionsEn": [
+      "Could not hold it in anymore",
+      "More emotional at night",
+      "People are too good at acting normal during the day, so things leak out at night",
+      "Had no chance to say it during the day"
+    ],
+    "optionsZh": [
+      "忍不住了",
+      "晚上比较感性",
+      "人白天太会装正常，晚上会漏出来",
+      "白天没机会说"
+    ],
+    "correctAnswer": "People are too good at acting normal during the day, so things leak out at night",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why do people post memes while falling apart?",
+    "textEn": "Why do people post memes while falling apart?",
+    "textZh": "为什么人会一边崩溃一边发 meme？",
+    "options": [
+      "Want to make others laugh",
+      "Do not want to look too miserable",
+      "Memes are easier to send",
+      "Humans have learned to turn pain into content"
+    ],
+    "optionsEn": [
+      "Want to make others laugh",
+      "Do not want to look too miserable",
+      "Memes are easier to send",
+      "Humans have learned to turn pain into content"
+    ],
+    "optionsZh": [
+      "想逗别人笑",
+      "不想显得太惨",
+      "梗比较容易发出去",
+      "人类已经学会把痛苦做成 content"
+    ],
+    "correctAnswer": "Humans have learned to turn pain into content",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why do people scroll until dawn?",
+    "textEn": "Why do people scroll until dawn?",
+    "textZh": "为什么人会刷到凌晨？",
+    "options": [
+      "Sometimes people do not refuse sleep; they refuse to let today end",
+      "Not sleepy",
+      "Lost track of time",
+      "Still want to watch one more"
+    ],
+    "optionsEn": [
+      "Sometimes people do not refuse sleep; they refuse to let today end",
+      "Not sleepy",
+      "Lost track of time",
+      "Still want to watch one more"
+    ],
+    "optionsZh": [
+      "人有时候不是不想睡，是不想让今天结束",
+      "不困",
+      "忘了时间",
+      "还想再看一条"
+    ],
+    "correctAnswer": "Sometimes people do not refuse sleep; they refuse to let today end",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why do people suddenly want to delete all apps?",
+    "textEn": "Why do people suddenly want to delete all apps?",
+    "textZh": "为什么人会突然想删掉所有 APP？",
+    "options": [
+      "The phone is too messy",
+      "People sometimes want to escape the internet and breathe for a moment",
+      "Annoyed by notifications",
+      "Want a fresh start"
+    ],
+    "optionsEn": [
+      "The phone is too messy",
+      "People sometimes want to escape the internet and breathe for a moment",
+      "Annoyed by notifications",
+      "Want a fresh start"
+    ],
+    "optionsZh": [
+      "手机太乱了",
+      "人偶尔会想从互联网里逃出来喘口气",
+      "被通知烦到了",
+      "想重新开始"
+    ],
+    "correctAnswer": "People sometimes want to escape the internet and breathe for a moment",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why do people seriously study their own mental state?",
+    "textEn": "Why do people seriously study their own mental state?",
+    "textZh": "为什么人会认真研究自己的精神状态？",
+    "options": [
+      "Want to become better",
+      "Want to know what is wrong with themselves",
+      "People hope their chaos is not random",
+      "Anxiety needs an explanation"
+    ],
+    "optionsEn": [
+      "Want to become better",
+      "Want to know what is wrong with themselves",
+      "People hope their chaos is not random",
+      "Anxiety needs an explanation"
+    ],
+    "optionsZh": [
+      "想变好",
+      "想知道自己怎么了",
+      "人希望自己的混乱不是随机的",
+      "焦虑需要一个解释"
+    ],
+    "correctAnswer": "People hope their chaos is not random",
+    "isActive": true
+  },
+  {
+    "category": "Internet Mental State Detection Center",
+    "text": "Why did you seriously make it this far?",
+    "textEn": "Why did you seriously make it this far?",
+    "textZh": "为什么你会认真做到这里？",
+    "options": [
+      "Want to see the result",
+      "The questions became addictive",
+      "Want to know what kind of person you are",
+      "You want to confirm that you are not the only person who seriously finished this thing"
+    ],
+    "optionsEn": [
+      "Want to see the result",
+      "The questions became addictive",
+      "Want to know what kind of person you are",
+      "You want to confirm that you are not the only person who seriously finished this thing"
+    ],
+    "optionsZh": [
+      "想看结果",
+      "题目有点上头",
+      "想知道自己是哪类人",
+      "你想确认自己不是唯一认真做完这种东西的人"
+    ],
+    "correctAnswer": "You want to confirm that you are not the only person who seriously finished this thing",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people smell new books?",
+    "textEn": "Why do people smell new books?",
+    "textZh": "为什么人会闻新书？",
+    "options": [
+      "The ink smells nice",
+      "It feels like this makes the purchase real",
+      "To check whether the knowledge is fresh",
+      "People use smell to confirm I own this now"
+    ],
+    "optionsEn": [
+      "The ink smells nice",
+      "It feels like this makes the purchase real",
+      "To check whether the knowledge is fresh",
+      "People use smell to confirm I own this now"
+    ],
+    "optionsZh": [
+      "油墨味很好闻",
+      "感觉这样才算真的买了",
+      "想确认知识是不是新鲜的",
+      "人会用气味确认“我拥有了它”"
+    ],
+    "correctAnswer": "People use smell to confirm I own this now",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people open the fridge and forget what they were doing?",
+    "textEn": "Why do people open the fridge and forget what they were doing?",
+    "textZh": "为什么人打开冰箱后会忘记要干嘛？",
+    "options": [
+      "Sometimes people never knew what they wanted in the first place",
+      "It is too cold",
+      "Just opened it out of habit",
+      "Opening the fridge feels like pressing pause on life"
+    ],
+    "optionsEn": [
+      "Sometimes people never knew what they wanted in the first place",
+      "It is too cold",
+      "Just opened it out of habit",
+      "Opening the fridge feels like pressing pause on life"
+    ],
+    "optionsZh": [
+      "人有时候本来就不知道自己想要什么",
+      "太冷了",
+      "只是习惯性打开",
+      "打开冰箱像人生暂停键"
+    ],
+    "correctAnswer": "Sometimes people never knew what they wanted in the first place",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people always choose the wrong queue?",
+    "textEn": "Why do people always choose the wrong queue?",
+    "textZh": "为什么排队永远选错队？",
+    "options": [
+      "The next queue is actually faster",
+      "The universe enjoys watching people regret things",
+      "You are too impatient",
+      "Once people queue, they start doubting their choices"
+    ],
+    "optionsEn": [
+      "The next queue is actually faster",
+      "The universe enjoys watching people regret things",
+      "You are too impatient",
+      "Once people queue, they start doubting their choices"
+    ],
+    "optionsZh": [
+      "隔壁真的比较快",
+      "宇宙喜欢看人后悔",
+      "自己太着急了",
+      "人一排队就会开始怀疑选择"
+    ],
+    "correctAnswer": "The universe enjoys watching people regret things",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people save meaningless screenshots?",
+    "textEn": "Why do people save meaningless screenshots?",
+    "textZh": "为什么人会收藏没意义截图？",
+    "options": [
+      "Afraid they might need it later",
+      "Do not want to delete it now",
+      "Deleting some moments feels like they never happened",
+      "It felt meaningful at the time"
+    ],
+    "optionsEn": [
+      "Afraid they might need it later",
+      "Do not want to delete it now",
+      "Deleting some moments feels like they never happened",
+      "It felt meaningful at the time"
+    ],
+    "optionsZh": [
+      "怕以后用到",
+      "不想现在删",
+      "有些瞬间删掉就像没发生过",
+      "当时觉得很有感觉"
+    ],
+    "correctAnswer": "Deleting some moments feels like they never happened",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people suddenly want to work hard at midnight?",
+    "textEn": "Why do people suddenly want to work hard at midnight?",
+    "textZh": "为什么人半夜突然想努力？",
+    "options": [
+      "People overthink more at night",
+      "There is no time to think about yourself during the day",
+      "People always feel that sleeping once can reboot life",
+      "It feels like tomorrow can be a fresh start"
+    ],
+    "optionsEn": [
+      "People overthink more at night",
+      "There is no time to think about yourself during the day",
+      "People always feel that sleeping once can reboot life",
+      "It feels like tomorrow can be a fresh start"
+    ],
+    "optionsZh": [
+      "晚上容易想太多",
+      "白天没空想自己",
+      "人总觉得睡一觉人生就能重启",
+      "感觉明天还能重新开始"
+    ],
+    "correctAnswer": "It feels like tomorrow can be a fresh start",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people always enter verification codes wrong?",
+    "textEn": "Why do people always enter verification codes wrong?",
+    "textZh": "为什么验证码永远输错？",
+    "options": [
+      "The verification code feels like it is targeting you",
+      "The letters are too ugly",
+      "You mess up when you rush",
+      "It is not checking whether you are human. It is humiliating you"
+    ],
+    "optionsEn": [
+      "The verification code feels like it is targeting you",
+      "The letters are too ugly",
+      "You mess up when you rush",
+      "It is not checking whether you are human. It is humiliating you"
+    ],
+    "optionsZh": [
+      "验证码好像在针对你",
+      "字太丑了",
+      "手一急就错",
+      "它不是在验证你是不是人，是在羞辱你"
+    ],
+    "correctAnswer": "The verification code feels like it is targeting you",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people peel the skin on their lips?",
+    "textEn": "Why do people peel the skin on their lips?",
+    "textZh": "为什么人会撕嘴皮？",
+    "options": [
+      "Nothing else to do",
+      "You know it will hurt, but cannot stop",
+      "A little anxious",
+      "People cause tiny kinds of harm to themselves"
+    ],
+    "optionsEn": [
+      "Nothing else to do",
+      "You know it will hurt, but cannot stop",
+      "A little anxious",
+      "People cause tiny kinds of harm to themselves"
+    ],
+    "optionsZh": [
+      "闲着没事",
+      "明知道会痛但停不下来",
+      "有点焦虑",
+      "人会对自己造成一些很小的伤害"
+    ],
+    "correctAnswer": "You know it will hurt, but cannot stop",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people leave messages on read without replying?",
+    "textEn": "Why do people leave messages on read without replying?",
+    "textZh": "为什么人会已读不回？",
+    "options": [
+      "Busy",
+      "Do not know how to reply",
+      "Thought a lot, but could not send a single sentence",
+      "Some messages are not unreplied because you do not want to answer, but because replying means continuing"
+    ],
+    "optionsEn": [
+      "Busy",
+      "Do not know how to reply",
+      "Thought a lot, but could not send a single sentence",
+      "Some messages are not unreplied because you do not want to answer, but because replying means continuing"
+    ],
+    "optionsZh": [
+      "忙",
+      "不知道怎么回",
+      "想了很多但一句都发不出去",
+      "有些消息不是不想回，是回了就要继续"
+    ],
+    "correctAnswer": "Thought a lot, but could not send a single sentence",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people always want to start over?",
+    "textEn": "Why do people always want to start over?",
+    "textZh": "为什么人总想重新开始？",
+    "options": [
+      "The present is too messy",
+      "Want a new state",
+      "It feels like a new beginning will change everything",
+      "People have a hard time accepting that they have already arrived here"
+    ],
+    "optionsEn": [
+      "The present is too messy",
+      "Want a new state",
+      "It feels like a new beginning will change everything",
+      "People have a hard time accepting that they have already arrived here"
+    ],
+    "optionsZh": [
+      "现在太乱了",
+      "想换个状态",
+      "感觉换个开头就会不一样",
+      "人很难接受自己已经走到这里了"
+    ],
+    "correctAnswer": "People have a hard time accepting that they have already arrived here",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people think about life while showering?",
+    "textEn": "Why do people think about life while showering?",
+    "textZh": "为什么人洗澡时会思考人生？",
+    "options": [
+      "There is no phone to escape into",
+      "It is quiet in the shower",
+      "Once water starts running, the brain starts wandering",
+      "People finally have a few minutes where they cannot pretend to be busy"
+    ],
+    "optionsEn": [
+      "There is no phone to escape into",
+      "It is quiet in the shower",
+      "Once water starts running, the brain starts wandering",
+      "People finally have a few minutes where they cannot pretend to be busy"
+    ],
+    "optionsZh": [
+      "没有手机可以逃避",
+      "洗澡的时候很安静",
+      "水一冲，脑子就开始乱想",
+      "人终于有几分钟不能假装很忙"
+    ],
+    "correctAnswer": "There is no phone to escape into",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people hoard plastic bags?",
+    "textEn": "Why do people hoard plastic bags?",
+    "textZh": "为什么人会囤塑料袋？",
+    "options": [
+      "Throwing them away feels wasteful",
+      "Feels like they will be useful later",
+      "Every home needs a bag full of bags",
+      "People are always too optimistic about later"
+    ],
+    "optionsEn": [
+      "Throwing them away feels wasteful",
+      "Feels like they will be useful later",
+      "Every home needs a bag full of bags",
+      "People are always too optimistic about later"
+    ],
+    "optionsZh": [
+      "扔了有点可惜",
+      "感觉以后会用到",
+      "每个家都需要一个袋中袋",
+      "人对“以后”总是过分乐观"
+    ],
+    "correctAnswer": "Feels like they will be useful later",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people reread old chat history?",
+    "textEn": "Why do people reread old chat history?",
+    "textZh": "为什么人会看旧聊天记录？",
+    "options": [
+      "Missing the past",
+      "Want to see how you talked back then",
+      "Want to confirm that the old version of yourself really existed",
+      "You know it will hurt, but still want to look"
+    ],
+    "optionsEn": [
+      "Missing the past",
+      "Want to see how you talked back then",
+      "Want to confirm that the old version of yourself really existed",
+      "You know it will hurt, but still want to look"
+    ],
+    "optionsZh": [
+      "怀念以前",
+      "想看看当时怎么说话",
+      "想确认那时候的自己真的存在过",
+      "明知道会难受但还是想看"
+    ],
+    "correctAnswer": "Want to confirm that the old version of yourself really existed",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why can people not stop watching short videos?",
+    "textEn": "Why can people not stop watching short videos?",
+    "textZh": "为什么短视频停不下来？",
+    "options": [
+      "Each one is very short",
+      "If you stop, it suddenly becomes quiet",
+      "Sometimes people are not scrolling videos; they are avoiding themselves",
+      "The next one might be better"
+    ],
+    "optionsEn": [
+      "Each one is very short",
+      "If you stop, it suddenly becomes quiet",
+      "Sometimes people are not scrolling videos; they are avoiding themselves",
+      "The next one might be better"
+    ],
+    "optionsZh": [
+      "每条都很短",
+      "停下来就会突然安静",
+      "人有时候刷的不是视频，是不想面对自己",
+      "下一条可能更好看"
+    ],
+    "correctAnswer": "The next one might be better",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people lose their minds over the last one?",
+    "textEn": "Why do people lose their minds over the last one?",
+    "textZh": "为什么人会对“最后一件”失去理智？",
+    "options": [
+      "People do not always want it; they just do not want to miss it",
+      "Afraid they will not get it",
+      "Feels like not buying it means losing out",
+      "The last one feels like it is calling your name"
+    ],
+    "optionsEn": [
+      "People do not always want it; they just do not want to miss it",
+      "Afraid they will not get it",
+      "Feels like not buying it means losing out",
+      "The last one feels like it is calling your name"
+    ],
+    "optionsZh": [
+      "人不是真的想要，是不想错过",
+      "怕买不到",
+      "感觉不买就亏了",
+      "最后一件像是在点名你"
+    ],
+    "correctAnswer": "People do not always want it; they just do not want to miss it",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people suddenly question life?",
+    "textEn": "Why do people suddenly question life?",
+    "textZh": "为什么人会突然怀疑人生？",
+    "options": [
+      "Recent stress",
+      "Suddenly realizing you are repeating the same day",
+      "This happens easily at night",
+      "The brain sometimes accidentally turns on reality mode"
+    ],
+    "optionsEn": [
+      "Recent stress",
+      "Suddenly realizing you are repeating the same day",
+      "This happens easily at night",
+      "The brain sometimes accidentally turns on reality mode"
+    ],
+    "optionsZh": [
+      "最近压力大",
+      "突然发现自己在重复同一天",
+      "晚上容易这样",
+      "大脑偶尔会不小心打开真实模式"
+    ],
+    "correctAnswer": "Suddenly realizing you are repeating the same day",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people repeatedly open the same app?",
+    "textEn": "Why do people repeatedly open the same app?",
+    "textZh": "为什么人会反复打开同一个 APP？",
+    "options": [
+      "Out of habit",
+      "The hand is faster than the brain",
+      "Want to see if there are new messages",
+      "People are actually waiting for the world to respond to them"
+    ],
+    "optionsEn": [
+      "Out of habit",
+      "The hand is faster than the brain",
+      "Want to see if there are new messages",
+      "People are actually waiting for the world to respond to them"
+    ],
+    "optionsZh": [
+      "习惯了",
+      "手比脑子更快",
+      "想看看有没有新消息",
+      "人其实是在等世界给自己一点回应"
+    ],
+    "correctAnswer": "Want to see if there are new messages",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people suddenly delete social media posts?",
+    "textEn": "Why do people suddenly delete social media posts?",
+    "textZh": "为什么人会突然删除朋友圈或动态？",
+    "options": [
+      "It feels embarrassing",
+      "Do not want others to see it anymore",
+      "People periodically feel embarrassed by older versions of themselves",
+      "That version of yourself no longer feels like you"
+    ],
+    "optionsEn": [
+      "It feels embarrassing",
+      "Do not want others to see it anymore",
+      "People periodically feel embarrassed by older versions of themselves",
+      "That version of yourself no longer feels like you"
+    ],
+    "optionsZh": [
+      "觉得尴尬",
+      "不想让别人看到了",
+      "人会周期性羞耻旧版本的自己",
+      "那个时候的自己已经不像现在了"
+    ],
+    "correctAnswer": "That version of yourself no longer feels like you",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people suddenly organize their desktop?",
+    "textEn": "Why do people suddenly organize their desktop?",
+    "textZh": "为什么人会突然整理桌面？",
+    "options": [
+      "Organizing the computer is easier than organizing life",
+      "It is too messy",
+      "Want it to look cleaner",
+      "People organize visible chaos first"
+    ],
+    "optionsEn": [
+      "Organizing the computer is easier than organizing life",
+      "It is too messy",
+      "Want it to look cleaner",
+      "People organize visible chaos first"
+    ],
+    "optionsZh": [
+      "整理电脑比整理人生简单",
+      "太乱了",
+      "想看起来清爽一点",
+      "人会先整理看得见的混乱"
+    ],
+    "correctAnswer": "Organizing the computer is easier than organizing life",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people suddenly want to change their profile picture?",
+    "textEn": "Why do people suddenly want to change their profile picture?",
+    "textZh": "为什么人会突然想换头像？",
+    "options": [
+      "Got tired of the old one",
+      "Sometimes people just want a low-cost way to become someone new",
+      "Mood changed",
+      "Want others to feel that something changed"
+    ],
+    "optionsEn": [
+      "Got tired of the old one",
+      "Sometimes people just want a low-cost way to become someone new",
+      "Mood changed",
+      "Want others to feel that something changed"
+    ],
+    "optionsZh": [
+      "看腻了",
+      "有时候人只是想低成本重新做人",
+      "心情变了",
+      "想让别人感觉自己变了"
+    ],
+    "correctAnswer": "Sometimes people just want a low-cost way to become someone new",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people suddenly listen to old songs?",
+    "textEn": "Why do people suddenly listen to old songs?",
+    "textZh": "为什么人会突然刷老歌？",
+    "options": [
+      "They are good songs",
+      "Missing the past",
+      "Want to return to the time when they listened to that song",
+      "The cruelest thing about old songs is that they bring back an old version of yourself"
+    ],
+    "optionsEn": [
+      "They are good songs",
+      "Missing the past",
+      "Want to return to the time when they listened to that song",
+      "The cruelest thing about old songs is that they bring back an old version of yourself"
+    ],
+    "optionsZh": [
+      "好听",
+      "怀念以前",
+      "想回到听这首歌的那个时候",
+      "老歌最狠的地方是会把旧版本的自己带回来"
+    ],
+    "correctAnswer": "Want to return to the time when they listened to that song",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people save things as watch later?",
+    "textEn": "Why do people save things as watch later?",
+    "textZh": "为什么人会收藏“以后再看”？",
+    "options": [
+      "Feels like it might be useful later",
+      "Not saving it feels like a loss",
+      "People always think their future self will work harder than their current self",
+      "No time right now"
+    ],
+    "optionsEn": [
+      "Feels like it might be useful later",
+      "Not saving it feels like a loss",
+      "People always think their future self will work harder than their current self",
+      "No time right now"
+    ],
+    "optionsZh": [
+      "感觉以后会有用",
+      "不收藏会觉得亏",
+      "人总觉得未来的自己会比现在更努力",
+      "现在没时间"
+    ],
+    "correctAnswer": "No time right now",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people tap into a text box and then leave?",
+    "textEn": "Why do people tap into a text box and then leave?",
+    "textZh": "为什么人会点开输入框又退出？",
+    "options": [
+      "Typed it, then felt it was unnecessary",
+      "Do not know how to say it",
+      "Already simulated every possible outcome in their head",
+      "Some words cannot be taken back once sent"
+    ],
+    "optionsEn": [
+      "Typed it, then felt it was unnecessary",
+      "Do not know how to say it",
+      "Already simulated every possible outcome in their head",
+      "Some words cannot be taken back once sent"
+    ],
+    "optionsZh": [
+      "打了又觉得没必要",
+      "不知道怎么说",
+      "脑子里已经演完所有结果了",
+      "有些话发出去就收不回来了"
+    ],
+    "correctAnswer": "Typed it, then felt it was unnecessary",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people stay up late even though they know it is bad?",
+    "textEn": "Why do people stay up late even though they know it is bad?",
+    "textZh": "为什么人明知熬夜不好还熬？",
+    "options": [
+      "Not sleepy",
+      "Night finally feels like personal time",
+      "Want to play a little longer",
+      "People do not always refuse sleep; they refuse to let today end"
+    ],
+    "optionsEn": [
+      "Not sleepy",
+      "Night finally feels like personal time",
+      "Want to play a little longer",
+      "People do not always refuse sleep; they refuse to let today end"
+    ],
+    "optionsZh": [
+      "不困",
+      "晚上终于有自己的时间",
+      "想再玩一会",
+      "人不是不想睡，是不想让今天结束"
+    ],
+    "correctAnswer": "Night finally feels like personal time",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people suddenly open the front camera?",
+    "textEn": "Why do people suddenly open the front camera?",
+    "textZh": "为什么人会突然打开前置摄像头？",
+    "options": [
+      "To check their face",
+      "To adjust their appearance",
+      "Suddenly want to check how they look right now",
+      "Sometimes people need to confirm they are still here"
+    ],
+    "optionsEn": [
+      "To check their face",
+      "To adjust their appearance",
+      "Suddenly want to check how they look right now",
+      "Sometimes people need to confirm they are still here"
+    ],
+    "optionsZh": [
+      "看看脸",
+      "整理一下状态",
+      "突然想确认自己现在看起来怎么样",
+      "人有时候需要确认自己还在这里"
+    ],
+    "correctAnswer": "Suddenly want to check how they look right now",
+    "isActive": true
+  },
+  {
+    "category": "Human Confusing Behavior Observation Center",
+    "text": "Why do people seriously take tests like this?",
+    "textEn": "Why do people seriously take tests like this?",
+    "textZh": "为什么人会认真做这种测试？",
+    "options": [
+      "It is fun",
+      "Want to see the result",
+      "Want to know what kind of person they are",
+      "People always want to know whether they are understood"
+    ],
+    "optionsEn": [
+      "It is fun",
+      "Want to see the result",
+      "Want to know what kind of person they are",
+      "People always want to know whether they are understood"
+    ],
+    "optionsZh": [
+      "好玩",
+      "想看结果",
+      "想知道自己是哪种人",
+      "人总想知道自己有没有被理解"
+    ],
+    "correctAnswer": "People always want to know whether they are understood",
+    "isActive": true
   }
 ]

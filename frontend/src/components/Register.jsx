@@ -35,7 +35,7 @@ const buttonStyle = {
   marginTop: 4,
 };
 
-export default function Register({ onSubmit, loading, inputStyle }) {
+export default function Register({ onSubmit, loading, inputStyle, copy }) {
   const [form, setForm] = useState({
     username: '',
     fullName: '',
@@ -56,59 +56,59 @@ export default function Register({ onSubmit, loading, inputStyle }) {
   return (
     <form onSubmit={handleSubmit} style={formStyle}>
       <label style={labelStyle}>
-        <span style={labelTextStyle}>Username</span>
+        <span style={labelTextStyle}>{copy.usernameLabel}</span>
         <input
           name="username"
           value={form.username}
           onChange={handleChange}
-          placeholder="Choose a username"
+          placeholder={copy.usernamePlaceholder}
           style={inputStyle}
           required
         />
       </label>
 
       <label style={labelStyle}>
-        <span style={labelTextStyle}>Full Name</span>
+        <span style={labelTextStyle}>{copy.fullNameLabel}</span>
         <input
           name="fullName"
           value={form.fullName}
           onChange={handleChange}
-          placeholder="Alex Morgan"
+          placeholder={copy.fullNamePlaceholder}
           style={inputStyle}
         />
       </label>
 
       <label style={labelStyle}>
-        <span style={labelTextStyle}>Email</span>
+        <span style={labelTextStyle}>{copy.emailLabel}</span>
         <input
           type="email"
           name="email"
           value={form.email}
           onChange={handleChange}
-          placeholder="alex@example.com"
+          placeholder={copy.emailPlaceholder}
           style={inputStyle}
           required
         />
       </label>
 
       <label style={labelStyle}>
-        <span style={labelTextStyle}>Password</span>
+        <span style={labelTextStyle}>{copy.passwordLabel}</span>
         <input
           type="password"
           name="password"
           value={form.password}
           onChange={handleChange}
-          placeholder="Minimum 6 characters"
+          placeholder={copy.passwordPlaceholder}
           style={inputStyle}
           required
           minLength={6}
         />
       </label>
 
-      <div style={helperStyle}>A fresh account gives you a saved identity and a history of future quiz attempts.</div>
+      <div style={helperStyle}>{copy.helper}</div>
 
       <button type="submit" disabled={loading} style={{ ...buttonStyle, opacity: loading ? 0.7 : 1 }}>
-        {loading ? 'Creating account...' : 'Register'}
+        {loading ? copy.loading : copy.submit}
       </button>
     </form>
   );
