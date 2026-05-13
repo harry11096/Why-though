@@ -1679,6 +1679,14 @@ function QuizWorkspace({
     };
   }, [language, selectedCategory, step]);
 
+  useEffect(() => {
+    if (step !== 'result') {
+      return;
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [step]);
+
   const startCategory = async (category) => {
     try {
       setGlobalMessage('');
@@ -2429,27 +2437,34 @@ function Dashboard({ user, attempts, onSave, onLogout, onStartQuiz, loading, lan
             </div>
           ) : (
             <div style={{ display: 'grid', gap: 14 }}>
-              {attempts.map((attempt) => (
-                <div
-                  key={attempt.id}
-                  style={{
-                    padding: '18px 18px 16px',
-                    borderRadius: 22,
-                    background: 'linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.02) 100%)',
-                    border: '1px solid rgba(255,255,255,0.08)',
-                    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.18)',
-                  }}
-                >
+              {attempts.map((attempt) => {
+                const attemptProfile = getCategoryProfile(attempt.category);
+
+                return (
                   <div
+                    key={attempt.id}
                     style={{
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      gap: 12,
-                      alignItems: 'center',
-                      flexWrap: 'wrap',
+                      padding: '18px 18px 16px',
+                      borderRadius: 22,
+                      background: 'linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.02) 100%)',
+                      border: '1px solid rgba(255,255,255,0.08)',
+                      boxShadow: '0 10px 30px rgba(0, 0, 0, 0.18)',
                     }}
                   >
-                    <strong style={{ fontSize: '1.03rem' }}>{attempt.category}</strong>
+                    <div
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        gap: 12,
+                        alignItems: 'center',
+                        flexWrap: 'wrap',
+                      }}
+                    >
+                    <strong style={{ fontSize: '1.03rem' }}>
+                      {attemptProfile
+                        ? getTextByLanguage(attemptProfile.title, attemptProfile.titleEn, language)
+                        : attempt.category}
+                    </strong>
                     <span
                       style={{
                         padding: '7px 12px',
@@ -2461,18 +2476,19 @@ function Dashboard({ user, attempts, onSave, onLogout, onStartQuiz, loading, lan
                     >
                       Score {attempt.score}
                     </span>
+                    </div>
+                    <div style={{ color: '#94a3b8', marginTop: 10, fontSize: '0.95rem' }}>
+                      {new Date(attempt.completedAt).toLocaleString()}
+                    </div>
+                    <button
+                      onClick={() => setSelectedAttempt(attempt)}
+                      style={{ ...secondaryButtonStyle, marginTop: 14 }}
+                    >
+                      {copy.viewReport}
+                    </button>
                   </div>
-                  <div style={{ color: '#94a3b8', marginTop: 10, fontSize: '0.95rem' }}>
-                    {new Date(attempt.completedAt).toLocaleString()}
-                  </div>
-                  <button
-                    onClick={() => setSelectedAttempt(attempt)}
-                    style={{ ...secondaryButtonStyle, marginTop: 14 }}
-                  >
-                    {copy.viewReport}
-                  </button>
-                </div>
-              ))}
+                );
+              })}
             </div>
           )}
         </div>
