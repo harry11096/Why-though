@@ -36,7 +36,7 @@ const unwrapData = (result) => {
 };
 
 const requestAdmin = async (path, options = {}) => {
-  const token = localStorage.getItem('quiz-admin-token');
+  const token = localStorage.getItem('whythough-admin-token');
   const result = await request(path, {
     ...options,
     headers: {

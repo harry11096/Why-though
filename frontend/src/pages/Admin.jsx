@@ -70,8 +70,8 @@ const bulkImportSchema = z.object({
 });
 
 export default function AdminPage() {
-  const [theme, setTheme] = useState(() => localStorage.getItem('quiz-admin-theme') || 'light');
-  const [token, setToken] = useState(() => localStorage.getItem('quiz-admin-token') || '');
+  const [theme, setTheme] = useState(() => localStorage.getItem('whythough-admin-theme') || 'light');
+  const [token, setToken] = useState(() => localStorage.getItem('whythough-admin-token') || '');
   const [admin, setAdmin] = useState(null);
   const [categories, setCategories] = useState(['Pun Play']);
   const [questions, setQuestions] = useState([]);
@@ -98,7 +98,7 @@ export default function AdminPage() {
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme;
-    localStorage.setItem('quiz-admin-theme', theme);
+    localStorage.setItem('whythough-admin-theme', theme);
   }, [theme]);
 
   useEffect(() => {
@@ -126,7 +126,7 @@ export default function AdminPage() {
           questionForm.setValue('category', questionForm.getValues('category') || categoryData[0]);
         }
       } catch (error) {
-        localStorage.removeItem('quiz-admin-token');
+        localStorage.removeItem('whythough-admin-token');
         setToken('');
         setAdmin(null);
         setStatus({ type: 'error', message: error.message });
@@ -163,7 +163,7 @@ export default function AdminPage() {
         throw new Error('This account does not have admin access.');
       }
 
-      localStorage.setItem('quiz-admin-token', result.token);
+      localStorage.setItem('whythough-admin-token', result.token);
       setToken(result.token);
       setStatus({ type: 'success', message: 'Admin login successful.' });
     } catch (error) {
@@ -266,7 +266,7 @@ export default function AdminPage() {
   };
 
   const logout = () => {
-    localStorage.removeItem('quiz-admin-token');
+    localStorage.removeItem('whythough-admin-token');
     setToken('');
     setAdmin(null);
     setQuestions([]);
