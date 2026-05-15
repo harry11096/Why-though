@@ -17,6 +17,8 @@ import {
   secondaryButtonStyle,
 } from '../styles/appStyles.js';
 
+// QuizWorkspace owns the full quiz state machine: category selection, one-page
+// questions, submission, result rendering, and the fifth category's glitch cues.
 export default function QuizWorkspace({
   token,
   loading,
@@ -41,6 +43,8 @@ export default function QuizWorkspace({
   const [systemGlitchSeen, setSystemGlitchSeen] = useState([]);
   const systemGlitchTimeoutRef = useRef(null);
 
+  // Categories are loaded from the backend so admin-managed question banks can
+  // change without requiring frontend deploys.
   useEffect(() => {
     let cancelled = false;
 
@@ -72,12 +76,15 @@ export default function QuizWorkspace({
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [step]);
 
+  // Avoid a delayed glitch timeout trying to update state after leaving the page.
   useEffect(() => () => {
     if (systemGlitchTimeoutRef.current) {
       clearTimeout(systemGlitchTimeoutRef.current);
     }
   }, []);
 
+  // The system category should feel like a normal quiz with a few accidental
+  // leaks, so the triggers are sparse and partly unpredictable.
   const createSystemGlitchPlan = (questionCount) => {
     if (questionCount <= 0) {
       return [];
@@ -95,6 +102,8 @@ export default function QuizWorkspace({
     return [...triggerPoints].sort((left, right) => left - right);
   };
 
+  // Full-screen flashes are intentionally brief; they should read like a visual
+  // fault, not a modal or a horror-game interruption.
   const showSystemGlitch = () => {
     const notices = getSystemNotices(language);
     const message = notices[Math.floor(Math.random() * notices.length)];
@@ -114,6 +123,8 @@ export default function QuizWorkspace({
     }, 720);
   };
 
+  // Starting a category resets all quiz-local state so switching categories does
+  // not carry old answers, result data, or glitch timing into the next run.
   const startCategory = async (category) => {
     try {
       setGlobalMessage('');
@@ -135,6 +146,8 @@ export default function QuizWorkspace({
     }
   };
 
+  // Answers are stored by question id so users can go back without losing their
+  // previous choices, even though only one question is visible at a time.
   const chooseAnswer = (questionId, option) => {
     const nextAnswers = { ...answers, [questionId]: option };
     const nextAnsweredCount = Object.keys(nextAnswers).length;
@@ -172,6 +185,8 @@ export default function QuizWorkspace({
     setCurrentQuestionIndex((current) => Math.min(questions.length - 1, current + 1));
   };
 
+  // The backend still receives the selected answer text to stay compatible with
+  // the existing scoring model.
   const handleSubmit = async () => {
     const payload = {
       category: selectedCategory,

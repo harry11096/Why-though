@@ -19,6 +19,8 @@ import {
   secondaryButtonStyle,
 } from '../styles/appStyles.js';
 
+// Dashboard is intentionally quiet by default: the home panel only shows the
+// user name and start button, while stats/profile/history sit behind the nav.
 export default function Dashboard({
   user,
   attempts,
@@ -41,6 +43,7 @@ export default function Dashboard({
     bio: user?.bio || '',
   });
 
+  // Keep the editable profile form synced when the authenticated user changes.
   useEffect(() => {
     setProfileForm({
       fullName: user?.fullName || '',
@@ -49,6 +52,7 @@ export default function Dashboard({
     });
   }, [user]);
 
+  // Derived dashboard stats are memoized because attempts can grow over time.
   const attemptSummary = useMemo(() => {
     if (!attempts.length) {
       return {
@@ -79,6 +83,8 @@ export default function Dashboard({
         total: selectedAttempt.answers?.length || 0,
       }
     : null;
+  // Attempt history stores the raw score; rebuild the display persona from the
+  // current category profile so copy/theme changes apply to older attempts too.
   const selectedAttemptPersona =
     selectedAttemptResult && selectedAttemptResult.total > 0
       ? getPersonaResult(selectedAttemptResult, selectedAttempt.category, language)
@@ -86,6 +92,7 @@ export default function Dashboard({
   const selectedAttemptProfile = selectedAttempt ? getCategoryProfile(selectedAttempt.category) : null;
   const selectedAttemptTheme = getCategoryTheme(selectedAttemptProfile, themeMode);
 
+  // Opening a past report should feel like a new page instead of appearing mid-scroll.
   useEffect(() => {
     if (!selectedAttempt) {
       return;

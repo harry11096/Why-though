@@ -6,6 +6,8 @@ import {
 } from '../lib/quizContent.js';
 import { glassCardStyle } from '../styles/appStyles.js';
 
+// Renders a single question at a time. The parent owns navigation so this card
+// can stay focused on localized question text and answer selection.
 export default function QuizQuestionCard({
   answers,
   categoryTheme,

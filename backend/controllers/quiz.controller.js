@@ -1,6 +1,8 @@
 const { Question } = require('../models/Question');
 const Score = require('../models/Score');
 
+// Returns only active categories so the quiz selection screen reflects the
+// current question bank without exposing admin-only or disabled content.
 const getCategories = async (req, res) => {
   try {
     const categories = await Question.distinct('category', { isActive: true });
@@ -24,6 +26,7 @@ const getQuestions = async (req, res) => {
       return res.status(400).json({ success: false, error: 'Not enough questions in this category' });
     }
 
+    // Keep each run short and slightly variable so repeated attempts do not feel identical.
     const questionCount = questions.length >= 15 && Math.random() >= 0.5 ? 15 : 10;
     const shuffled = questions.sort(() => Math.random() - 0.5).slice(0, questionCount);
     res.json({ success: true, data: shuffled });
@@ -43,6 +46,8 @@ const submitQuiz = async (req, res) => {
     const questionIds = answers.map((answer) => answer.questionId);
     const questions = await Question.find({ _id: { $in: questionIds } });
 
+    // Scoring stays deterministic on the server. Future AI result text can use
+    // this score, but it should not decide whether an answer is correct.
     let score = 0;
     const gradedAnswers = answers.map((answer) => {
       const question = questions.find((item) => item._id.toString() === answer.questionId);

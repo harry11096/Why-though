@@ -9,6 +9,8 @@ export const shellStyle = {
   overflow: 'hidden',
 };
 
+// Shared inline style tokens. The app uses inline styles plus CSS variables so
+// components can stay portable while theme switching remains centralized.
 export const pageStyle = {
   maxWidth: 1180,
   margin: '0 auto',

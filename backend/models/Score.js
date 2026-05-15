@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+// Stores the user's submitted answer together with whether it matched the
+// question's scoring key at the time of submission.
 const answerSchema = new mongoose.Schema({
   questionId: {
     type: mongoose.Schema.Types.ObjectId,
@@ -16,6 +18,8 @@ const answerSchema = new mongoose.Schema({
   }
 });
 
+// A Score document is one completed quiz attempt. It keeps enough data for
+// history pages and future result-sharing features without storing full user PII.
 const scoreSchema = new mongoose.Schema({
   userId: {
     type: mongoose.Schema.Types.ObjectId,

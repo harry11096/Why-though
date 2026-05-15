@@ -12,8 +12,8 @@ import {
   shellStyle,
 } from './styles/appStyles.js';
 
-
-
+// App owns only global concerns: authentication, language/theme preference,
+// and routing between the dashboard and quiz workspace.
 export default function App() {
   const [language, setLanguage] = useState(() => localStorage.getItem('whythough-language') || 'en');
   const [themeMode, setThemeMode] = useState(() => localStorage.getItem('whythough-theme') || 'light');
@@ -28,6 +28,7 @@ export default function App() {
   const [loading, setLoading] = useState(false);
   const copy = UI_COPY[language] || UI_COPY.en;
 
+  // Keep user interface preferences persistent without involving the backend.
   useEffect(() => {
     localStorage.setItem('whythough-language', language);
   }, [language]);
@@ -36,6 +37,7 @@ export default function App() {
     localStorage.setItem('whythough-theme', themeMode);
   }, [themeMode]);
 
+  // If a saved token exists, restore the user profile and quiz history on load.
   useEffect(() => {
     if (!authState.token) {
       return;
@@ -75,14 +77,14 @@ export default function App() {
 
   const handleAuthSuccess = (result) => {
     localStorage.setItem('whythough-user-token', result.data.token);
-      setAuthState({
-        token: result.data.token,
-        user: result.data.user,
-        attempts: [],
-      });
-      setView('dashboard');
-      setMessage('');
-    };
+    setAuthState({
+      token: result.data.token,
+      user: result.data.user,
+      attempts: [],
+    });
+    setView('dashboard');
+    setMessage('');
+  };
 
   const handleLogin = async (payload) => {
     setLoading(true);
@@ -144,6 +146,7 @@ export default function App() {
     <main style={{ ...shellStyle, ...getThemeVariables(themeMode) }}>
       <style>{appAnimationStyles}</style>
       <div style={pageStyle}>
+        {/* Auth controls live in the header only before login; after login they move into the compact dashboard nav. */}
         <header style={{ marginBottom: 26 }}>
           <div
             style={{

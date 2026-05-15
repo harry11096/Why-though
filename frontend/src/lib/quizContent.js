@@ -1,5 +1,7 @@
 import { CATEGORY_PROFILES } from '../data/categoryProfiles.js';
 
+// Content helpers centralize category lookup, localization, theme selection, and
+// persona scoring so React components can stay mostly presentational.
 export const normalizeCategory = (value = '') => value.trim().toLowerCase();
 
 export const getCategoryProfile = (category = '') =>
@@ -76,6 +78,8 @@ export const SYSTEM_INTERSTITIAL_NOTICES = {
 
 export const getSystemNotices = (language) => SYSTEM_INTERSTITIAL_NOTICES[language] || SYSTEM_INTERSTITIAL_NOTICES.en;
 
+// Category themes preserve each department's identity while still respecting
+// the global light/dark mode.
 export const getCategoryTheme = (profile, themeMode = 'light') => {
   const isDark = themeMode === 'dark';
 

@@ -1,6 +1,8 @@
 import React from 'react';
 import { glassCardStyle, languageButton } from '../styles/appStyles.js';
 
+// Compact navigation keeps the main dashboard minimal. It also holds language
+// and theme controls after login so the header can stay visually calm.
 export default function DashboardNav({
   activePanel,
   copy,
@@ -20,6 +22,8 @@ export default function DashboardNav({
     { id: 'history', icon: '◷', label: language === 'zh' ? '历史' : 'History' },
   ];
 
+  // The nav uses icon-first buttons because labels are supporting hints, not
+  // the main visual structure of the dashboard.
   const navButton = (item) => ({
     width: '100%',
     border: '1px solid var(--card-border)',

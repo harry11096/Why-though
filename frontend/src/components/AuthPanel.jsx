@@ -4,6 +4,8 @@ import Register from './Register.jsx';
 import { UI_COPY } from '../data/uiCopy.js';
 import { glassCardStyle, inputStyle, tabButton } from '../styles/appStyles.js';
 
+// Public entry screen. It keeps the product copy separate from the login/register
+// forms so the left hero can evolve without touching authentication logic.
 export default function AuthPanel({ mode, setMode, onLogin, onRegister, loading, message, language }) {
   const copy = UI_COPY[language];
   return (

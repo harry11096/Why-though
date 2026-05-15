@@ -3,6 +3,8 @@ import { UI_COPY } from '../data/uiCopy.js';
 import { getLocalizedArray, getTextByLanguage } from '../lib/quizContent.js';
 import { glassCardStyle } from '../styles/appStyles.js';
 
+// Shared result view for fresh quiz submissions and historical attempts. It
+// receives a resolved persona so the scoring logic stays outside the UI layer.
 export default function PersonaReport({ persona, result, language, categoryTheme, label }) {
   return (
     <section
@@ -50,6 +52,7 @@ export default function PersonaReport({ persona, result, language, categoryTheme
         {getTextByLanguage(persona.verdict, persona.verdictEn || persona.verdict, language)}
       </p>
       {(() => {
+        // Optional arrays let each category decide how detailed its report feels.
         const reportBody = getLocalizedArray(persona.reportBodyZh, persona.reportBodyEn, language);
         const traits = getLocalizedArray(persona.traitsZh, persona.traitsEn, language);
         const systemEvaluation = getLocalizedArray(persona.systemEvaluationZh, persona.systemEvaluationEn, language);

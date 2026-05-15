@@ -1,6 +1,8 @@
 const API_BASE_URL =
   import.meta.env.VITE_API_URL || import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
 
+// Small fetch wrapper used by both public auth routes and protected quiz/admin
+// routes. It normalizes backend errors into thrown Error objects.
 async function request(path, options = {}) {
   const headers = {
     'Content-Type': 'application/json',
@@ -21,6 +23,8 @@ async function request(path, options = {}) {
   return data;
 }
 
+// Some backend routes return { success, data }, while older helpers return raw
+// objects. This keeps component code using one predictable shape.
 const unwrapData = (result) => {
   if (typeof result.success === 'boolean') {
     return {
@@ -35,6 +39,8 @@ const unwrapData = (result) => {
   };
 };
 
+// Admin helpers read their token from localStorage because the public app keeps
+// user auth and admin auth as separate sessions.
 const requestAdmin = async (path, options = {}) => {
   const token = localStorage.getItem('whythough-admin-token');
   const result = await request(path, {
