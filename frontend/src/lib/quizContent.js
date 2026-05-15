@@ -56,111 +56,115 @@ export const getLocalizedArray = (zh, en, language) => {
 
 export const SYSTEM_INTERSTITIAL_NOTICES = {
   zh: [
-    '系统已记录你的进入时间。',
-    '正在分析你的停留意愿。',
-    '正在判断你是否意识到异常。',
-    '系统正在记录……',
-    '请继续。你已经开始了。',
+    '你还在做。',
+    '不是所有人都会做到这里。',
+    '停留时间已记录。',
+    '你开始认真了。',
+    '记录成功。',
+    '继续。',
   ],
   en: [
-    'The system has recorded your entry time.',
-    'Analyzing your willingness to remain.',
-    'Determining whether you have noticed the abnormality.',
-    'The system is recording…',
-    'Please continue. You have already begun.',
+    'You are still doing this.',
+    'Not everyone makes it this far.',
+    'Time on page recorded.',
+    'You started taking this seriously.',
+    'Recorded.',
+    'You still have not left.',
+    'Continue.',
   ],
 };
 
 export const getSystemNotices = (language) => SYSTEM_INTERSTITIAL_NOTICES[language] || SYSTEM_INTERSTITIAL_NOTICES.en;
 
-export const getScanlineOverlay = (borderRadius = 24) => ({
-  position: 'absolute',
-  inset: 0,
-  borderRadius,
-  backgroundImage:
-    'repeating-linear-gradient(180deg, rgba(255,255,255,0.00) 0px, rgba(255,255,255,0.00) 8px, rgba(255,255,255,0.035) 9px, rgba(255,255,255,0.00) 10px)',
-  opacity: 0.22,
-  pointerEvents: 'none',
-  mixBlendMode: 'screen',
-});
+export const getCategoryTheme = (profile, themeMode = 'light') => {
+  const isDark = themeMode === 'dark';
 
-export const getCategoryTheme = (profile) => {
   if (profile?.theme === 'observation') {
     return {
-      accent: '#d70015',
-      accentSoft: 'rgba(215, 0, 21, 0.08)',
-      text: '#1d1d1f',
-      subtext: '#6e6e73',
-      cardBackground: 'linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(255,246,246,0.86) 100%)',
-      cardBorder: '1px solid rgba(215,0,21,0.12)',
-      chipBackground: 'rgba(215,0,21,0.05)',
-      chipBorder: '1px solid rgba(215,0,21,0.12)',
-      optionActive: 'rgba(255,228,230,0.88)',
-      optionBorder: '1px solid rgba(15,23,42,0.10)',
-      shadow: '0 18px 42px rgba(215, 0, 21, 0.08)',
+      accent: isDark ? '#ff6961' : '#d70015',
+      accentSoft: isDark ? 'rgba(255, 105, 97, 0.13)' : 'rgba(215, 0, 21, 0.08)',
+      text: isDark ? '#f5f5f7' : '#1d1d1f',
+      subtext: isDark ? '#b8b8bd' : '#6e6e73',
+      cardBackground: isDark
+        ? 'linear-gradient(180deg, rgba(34,28,30,0.94) 0%, rgba(22,22,24,0.92) 100%)'
+        : 'linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(255,246,246,0.86) 100%)',
+      cardBorder: isDark ? '1px solid rgba(255,105,97,0.16)' : '1px solid rgba(215,0,21,0.12)',
+      chipBackground: isDark ? 'rgba(255,105,97,0.08)' : 'rgba(215,0,21,0.05)',
+      chipBorder: isDark ? '1px solid rgba(255,105,97,0.14)' : '1px solid rgba(215,0,21,0.12)',
+      optionActive: isDark ? 'rgba(255,105,97,0.16)' : 'rgba(255,228,230,0.88)',
+      optionBorder: isDark ? '1px solid rgba(255,255,255,0.11)' : '1px solid rgba(15,23,42,0.10)',
+      shadow: isDark ? '0 22px 54px rgba(0,0,0,0.36)' : '0 18px 42px rgba(215, 0, 21, 0.08)',
     };
   }
 
   if (profile?.theme === 'cosmic') {
     return {
-      accent: '#7e22ce',
-      accentSoft: 'rgba(126, 34, 206, 0.08)',
-      text: '#20142d',
-      subtext: '#6b5a78',
-      cardBackground: 'linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(247,241,255,0.88) 100%)',
-      cardBorder: '1px solid rgba(126,34,206,0.14)',
-      chipBackground: 'rgba(126,34,206,0.06)',
-      chipBorder: '1px solid rgba(126,34,206,0.14)',
-      optionActive: 'rgba(243,232,255,0.92)',
-      optionBorder: '1px solid rgba(126,34,206,0.12)',
-      shadow: '0 22px 48px rgba(126, 34, 206, 0.10)',
+      accent: isDark ? '#c084fc' : '#7e22ce',
+      accentSoft: isDark ? 'rgba(192, 132, 252, 0.13)' : 'rgba(126, 34, 206, 0.08)',
+      text: isDark ? '#f5f3ff' : '#20142d',
+      subtext: isDark ? '#c4b5fd' : '#6b5a78',
+      cardBackground: isDark
+        ? 'linear-gradient(180deg, rgba(35,28,46,0.94) 0%, rgba(20,18,26,0.92) 100%)'
+        : 'linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(247,241,255,0.88) 100%)',
+      cardBorder: isDark ? '1px solid rgba(192,132,252,0.16)' : '1px solid rgba(126,34,206,0.14)',
+      chipBackground: isDark ? 'rgba(192,132,252,0.08)' : 'rgba(126,34,206,0.06)',
+      chipBorder: isDark ? '1px solid rgba(192,132,252,0.14)' : '1px solid rgba(126,34,206,0.14)',
+      optionActive: isDark ? 'rgba(192,132,252,0.16)' : 'rgba(243,232,255,0.92)',
+      optionBorder: isDark ? '1px solid rgba(255,255,255,0.11)' : '1px solid rgba(126,34,206,0.12)',
+      shadow: isDark ? '0 22px 54px rgba(0,0,0,0.36)' : '0 22px 48px rgba(126, 34, 206, 0.10)',
     };
   }
 
   if (profile?.theme === 'internet') {
     return {
-      accent: '#007aff',
-      accentSoft: 'rgba(0, 122, 255, 0.08)',
-      text: '#0b1b34',
-      subtext: '#526272',
-      cardBackground: 'linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(239,248,255,0.88) 100%)',
-      cardBorder: '1px solid rgba(0,122,255,0.14)',
-      chipBackground: 'rgba(0,122,255,0.06)',
-      chipBorder: '1px solid rgba(0,122,255,0.14)',
-      optionActive: 'rgba(219,234,254,0.92)',
-      optionBorder: '1px solid rgba(0,122,255,0.12)',
-      shadow: '0 22px 48px rgba(0, 122, 255, 0.10)',
+      accent: isDark ? '#64d2ff' : '#007aff',
+      accentSoft: isDark ? 'rgba(100, 210, 255, 0.12)' : 'rgba(0, 122, 255, 0.08)',
+      text: isDark ? '#f1f8ff' : '#0b1b34',
+      subtext: isDark ? '#a9bed1' : '#526272',
+      cardBackground: isDark
+        ? 'linear-gradient(180deg, rgba(23,31,40,0.94) 0%, rgba(16,20,26,0.92) 100%)'
+        : 'linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(239,248,255,0.88) 100%)',
+      cardBorder: isDark ? '1px solid rgba(100,210,255,0.15)' : '1px solid rgba(0,122,255,0.14)',
+      chipBackground: isDark ? 'rgba(100,210,255,0.075)' : 'rgba(0,122,255,0.06)',
+      chipBorder: isDark ? '1px solid rgba(100,210,255,0.13)' : '1px solid rgba(0,122,255,0.14)',
+      optionActive: isDark ? 'rgba(100,210,255,0.15)' : 'rgba(219,234,254,0.92)',
+      optionBorder: isDark ? '1px solid rgba(255,255,255,0.11)' : '1px solid rgba(0,122,255,0.12)',
+      shadow: isDark ? '0 22px 54px rgba(0,0,0,0.36)' : '0 22px 48px rgba(0, 122, 255, 0.10)',
     };
   }
 
   if (profile?.theme === 'system') {
     return {
-      accent: '#f87171',
-      accentSoft: 'rgba(248, 113, 113, 0.12)',
-      text: '#fafafa',
-      subtext: '#b4b4b8',
-      cardBackground: 'linear-gradient(180deg, rgba(8,8,10,0.98) 0%, rgba(2,2,4,0.96) 100%)',
-      cardBorder: '1px solid rgba(255,255,255,0.10)',
-      chipBackground: 'rgba(255,255,255,0.03)',
-      chipBorder: '1px solid rgba(248,113,113,0.18)',
-      optionActive: 'rgba(80,14,20,0.62)',
-      optionBorder: '1px solid rgba(255,255,255,0.11)',
-      shadow: '0 28px 68px rgba(0, 0, 0, 0.52)',
+      accent: isDark ? '#f5f5f7' : '#1d1d1f',
+      accentSoft: isDark ? 'rgba(255,255,255,0.07)' : 'rgba(29, 29, 31, 0.06)',
+      text: isDark ? '#f5f5f7' : '#1d1d1f',
+      subtext: isDark ? '#a1a1aa' : '#6e6e73',
+      cardBackground: isDark
+        ? 'linear-gradient(180deg, rgba(35,35,37,0.94) 0%, rgba(22,22,24,0.92) 100%)'
+        : 'linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(246,246,247,0.92) 100%)',
+      cardBorder: isDark ? '1px solid rgba(255,255,255,0.12)' : '1px solid rgba(29,29,31,0.12)',
+      chipBackground: isDark ? 'rgba(255,255,255,0.055)' : 'rgba(29,29,31,0.035)',
+      chipBorder: isDark ? '1px solid rgba(255,255,255,0.10)' : '1px solid rgba(29,29,31,0.10)',
+      optionActive: isDark ? 'rgba(255,255,255,0.12)' : 'rgba(29,29,31,0.10)',
+      optionBorder: isDark ? '1px solid rgba(255,255,255,0.10)' : '1px solid rgba(29,29,31,0.10)',
+      shadow: isDark ? '0 22px 54px rgba(0,0,0,0.36)' : '0 18px 44px rgba(0, 0, 0, 0.08)',
     };
   }
 
   return {
-    accent: '#00a6d6',
-    accentSoft: 'rgba(0,166,214,0.08)',
-    text: '#102027',
-    subtext: '#61727c',
-    cardBackground: 'linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(235,250,255,0.86) 100%)',
-    cardBorder: '1px solid rgba(0,166,214,0.14)',
-    chipBackground: 'rgba(0,166,214,0.06)',
-    chipBorder: '1px solid rgba(0,166,214,0.14)',
-    optionActive: 'rgba(207,250,254,0.88)',
-    optionBorder: '1px solid rgba(0,166,214,0.12)',
-    shadow: '0 22px 48px rgba(0, 166, 214, 0.10)',
+    accent: isDark ? '#5de6ff' : '#00a6d6',
+    accentSoft: isDark ? 'rgba(93,230,255,0.12)' : 'rgba(0,166,214,0.08)',
+    text: isDark ? '#edfaff' : '#102027',
+    subtext: isDark ? '#a5bec7' : '#61727c',
+    cardBackground: isDark
+      ? 'linear-gradient(180deg, rgba(21,31,35,0.94) 0%, rgba(16,20,22,0.92) 100%)'
+      : 'linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(235,250,255,0.86) 100%)',
+    cardBorder: isDark ? '1px solid rgba(93,230,255,0.14)' : '1px solid rgba(0,166,214,0.14)',
+    chipBackground: isDark ? 'rgba(93,230,255,0.075)' : 'rgba(0,166,214,0.06)',
+    chipBorder: isDark ? '1px solid rgba(93,230,255,0.13)' : '1px solid rgba(0,166,214,0.14)',
+    optionActive: isDark ? 'rgba(93,230,255,0.15)' : 'rgba(207,250,254,0.88)',
+    optionBorder: isDark ? '1px solid rgba(255,255,255,0.11)' : '1px solid rgba(0,166,214,0.12)',
+    shadow: isDark ? '0 22px 54px rgba(0,0,0,0.36)' : '0 22px 48px rgba(0, 166, 214, 0.10)',
   };
 };
 

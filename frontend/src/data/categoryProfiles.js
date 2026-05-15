@@ -13,10 +13,8 @@ export const CATEGORY_PROFILES = [
       'This department studies why people suddenly feel that life is strange when they walk into a convenience store at 3 AM.',
     vibe: ['深夜', '孤独', '都市', '便利店', '微波炉', '冷白灯', '人生暂停加载'],
     vibeEn: ['Midnight', 'Loneliness', 'City life', 'Convenience store', 'Microwave', 'Cold white light', 'Life buffering'],
-    categoryHintZh:
-      '系统怀疑：你和冷白灯、微波炉、便利店自动门之间，可能存在一种不太健康但非常诚实的精神联系。',
-    categoryHint:
-      'The system suspects your relationship with cold white lighting, microwaves, and existential retail environments may reveal something inconveniently personal.',
+    categoryHintZh: '凌晨三点。便利店。你突然有点懂了。',
+    categoryHint: '3 AM. Convenience store lights. You get it now.',
     questionLeadZh:
       '研究部门正在观察：你会不会认真回答关于饭团、自动门和情绪冷藏的问题。',
     questionLead:
@@ -181,10 +179,8 @@ export const CATEGORY_PROFILES = [
       'This department has been observing a strange species for a long time: humans. The system still cannot confirm whether these behaviors are intelligence, or just bugs.',
     vibe: ['人类迷惑行为', '日常荒诞', '互联网后遗症', '小动作心理学', '为什么大家都这样'],
     vibeEn: ['Confusing human behavior', 'Everyday absurdity', 'Internet aftereffects', 'Micro-behavior psychology', 'Why does everyone do this?'],
-    categoryHintZh:
-      '系统正在记录：打开冰箱后失忆、收藏永远不会看的截图、半夜突然想努力，这些到底是人类智慧还是系统故障。',
-    categoryHint:
-      'The system is currently logging fridge amnesia, unread screenshots, and midnight self-improvement impulses as possible indicators of human malfunction.',
+    categoryHintZh: '你做过的怪事，可能不是只有你会做。',
+    categoryHint: 'Your strange habits may not be yours alone.',
     questionLeadZh:
       '观察中心正在记录你的微动作、犹豫、撤回冲动和所有“我只是随便看看”的行为痕迹。',
     questionLead:
@@ -342,10 +338,8 @@ export const CATEGORY_PROFILES = [
       'This laboratory specializes in questions that are completely unnecessary, but once asked, become impossible not to think about. The system currently cannot determine whether these questions are nonsense, or truths accidentally leaked by the universe.',
     vibe: ['宇宙级废话', '无厘头哲学', '物品拟人', '生物荒诞', '一本正经地胡说八道'],
     vibeEn: ['Cosmic-level nonsense', 'Absurd philosophy', 'Object personification', 'Biological absurdity', 'Speaking nonsense with complete seriousness'],
-    categoryHintZh:
-      '系统正在校准香蕉意识频率、镜面真相延迟和 WiFi 怨念波段。请准备接受一些完全没有必要、却很难不认真回答的问题。',
-    categoryHint:
-      'The system is calibrating banana consciousness frequency, mirror-truth delay, and WiFi resentment bandwidth. Prepare to answer questions that are completely unnecessary and strangely difficult to ignore.',
+    categoryHintZh: '完全没必要的问题。很难不认真回答。',
+    categoryHint: 'Pointless questions. Somehow hard to ignore.',
     questionLeadZh:
       '实验样本编号已载入。正在监测你对香蕉政治、自动门尊严和宇宙后台泄露内容的接受程度。',
     questionLead:
@@ -503,10 +497,8 @@ export const CATEGORY_PROFILES = [
       'Welcome to the Internet Mental State Detection Center. This center has long researched a modern condition: the gradual psychological distortion humans develop after long-term internet exposure.',
     vibe: ['互联网精神状态', '赛博疲惫', '抽象 meme 文化', '深夜冲浪', '哈哈哈哈我疯了', '一边崩溃一边截图'],
     vibeEn: ['Internet mental state', 'Cyber exhaustion', 'Abstract meme culture', 'Late-night scrolling', 'HAHAHAHA I’ve lost my mind', 'Falling apart while taking screenshots'],
-    categoryHintZh:
-      '系统正在检测：你究竟是在使用互联网，还是已经被互联网长期反向使用。请勿长时间暴露于评论区环境。',
-    categoryHint:
-      'The system is now checking whether you are using the internet, or whether the internet has been using you for too long. Please do not remain exposed to comment-section environments for extended periods.',
+    categoryHintZh: '你在使用互联网，还是互联网在使用你？',
+    categoryHint: 'Are you using the internet, or is it using you?',
     questionLeadZh:
       '检测中心正在记录你的深夜刷新、截图囤积、meme 共振和所有“明明很困却不愿睡”的精神波动。',
     questionLead:
@@ -658,26 +650,20 @@ export const CATEGORY_PROFILES = [
     matches: ['the system is watching you', '系统正在观察你'],
     title: '系统正在观察你',
     titleEn: 'The System Is Watching You',
-    intro:
-      '你不是在选择题目。你是在允许系统接近你。本类别只研究一个问题：为什么你明知道这些题很奇怪，但还是点进来了？',
-    introEn:
-      'You are not choosing questions. You are allowing the system to approach you. This category studies only one question: why did you click in, even though you knew these questions were strange?',
-    vibe: ['被观察', '自我怀疑', '系统人格', '测试反噬', '玩家变样本', '我为什么还在做', '伪心理分析'],
-    vibeEn: ['Being observed', 'Self-doubt', 'System personality', 'The test biting back', 'The player becoming the sample', 'Why am I still doing this?', 'Fake psychological analysis'],
-    categoryHintZh:
-      '系统已记录你的进入时间。正在分析你的停留意愿，判断你是否已经意识到异常。请继续。你已经开始了。',
-    categoryHint:
-      'The system has recorded your entry time. It is analyzing your willingness to remain and determining whether you have noticed the abnormality. Please continue. You have already begun.',
-    questionLeadZh:
-      '系统正在记录你的停顿、犹豫、自我解释和所有“不知道为什么但我还是继续了”的行为痕迹。',
-    questionLead:
-      'The system is recording your pauses, hesitation, self-explanations, and every trace of “I do not know why, but I am still continuing.”',
+    intro: '你已经做到这里了。',
+    introEn: 'You made it this far.',
+    vibe: [],
+    vibeEn: [],
+    categoryHintZh: '进入时间已记录。',
+    categoryHint: 'Entry time recorded.',
+    questionLeadZh: '继续。',
+    questionLead: 'Continue.',
     resultLabelZh: '系统判定',
     resultLabel: 'System Determination',
-    submitLabelZh: '提交给系统',
-    submitLabel: 'Submit to the system',
-    retryLabelZh: '重新进入观察',
-    retryLabel: 'Re-enter observation',
+    submitLabelZh: '继续',
+    submitLabel: 'Continue',
+    retryLabelZh: '再来一次',
+    retryLabel: 'Again',
     scoreBands: [
       {
         max: 0.25,

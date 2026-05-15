@@ -23,8 +23,8 @@ export default function AuthPanel({ mode, setMode, onLogin, onRegister, loading,
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'center',
-          background:
-            'linear-gradient(180deg, rgba(255,255,255,0.88) 0%, rgba(247,247,249,0.78) 100%)',
+          background: 'var(--auth-hero-bg)',
+          borderColor: 'var(--auth-hero-border)',
         }}
       >
         <div>
@@ -35,8 +35,8 @@ export default function AuthPanel({ mode, setMode, onLogin, onRegister, loading,
               gap: 8,
               padding: '8px 12px',
               borderRadius: 999,
-              background: 'rgba(0, 122, 255, 0.08)',
-              color: '#007aff',
+              background: 'var(--auth-badge-bg)',
+              color: 'var(--auth-badge-text)',
               fontWeight: 700,
               fontSize: '0.84rem',
               letterSpacing: '0.16em',
@@ -62,8 +62,9 @@ export default function AuthPanel({ mode, setMode, onLogin, onRegister, loading,
             style={{
               maxWidth: 430,
               color: 'var(--text)',
-              fontSize: '1.08rem',
-              lineHeight: 1.75,
+              fontSize: 'clamp(1.25rem, 2.5vw, 1.8rem)',
+              lineHeight: 1.35,
+              fontWeight: 700,
               margin: 0,
             }}
           >
@@ -73,10 +74,11 @@ export default function AuthPanel({ mode, setMode, onLogin, onRegister, loading,
           <p
             style={{
               maxWidth: 470,
-              color: 'var(--muted)',
-              fontSize: '0.98rem',
-              lineHeight: 1.75,
-              margin: '16px 0 0',
+              color: 'var(--text)',
+              fontSize: '1.05rem',
+              lineHeight: 1.65,
+              margin: '24px 0 0',
+              fontWeight: 700,
             }}
           >
             {copy.authBody}
@@ -103,7 +105,7 @@ export default function AuthPanel({ mode, setMode, onLogin, onRegister, loading,
               gap: 8,
               padding: 6,
               borderRadius: 999,
-              background: 'rgba(29, 29, 31, 0.05)',
+              background: 'var(--tab-rail-bg)',
             }}
           >
             <button onClick={() => setMode('login')} style={tabButton(mode === 'login')}>
@@ -154,4 +156,3 @@ export default function AuthPanel({ mode, setMode, onLogin, onRegister, loading,
     </section>
   );
 }
-
